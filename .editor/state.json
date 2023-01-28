@@ -1,0 +1,22 @@
+{
+    "views": {
+        "console": {
+            "showInfo": true,
+            "showWarnings": true,
+            "showErrors": true
+        }
+    },
+    "openViews": {
+        "Main Window": true,
+        "Scene View": true,
+        "Asset Browser": true,
+        "Console": true,
+        "Scene Outline": true,
+        "Properties": true,
+        "Project Settings": true,
+        "Resources": true,
+        "Project Data": true,
+        "Profile": true,
+        "Preferences": true
+    }
+}
