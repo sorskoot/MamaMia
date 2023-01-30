@@ -15,8 +15,8 @@
         "Properties": true,
         "Project Settings": true,
         "Resources": true,
-        "Project Data": true,
-        "Profile": true,
+        "Project Data": false,
+        "Profile": false,
         "Preferences": true
     }
 }

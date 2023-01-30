@@ -12,3 +12,12 @@
 
 /* Register all default components. */
 import '@wonderlandengine/components';
+import '@wonderlandengine/components/player-height';
+
+import { Grabbable } from './interactions/grabbable';
+import { Grabber } from './interactions/grabber';
+import { SnapZone } from './interactions/snapZone';
+
+WL.registerComponent(Grabber);
+WL.registerComponent(Grabbable);
+WL.registerComponent(SnapZone);

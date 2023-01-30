@@ -1,22 +1,26 @@
 {
-  "name": "MamaMia.wlp",
+  "name": "MamaMia",
   "version": "1.0.0",
   "description": "My Wonderland project",
   "main": "js/index.js",
-  "type": "module",
-  "module": "js/index.js",
   "scripts": {
-    "build": "esbuild ./js/index.js --bundle --outfile=\"deploy/MamaMia.wlp-bundle.js\""
+    "build": "webpack --config webpack.config.js --mode development",
+    "buildProd": "webpack --config webpack.config.js --mode production",
+    "forward":"adb reverse tcp:7551 tcp:7551"
   },
   "keywords": [
     "wonderland-engine"
   ],
   "devDependencies": {
-    "esbuild": "^0.15.18"
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
   },
   "dependencies": {
+    "@sorskoot/wonderland-components": "^1.0.7",
     "@wonderlandengine/api": "^0.9.4",
     "@wonderlandengine/components": "^0.9.1",
-    "gl-matrix": "^3.4.3"
+    "@zestymarket/wonderland-sdk": "^1.6.0",
+    "gl-matrix": "^3.4.3",
+    "rxjs": "^7.8.0"
   }
 }
