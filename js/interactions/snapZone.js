@@ -1,12 +1,29 @@
-import { Component, registerComponent } from '@wonderlandengine/api';
-import { reparentKeepTransform } from '../helper';
+import { CollisionComponent, Type } from '@wonderlandengine/api/wonderland';
+import { EventEmitterComponent } from '../core/eventEmitter';
 import { Grabbable } from './grabbable';
 
-export class SnapZone extends Component {
+
+/**
+ * Zone that can snap an object to it.
+ * 
+ * Emit the following events:
+ * @event snapped - when an object is snapped to the zone
+ * @event enteredSnapZone - when an object enters the snap zone
+ * @event leftSnapZone - when an object leaves the snap zone
+ * @extends EventEmitterComponent
+ */
+export class SnapZone extends EventEmitterComponent {
     static TypeName = 'snap-zone';
     static Properties = {
-        snapCollisionObject: { type: WL.Type.Object },
-        snapTargetObject: { type: WL.Type.Object }
+        snapCollisionObject: { type: Type.Object },
+        snapTargetObject: { type: Type.Object },
+        locked: { type: Type.Bool, default: false }
+    }
+
+    objectInZone = null;
+
+    constructor() {
+        super();
     }
 
     start() {
@@ -26,29 +43,50 @@ export class SnapZone extends Component {
     }
 
     update(dt) {
+        if (this.locked) {
+            return;
+        }
 
         if (this.heldObject) {
             if (this.heldObject.IsBeingHeld()) {
                 this.heldObject = null;
             }
         } else {
-
             let collisions = this._snapCollision.queryOverlaps();
+            // TODO: add filtering on collision groups                         
             if (collisions.length > 0) {
-                /** @type {Grabbable} */
-                let grabbable = collisions[0].object.getComponent('grabbable');
-                if (grabbable && !grabbable.IsBeingHeld()) {
-                    console.log('Enter Target');
-                    this.heldObject = grabbable;
-                    grabbable.object.parent = this.object.parent;
-                    grabbable.object.resetTranslationRotation();
-                    let x = []                 
-                    this.snapTarget.getTranslationWorld(x);
-                    grabbable.object.setTranslationWorld(x);
-                    
+                // object in zone
+                this.snapToZone(collisions[0]);
+            } else {                
+                if(this.objectInZone){
+                    this.emit('leftSnapZone', this.objectInZone);
+                    this.objectInZone = null;
                 }
             }
         }
     }
 
+    /**
+     * Possibly snap object to the current zone
+     * @param {CollisionComponent} collision
+     */
+    snapToZone(collision) {
+        /** @type {Grabbable} */
+        let grabbable = collision.object.getComponent('grabbable');
+        if (grabbable) {
+            if(!this.objectInZone){
+                this.objectInZone = grabbable;
+                this.emit('enteredSnapZone', grabbable);
+            }
+            if (!grabbable.IsBeingHeld()) {
+                this.heldObject = grabbable;
+                grabbable.object.parent = this.object.parent;
+                grabbable.object.resetTranslationRotation();
+                let x = [];
+                this.snapTarget.getTranslationWorld(x);
+                grabbable.object.setTranslationWorld(x);
+                this.emit('snapped', grabbable);
+            }
+        }
+    }
 };
