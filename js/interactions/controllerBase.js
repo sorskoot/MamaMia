@@ -78,7 +78,7 @@ export class ControllerBase extends Component {
     /** @param {XRSession} session */
     _onXRSessionStart(session) {
 
-        session.addEventListener('inputinputsourceschange', this._handleOnInputSourcesChange.bind(this));
+        session.addEventListener('inputsourceschange', this._handleOnInputSourcesChange.bind(this));
 
         session.addEventListener('selectstart', this._handleSelectStart.bind(this));
         session.addEventListener('selectend', this._handleSelectEnd.bind(this));

@@ -324,7 +324,8 @@
                     "type": "grabber",
                     "grabber": {
                         "collider": "382",
-                        "collisionObject": "382"
+                        "collisionObject": "382",
+                        "hapticsOnPickup": true
                     }
                 },
                 {
@@ -368,7 +369,8 @@
                     "grabber": {
                         "handedness": "Right",
                         "collider": "381",
-                        "collisionObject": "381"
+                        "collisionObject": "381",
+                        "hapticsOnPickup": true
                     }
                 },
                 {
@@ -1105,6 +1107,102 @@
                 1.0,
                 1.0
             ]
+        },
+        "388": {
+            "name": "Knife",
+            "parent": "383",
+            "translation": [
+                -1.6794826,
+                2.35769,
+                1.1615984
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "grabbable"
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "aabb",
+                        "aabb": {
+                            "extents": [
+                                0.05,
+                                0.1,
+                                0.05
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "392": {
+            "link": {
+                "name": "generated",
+                "file": "models\\TestKnife.fbx"
+            },
+            "parent": "388",
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                0.0,
+                0.1113162,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
         }
     },
     "meshes": {
@@ -1254,6 +1352,13 @@
                 "name": "BasicHand",
                 "file": "models\\SK_BasicHand_R.fbx"
             }
+        },
+        "391": {
+            "link": {
+                "name": "generated",
+                "file": "models\\TestKnife.fbx"
+            },
+            "importScaling": 0.0024999
         }
     },
     "textures": {
@@ -1315,6 +1420,18 @@
             "link": {
                 "name": "BasicHand_Occlusion.png",
                 "file": "textures\\BasicHand_Occlusion.png"
+            }
+        },
+        "389": {
+            "link": {
+                "name": "texture_0",
+                "file": "models\\TestKnife.fbx"
+            }
+        },
+        "394": {
+            "link": {
+                "name": "TestKnife.png",
+                "file": "models\\Textures\\TestKnife.png"
             }
         }
     },
@@ -1382,6 +1499,17 @@
                 "name": "BasicHand_Occlusion.png",
                 "file": "textures\\BasicHand_Occlusion.png"
             }
+        },
+        "393": {
+            "link": {
+                "name": "TestKnife.png",
+                "file": "models\\Textures\\TestKnife.png"
+            },
+            "maxSize": [
+                64,
+                64
+            ],
+            "compress": false
         }
     },
     "materials": {
@@ -1629,6 +1757,19 @@
                 "roughnessMetallicTexture": "294",
                 "normalTexture": "296",
                 "occlusionTexture": "298"
+            }
+        },
+        "390": {
+            "link": {
+                "name": "TestKnife",
+                "file": "models\\TestKnife.fbx"
+            },
+            "Phong": {
+                "diffuseTexture": "394"
+            },
+            "pipeline": "35",
+            "Flat": {
+                "flatTexture": "394"
             }
         }
     },
@@ -2099,7 +2240,9 @@
         "textures/BasicHand_Light_MetallicSmoothness.png",
         "textures/BasicHand_Light_Normal.png",
         "textures/BasicHand_Occlusion.png",
-        "models/L_1Finger.fbx"
+        "models/L_1Finger.fbx",
+        "models/TestKnife.fbx",
+        "models/Textures/TestKnife.png"
     ],
     "fonts": {
         "230": {
