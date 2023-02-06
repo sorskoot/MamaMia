@@ -5,6 +5,9 @@ import { Grabbable } from './grabbable';
 export class Grabber extends ControllerBase {
     static TypeName = 'grabber';
     static Properties = Object.assign({}, ControllerBase.Properties,{
+        handMeshObject: {type: WL.Type.Object, default:null},
+        hideHandOnGrab: {type: WL.Type.Bool, default: true},
+        
         collisionObject: {type: WL.Type.Object},
         //- only on certain layers
         //- grab with trigger or grip

@@ -65,8 +65,6 @@ export class ControllerBase extends Component {
         if(this._gripEnd){
             this.buttonInfo[ControllerButtonType.GRIP].pressed = false;
         }
-        
-
 
         // Reset button states
         this._triggerStart = false;

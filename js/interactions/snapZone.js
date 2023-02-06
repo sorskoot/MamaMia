@@ -88,5 +88,10 @@ export class SnapZone extends EventEmitterComponent {
                 this.emit('snapped', grabbable);
             }
         }
+
+
+        
     }
+
+    
 };

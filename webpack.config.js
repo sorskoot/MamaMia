@@ -1,9 +1,9 @@
 const path = require('path');
 
 module.exports = {
-  entry: './js/index.js',
+  entry: '/MamaMia-bundle.js',
   output: {
-    filename: 'MamaMia.wlp-bundle.js',
+    filename: 'MamaMia-bundle.js',
     path: path.resolve(__dirname, 'deploy'),
   },
 };

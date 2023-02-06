@@ -6,3 +6,7 @@ Interactions:
     ☐ Optional hide hand when grabbing
     ☐ Optional Haptics when grabbing
     ☐ Optional PhysX
+    
+    Bugs:
+        ✔ Only one item should snap to snapZone @done(23-02-01 00:06)
+        ☐ grabbable snaps to zone when not being dropped.

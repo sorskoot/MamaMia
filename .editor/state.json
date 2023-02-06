@@ -4,6 +4,12 @@
             "showInfo": true,
             "showWarnings": true,
             "showErrors": true
+        },
+        "sceneView": {
+            "visualizeObjects": false,
+            "visualizeCollision": true,
+            "visualizeOverdraw": false,
+            "visualizePhysics": true
         }
     },
     "openViews": {
@@ -14,9 +20,9 @@
         "Scene Outline": true,
         "Properties": true,
         "Project Settings": true,
-        "Resources": true,
+        "Resources": false,
         "Project Data": false,
         "Profile": false,
-        "Preferences": true
+        "Preferences": false
     }
 }

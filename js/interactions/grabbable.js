@@ -1,5 +1,5 @@
 import { Component, Object as WLObject} from '@wonderlandengine/api';
-import { reparentKeepTransform } from '../helper';
+import { reparentKeepTransform } from '../utils/helper';
 import { Grabber } from './grabber';
 
 // Maybe we can add an animation to this script as a hand pose for when it has grabbed the object.
@@ -17,7 +17,10 @@ export class Grabbable extends Component {
     /** @type {Grabber} the grabber that is currently holding this item */
     grabbedBy;        
 
-    
+    start(){
+        this.physx = this.object.getComponent('physx');        
+        super.start();
+    }
 
     /** @param {Grabber} grabber that is grabbing the item */
     grab(grabber) {
@@ -26,6 +29,9 @@ export class Grabbable extends Component {
         }
         this.grabbedBy = grabber;
 
+        if(this.physx){
+            this.physx.kinematic = true;
+        }
         reparentKeepTransform(this.object, grabber.object);
         console.log(`grab by grabber ${grabber.object.name}`);
     }
@@ -38,6 +44,9 @@ export class Grabbable extends Component {
         this.grabbedBy = null;
         console.log(`drop by grabber ${grabber.object.name}`);
         reparentKeepTransform(this.object, this.originalParent);
+        if(this.physx){
+            this.physx.kinematic = false;
+        }
     }
 
     IsBeingHeld(){
