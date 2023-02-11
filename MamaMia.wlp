@@ -3,20 +3,20 @@
         "14": {
             "name": "Player",
             "translation": [
+                2.9831426218152046e-8,
                 0.0,
-                0.0,
-                0.0
+                -0.5523564
             ],
             "rotation": [
                 0.0,
+                0.9999999,
                 0.0,
-                0.0,
-                1.0
+                -0.0002438
             ],
             "scale": [
-                0.9999998,
+                0.9999997,
                 1.0,
-                0.9999998
+                0.9999997
             ]
         },
         "17": {
@@ -116,40 +116,6 @@
                 1.0
             ]
         },
-        "21": {
-            "name": "LightDirect",
-            "components": [
-                {
-                    "type": "light",
-                    "light": {
-                        "attenuation": 0.0099999,
-                        "type": "sun",
-                        "color": [
-                            1.0,
-                            0.9999899,
-                            0.9999899
-                        ]
-                    }
-                }
-            ],
-            "parent": "217",
-            "translation": [
-                5.960464477539063e-7,
-                2.9999978,
-                0.0
-            ],
-            "rotation": [
-                0.3535534,
-                0.1464466,
-                0.3535534,
-                0.8535533
-            ],
-            "scale": [
-                1.0,
-                1.0,
-                0.9999999
-            ]
-        },
         "23": {
             "name": "Light.000",
             "components": [
@@ -158,18 +124,20 @@
                     "light": {
                         "attenuation": 0.1,
                         "color": [
-                            0.6156862,
-                            0.8055876,
-                            1.0
-                        ]
-                    }
+                            0.9960784,
+                            0.9527426,
+                            0.8359246
+                        ],
+                        "shadows": false
+                    },
+                    "active": true
                 }
             ],
             "parent": "217",
             "translation": [
-                -4.5154781,
-                3.2236673,
-                -2.5405919
+                -1.9445447,
+                2.2719078,
+                -0.379855
             ],
             "rotation": [
                 0.0,
@@ -344,9 +312,9 @@
             ],
             "parent": "217",
             "translation": [
-                4.627017,
-                -0.746406,
-                -2.5405919
+                3.0716891,
+                -2.1777999,
+                1.894283
             ],
             "rotation": [
                 0.0,
@@ -366,33 +334,67 @@
         "243": {
             "name": "Scene"
         },
-        "244": {
-            "name": "Mesh",
-            "parent": "243",
+        "342": {
+            "link": {
+                "name": "Building",
+                "file": "models\\PizzaPlace.fbx"
+            },
+            "parent": "243"
+        },
+        "343": {
+            "link": {
+                "name": "Counter",
+                "file": "models\\PizzaPlace.fbx"
+            },
+            "parent": "243"
+        },
+        "344": {
+            "link": {
+                "name": "Cupboards",
+                "file": "models\\PizzaPlace.fbx"
+            },
+            "parent": "243"
+        },
+        "345": {
+            "link": {
+                "name": "Oven",
+                "file": "models\\PizzaPlace.fbx"
+            },
+            "parent": "243"
+        },
+        "361": {
+            "name": "Light.000",
             "components": [
                 {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "7",
-                        "material": "20"
-                    }
+                    "type": "light",
+                    "light": {
+                        "attenuation": 0.1,
+                        "color": [
+                            0.9960784,
+                            0.9527426,
+                            0.8359246
+                        ],
+                        "shadows": false
+                    },
+                    "active": true
                 }
             ],
+            "parent": "217",
             "translation": [
-                0.0,
-                0.0,
-                0.0
+                2.2582836,
+                2.2719078,
+                -0.379855
             ],
             "rotation": [
-                -0.7071066,
                 0.0,
                 0.0,
-                0.7071068
+                0.0,
+                1.0
             ],
             "scale": [
-                4.0,
-                4.0,
-                4.0
+                1.0,
+                1.0,
+                1.0
             ]
         }
     },
@@ -450,6 +452,178 @@
                 "name": "Mesh.001",
                 "file": "models\\hand-right.glb"
             }
+        },
+        "246": {
+            "link": {
+                "name": "Plane",
+                "file": "models\\PizzaPlace.fbx"
+            },
+            "importScaling": 1.0
+        },
+        "247": {
+            "link": {
+                "name": "Cube.002",
+                "file": "models\\PizzaPlace.fbx"
+            },
+            "importScaling": 1.0
+        },
+        "248": {
+            "link": {
+                "name": "Cube.003",
+                "file": "models\\PizzaPlace.fbx"
+            },
+            "importScaling": 1.0
+        },
+        "249": {
+            "link": {
+                "name": "Cube",
+                "file": "models\\PizzaPlace.fbx"
+            },
+            "importScaling": 1.0
+        },
+        "259": {
+            "link": {
+                "name": "Building",
+                "file": "models\\PizzaPlace.fbx"
+            }
+        },
+        "260": {
+            "link": {
+                "name": "Counter",
+                "file": "models\\PizzaPlace.fbx"
+            }
+        },
+        "261": {
+            "link": {
+                "name": "Oven",
+                "file": "models\\PizzaPlace.fbx"
+            }
+        },
+        "266": {
+            "link": {
+                "name": "Building.002",
+                "file": "models\\Baked\\Export.fbx"
+            }
+        },
+        "267": {
+            "link": {
+                "name": "Counter.002",
+                "file": "models\\Baked\\Export.fbx"
+            }
+        },
+        "268": {
+            "link": {
+                "name": "Cube.002",
+                "file": "models\\Baked\\Export.fbx"
+            }
+        },
+        "269": {
+            "link": {
+                "name": "Oven.002",
+                "file": "models\\Baked\\Export.fbx"
+            }
+        },
+        "298": {
+            "link": {
+                "name": "Building.006",
+                "file": "models\\Baked\\Export.fbx"
+            }
+        },
+        "299": {
+            "link": {
+                "name": "Counter.003",
+                "file": "models\\Baked\\Export.fbx"
+            }
+        },
+        "300": {
+            "link": {
+                "name": "Cube.004",
+                "file": "models\\Baked\\Export.fbx"
+            }
+        },
+        "301": {
+            "link": {
+                "name": "Oven.003",
+                "file": "models\\Baked\\Export.fbx"
+            }
+        },
+        "318": {
+            "link": {
+                "name": "Building.003",
+                "file": "models\\Baked\\Export.fbx"
+            }
+        },
+        "330": {
+            "link": {
+                "name": "Building-uv1",
+                "file": "models\\PizzaPlace.fbx"
+            }
+        },
+        "331": {
+            "link": {
+                "name": "Building.0",
+                "file": "models\\PizzaPlace.fbx"
+            }
+        },
+        "332": {
+            "link": {
+                "name": "Building-uv1.0",
+                "file": "models\\PizzaPlace.fbx"
+            }
+        },
+        "333": {
+            "link": {
+                "name": "Building.1",
+                "file": "models\\PizzaPlace.fbx"
+            }
+        },
+        "334": {
+            "link": {
+                "name": "Building-uv1.1",
+                "file": "models\\PizzaPlace.fbx"
+            }
+        },
+        "335": {
+            "link": {
+                "name": "Building.2",
+                "file": "models\\PizzaPlace.fbx"
+            }
+        },
+        "336": {
+            "link": {
+                "name": "Building-uv1.2",
+                "file": "models\\PizzaPlace.fbx"
+            }
+        },
+        "337": {
+            "link": {
+                "name": "Building.3",
+                "file": "models\\PizzaPlace.fbx"
+            }
+        },
+        "338": {
+            "link": {
+                "name": "Building-uv1.3",
+                "file": "models\\PizzaPlace.fbx"
+            }
+        },
+        "339": {
+            "link": {
+                "name": "Counter-uv1",
+                "file": "models\\PizzaPlace.fbx"
+            }
+        },
+        "340": {
+            "link": {
+                "name": "Cube.003-uv1",
+                "file": "models\\PizzaPlace.fbx"
+            }
+        },
+        "341": {
+            "link": {
+                "name": "Oven-uv1",
+                "file": "models\\PizzaPlace.fbx"
+            }
         }
     },
     "textures": {
@@ -459,6 +633,198 @@
                 "file": "default"
             },
             "name": "DefaultFont"
+        },
+        "258": {
+            "link": {
+                "name": "donutcorn_a_typical_street_in_a_small_village_in_italy_0c3180ca-e585-4a39-9ee0-ca7224420f10.png",
+                "file": "models\\Textures\\donutcorn_a_typical_street_in_a_small_village_in_italy_0c3180ca-e585-4a39-9ee0-ca7224420f10.png"
+            }
+        },
+        "275": {
+            "link": {
+                "name": "Building_Bake1_CyclesBake_COMBINED.png",
+                "file": "models\\Baked\\Building_Bake1_CyclesBake_COMBINED.png"
+            }
+        },
+        "277": {
+            "link": {
+                "name": "Counter_Bake1_CyclesBake_COMBINED.png",
+                "file": "models\\Baked\\Counter_Bake1_CyclesBake_COMBINED.png"
+            }
+        },
+        "279": {
+            "link": {
+                "name": "Cupboards_Bake1_CyclesBake_COMBINED.png",
+                "file": "models\\Baked\\Cupboards_Bake1_CyclesBake_COMBINED.png"
+            }
+        },
+        "281": {
+            "link": {
+                "name": "Oven_Bake1_CyclesBake_COMBINED.png",
+                "file": "models\\Baked\\Oven_Bake1_CyclesBake_COMBINED.png"
+            }
+        },
+        "290": {
+            "link": {
+                "name": "texture_0",
+                "file": "models\\Baked\\Export.fbx"
+            }
+        },
+        "291": {
+            "link": {
+                "name": "texture_1",
+                "file": "models\\Baked\\Export.fbx"
+            }
+        },
+        "292": {
+            "link": {
+                "name": "texture_2",
+                "file": "models\\Baked\\Export.fbx"
+            }
+        },
+        "293": {
+            "link": {
+                "name": "texture_3",
+                "file": "models\\Baked\\Export.fbx"
+            }
+        },
+        "294": {
+            "link": {
+                "name": "texture_4",
+                "file": "models\\Baked\\Export.fbx"
+            }
+        },
+        "295": {
+            "link": {
+                "name": "texture_5",
+                "file": "models\\Baked\\Export.fbx"
+            }
+        },
+        "296": {
+            "link": {
+                "name": "texture_6",
+                "file": "models\\Baked\\Export.fbx"
+            }
+        },
+        "297": {
+            "link": {
+                "name": "texture_7",
+                "file": "models\\Baked\\Export.fbx"
+            }
+        },
+        "303": {
+            "link": {
+                "name": "Building_Bake1_PBR_Diffuse.png",
+                "file": "models\\Baked\\Building_Bake1_PBR_Diffuse.png"
+            }
+        },
+        "305": {
+            "link": {
+                "name": "Building_Bake1_PBR_Normal.png",
+                "file": "models\\Baked\\Building_Bake1_PBR_Normal.png"
+            }
+        },
+        "307": {
+            "link": {
+                "name": "Building_Bake1_PBR_Roughness.png",
+                "file": "models\\Baked\\Building_Bake1_PBR_Roughness.png"
+            }
+        },
+        "311": {
+            "link": {
+                "name": "CeramicFloor_ambientocclusion.png",
+                "file": "textures\\CeramicFloor_ambientocclusion.png"
+            }
+        },
+        "313": {
+            "link": {
+                "name": "CeramicFloor_basecolor.png",
+                "file": "textures\\CeramicFloor_basecolor.png"
+            }
+        },
+        "315": {
+            "link": {
+                "name": "CeramicFloor_roughness.png",
+                "file": "textures\\CeramicFloor_roughness.png"
+            }
+        },
+        "317": {
+            "link": {
+                "name": "CeramicFloor_normal.png",
+                "file": "textures\\CeramicFloor_normal.png"
+            }
+        },
+        "322": {
+            "link": {
+                "name": "PixelTest_basecolor.png",
+                "file": "models\\Textures\\PixelTest_basecolor.png"
+            }
+        },
+        "324": {
+            "link": {
+                "name": "texture_0",
+                "file": "models\\PizzaPlace.fbx"
+            }
+        },
+        "353": {
+            "link": {
+                "name": "PixelTest_normal.png",
+                "file": "models\\Textures\\PixelTest_normal.png"
+            }
+        },
+        "355": {
+            "link": {
+                "name": "PixelTest_ambientocclusion.png",
+                "file": "models\\Textures\\PixelTest_ambientocclusion.png"
+            }
+        },
+        "357": {
+            "link": {
+                "name": "PixelTest_metallic.png",
+                "file": "models\\Textures\\PixelTest_metallic.png"
+            }
+        },
+        "363": {
+            "link": {
+                "name": "PixelBrick_basecolor.png",
+                "file": "models\\Textures\\PixelBrick_basecolor.png"
+            }
+        },
+        "365": {
+            "link": {
+                "name": "PixelBrick_normal.png",
+                "file": "models\\Textures\\PixelBrick_normal.png"
+            }
+        },
+        "367": {
+            "link": {
+                "name": "PixelBrick_ambientocclusion.png",
+                "file": "models\\Textures\\PixelBrick_ambientocclusion.png"
+            }
+        },
+        "369": {
+            "link": {
+                "name": "PixelWood_basecolor.png",
+                "file": "models\\Textures\\PixelWood_basecolor.png"
+            }
+        },
+        "371": {
+            "link": {
+                "name": "PixelWood_roughness.png",
+                "file": "models\\Textures\\PixelWood_roughness.png"
+            }
+        },
+        "373": {
+            "link": {
+                "name": "PixelWood_normal.png",
+                "file": "models\\Textures\\PixelWood_normal.png"
+            }
+        },
+        "375": {
+            "link": {
+                "name": "PixelWood_ambientocclusion.png",
+                "file": "models\\Textures\\PixelWood_ambientocclusion.png"
+            }
         }
     },
     "images": {
@@ -507,6 +873,274 @@
                 256,
                 256
             ]
+        },
+        "257": {
+            "link": {
+                "name": "donutcorn_a_typical_street_in_a_small_village_in_italy_0c3180ca-e585-4a39-9ee0-ca7224420f10.png",
+                "file": "models\\Textures\\donutcorn_a_typical_street_in_a_small_village_in_italy_0c3180ca-e585-4a39-9ee0-ca7224420f10.png"
+            },
+            "maxSize": [
+                1536,
+                1024
+            ],
+            "compress": false
+        },
+        "274": {
+            "link": {
+                "name": "Building_Bake1_CyclesBake_COMBINED.png",
+                "file": "models\\Baked\\Building_Bake1_CyclesBake_COMBINED.png"
+            },
+            "maxSize": [
+                1024,
+                1024
+            ],
+            "compress": false
+        },
+        "276": {
+            "link": {
+                "name": "Counter_Bake1_CyclesBake_COMBINED.png",
+                "file": "models\\Baked\\Counter_Bake1_CyclesBake_COMBINED.png"
+            },
+            "maxSize": [
+                1024,
+                1024
+            ],
+            "compress": false
+        },
+        "278": {
+            "link": {
+                "name": "Cupboards_Bake1_CyclesBake_COMBINED.png",
+                "file": "models\\Baked\\Cupboards_Bake1_CyclesBake_COMBINED.png"
+            },
+            "maxSize": [
+                1024,
+                1024
+            ],
+            "compress": false
+        },
+        "280": {
+            "link": {
+                "name": "Oven_Bake1_CyclesBake_COMBINED.png",
+                "file": "models\\Baked\\Oven_Bake1_CyclesBake_COMBINED.png"
+            },
+            "maxSize": [
+                1024,
+                1024
+            ],
+            "compress": false
+        },
+        "282": {
+            "link": {
+                "name": "image_0",
+                "file": "models\\Baked\\Export.fbx"
+            }
+        },
+        "283": {
+            "link": {
+                "name": "image_1",
+                "file": "models\\Baked\\Export.fbx"
+            }
+        },
+        "284": {
+            "link": {
+                "name": "image_2",
+                "file": "models\\Baked\\Export.fbx"
+            }
+        },
+        "285": {
+            "link": {
+                "name": "image_3",
+                "file": "models\\Baked\\Export.fbx"
+            }
+        },
+        "286": {
+            "link": {
+                "name": "image_4",
+                "file": "models\\Baked\\Export.fbx"
+            }
+        },
+        "287": {
+            "link": {
+                "name": "image_5",
+                "file": "models\\Baked\\Export.fbx"
+            },
+            "maxSize": [
+                4096,
+                4096
+            ],
+            "stream": false,
+            "compress": true
+        },
+        "288": {
+            "link": {
+                "name": "image_6",
+                "file": "models\\Baked\\Export.fbx"
+            }
+        },
+        "289": {
+            "link": {
+                "name": "image_7",
+                "file": "models\\Baked\\Export.fbx"
+            }
+        },
+        "302": {
+            "link": {
+                "name": "Building_Bake1_PBR_Diffuse.png",
+                "file": "models\\Baked\\Building_Bake1_PBR_Diffuse.png"
+            }
+        },
+        "304": {
+            "link": {
+                "name": "Building_Bake1_PBR_Normal.png",
+                "file": "models\\Baked\\Building_Bake1_PBR_Normal.png"
+            }
+        },
+        "306": {
+            "link": {
+                "name": "Building_Bake1_PBR_Roughness.png",
+                "file": "models\\Baked\\Building_Bake1_PBR_Roughness.png"
+            }
+        },
+        "310": {
+            "link": {
+                "name": "CeramicFloor_ambientocclusion.png",
+                "file": "textures\\CeramicFloor_ambientocclusion.png"
+            }
+        },
+        "312": {
+            "link": {
+                "name": "CeramicFloor_basecolor.png",
+                "file": "textures\\CeramicFloor_basecolor.png"
+            }
+        },
+        "314": {
+            "link": {
+                "name": "CeramicFloor_roughness.png",
+                "file": "textures\\CeramicFloor_roughness.png"
+            }
+        },
+        "316": {
+            "link": {
+                "name": "CeramicFloor_normal.png",
+                "file": "textures\\CeramicFloor_normal.png"
+            }
+        },
+        "321": {
+            "link": {
+                "name": "PixelTest_basecolor.png",
+                "file": "models\\Textures\\PixelTest_basecolor.png"
+            },
+            "maxSize": [
+                256,
+                256
+            ],
+            "compress": true
+        },
+        "323": {
+            "link": {
+                "name": "image_0",
+                "file": "models\\PizzaPlace.fbx"
+            }
+        },
+        "352": {
+            "link": {
+                "name": "PixelTest_normal.png",
+                "file": "models\\Textures\\PixelTest_normal.png"
+            },
+            "maxSize": [
+                256,
+                256
+            ]
+        },
+        "354": {
+            "link": {
+                "name": "PixelTest_ambientocclusion.png",
+                "file": "models\\Textures\\PixelTest_ambientocclusion.png"
+            },
+            "maxSize": [
+                256,
+                256
+            ]
+        },
+        "356": {
+            "link": {
+                "name": "PixelTest_metallic.png",
+                "file": "models\\Textures\\PixelTest_metallic.png"
+            }
+        },
+        "362": {
+            "link": {
+                "name": "PixelBrick_basecolor.png",
+                "file": "models\\Textures\\PixelBrick_basecolor.png"
+            },
+            "maxSize": [
+                1024,
+                1024
+            ]
+        },
+        "364": {
+            "link": {
+                "name": "PixelBrick_normal.png",
+                "file": "models\\Textures\\PixelBrick_normal.png"
+            },
+            "maxSize": [
+                1024,
+                1024
+            ]
+        },
+        "366": {
+            "link": {
+                "name": "PixelBrick_ambientocclusion.png",
+                "file": "models\\Textures\\PixelBrick_ambientocclusion.png"
+            },
+            "maxSize": [
+                1024,
+                1024
+            ]
+        },
+        "368": {
+            "link": {
+                "name": "PixelWood_basecolor.png",
+                "file": "models\\Textures\\PixelWood_basecolor.png"
+            },
+            "maxSize": [
+                1024,
+                1024
+            ],
+            "compress": false
+        },
+        "370": {
+            "link": {
+                "name": "PixelWood_roughness.png",
+                "file": "models\\Textures\\PixelWood_roughness.png"
+            },
+            "maxSize": [
+                1024,
+                1024
+            ],
+            "compress": false
+        },
+        "372": {
+            "link": {
+                "name": "PixelWood_normal.png",
+                "file": "models\\Textures\\PixelWood_normal.png"
+            },
+            "maxSize": [
+                1024,
+                1024
+            ],
+            "compress": false
+        },
+        "374": {
+            "link": {
+                "name": "PixelWood_ambientocclusion.png",
+                "file": "models\\Textures\\PixelWood_ambientocclusion.png"
+            },
+            "maxSize": [
+                1024,
+                1024
+            ],
+            "compress": false
         }
     },
     "materials": {
@@ -543,6 +1177,10 @@
                     1.0
                 ],
                 "shininess": 1
+            },
+            "pipeline": "35",
+            "Flat": {
+                "flatTexture": "258"
             }
         },
         "22": {
@@ -749,6 +1387,160 @@
                     1.0
                 ]
             }
+        },
+        "245": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "models\\PizzaPlace.fbx"
+            }
+        },
+        "262": {
+            "link": {
+                "name": "Building_Baked",
+                "file": "models\\Baked\\Export.fbx"
+            },
+            "pipeline": "35",
+            "Flat": {
+                "flatTexture": "275"
+            },
+            "Phong": {
+                "shininess": 7
+            },
+            "Physical": {
+                "albedoTexture": "303",
+                "normalTexture": "305",
+                "roughnessFactor": 0.8,
+                "metallicFactor": 0.5,
+                "roughnessMetallicTexture": "307"
+            }
+        },
+        "263": {
+            "link": {
+                "name": "Counter_Baked",
+                "file": "models\\Baked\\Export.fbx"
+            },
+            "pipeline": "35",
+            "Flat": {
+                "flatTexture": "277"
+            }
+        },
+        "264": {
+            "link": {
+                "name": "Cupboards_Baked",
+                "file": "models\\Baked\\Export.fbx"
+            },
+            "pipeline": "35",
+            "Flat": {
+                "flatTexture": "279"
+            }
+        },
+        "265": {
+            "link": {
+                "name": "Oven_Baked",
+                "file": "models\\Baked\\Export.fbx"
+            },
+            "pipeline": "35",
+            "Flat": {
+                "flatTexture": "281"
+            }
+        },
+        "309": {
+            "name": "Tiles",
+            "pipeline": "229",
+            "Physical": {
+                "occlusionTexture": "311",
+                "albedoTexture": "313",
+                "roughnessMetallicTexture": "315",
+                "normalTexture": "317"
+            }
+        },
+        "320": {
+            "name": "Wall",
+            "pipeline": "35",
+            "Flat": {
+                "flatTexture": "322"
+            }
+        },
+        "325": {
+            "link": {
+                "name": "Stylized_Planks",
+                "file": "models\\PizzaPlace.fbx"
+            },
+            "pipeline": "235",
+            "Physical": {
+                "albedoTexture": "369",
+                "roughnessMetallicTexture": "371",
+                "normalTexture": "373",
+                "occlusionTexture": "375",
+                "occlusionFactor": 0.5
+            },
+            "Phong": {
+                "diffuseTexture": "369",
+                "normalTexture": "373",
+                "shininess": 0
+            }
+        },
+        "326": {
+            "link": {
+                "name": "NoMaterial",
+                "file": "models\\PizzaPlace.fbx"
+            }
+        },
+        "327": {
+            "link": {
+                "name": "Simple_White_Tiles",
+                "file": "models\\PizzaPlace.fbx"
+            }
+        },
+        "328": {
+            "link": {
+                "name": "BrickWall",
+                "file": "models\\PizzaPlace.fbx"
+            },
+            "pipeline": "235",
+            "PhongSorskoot": {
+                "diffuseTexture": "322"
+            },
+            "Phong": {
+                "normalTexture": "365",
+                "specularColor": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "shininess": 0,
+                "diffuseTexture": "363",
+                "ambientFactor": 0.5
+            },
+            "Physical": {
+                "albedoTexture": "363",
+                "albedoColor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "normalTexture": "365",
+                "occlusionTexture": "367",
+                "roughnessMetallicTexture": "357",
+                "roughnessFactor": 1.0
+            },
+            "SorskootPhysical": {
+                "albedoTexture": "322",
+                "albedoColor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ]
+            }
+        },
+        "329": {
+            "link": {
+                "name": "SmoothPlaster",
+                "file": "models\\PizzaPlace.fbx"
+            }
         }
     },
     "shaders": {
@@ -871,6 +1663,24 @@
                 "name": "TileFeedback.frag",
                 "file": "default"
             }
+        },
+        "346": {
+            "link": {
+                "name": "PhongSorskoot.frag",
+                "file": "default"
+            }
+        },
+        "349": {
+            "link": {
+                "name": "OriginalPhong.frag",
+                "file": "default"
+            }
+        },
+        "358": {
+            "link": {
+                "name": "SorskootPhysical.frag",
+                "file": "default"
+            }
         }
     },
     "settings": {
@@ -909,7 +1719,11 @@
             },
             "bloom": {
                 "enabled": false
-            }
+            },
+            "compressedTextureAtlasSize": [
+                16384,
+                16384
+            ]
         },
         "editor": {
             "serverPort": 7551
@@ -972,7 +1786,8 @@
                 "file": "default"
             },
             "features": {
-                "ALPHA_MASKED": true
+                "ALPHA_MASKED": true,
+                "NORMAL_MAPPING": false
             }
         },
         "39": {
@@ -1005,7 +1820,9 @@
                 "file": "default"
             },
             "features": {
-                "ALPHA_MASKED": true
+                "ALPHA_MASKED": true,
+                "NORMAL_MAPPING": true,
+                "OCCLUSION_TEXTURE": true
             }
         },
         "232": {
@@ -1031,6 +1848,51 @@
                 "name": "Sky",
                 "file": "default"
             }
+        },
+        "347": {
+            "link": {
+                "name": "PhongSorskoot",
+                "file": "default"
+            }
+        },
+        "348": {
+            "link": {
+                "name": "PhongSorskoot Textured",
+                "file": "default"
+            }
+        },
+        "350": {
+            "link": {
+                "name": "OriginalPhong Opaque",
+                "file": "default"
+            }
+        },
+        "351": {
+            "link": {
+                "name": "OriginalPhong Opaque Textured",
+                "file": "default"
+            }
+        },
+        "359": {
+            "link": {
+                "name": "SorskootPhysical Opaque",
+                "file": "default"
+            }
+        },
+        "360": {
+            "link": {
+                "name": "SorskootPhysical Opaque Textured",
+                "file": "default"
+            },
+            "castShadows": true,
+            "features": {
+                "SHADOW_NORMAL_OFFSET_SLOPE_SCALE": true,
+                "SHADOW_NORMAL_OFFSET_UV_ONLY": true,
+                "ALPHA_MASKED": true,
+                "OCCLUSION_TEXTURE": true,
+                "NORMAL_MAPPING": true
+            },
+            "shader": "227"
         }
     },
     "files": [
@@ -1039,7 +1901,32 @@
         "models/hand-left.glb",
         "models/hand-right.glb",
         "models/button.glb",
-        "models/teleport-indicator.glb"
+        "models/teleport-indicator.glb",
+        "models/PizzaPlace.fbx",
+        "models/Textures/donutcorn_a_typical_street_in_a_small_village_in_italy_0c3180ca-e585-4a39-9ee0-ca7224420f10.png",
+        "models/Baked/Export.fbx",
+        "models/Baked/Building_Bake1_CyclesBake_COMBINED.png",
+        "models/Baked/Counter_Bake1_CyclesBake_COMBINED.png",
+        "models/Baked/Cupboards_Bake1_CyclesBake_COMBINED.png",
+        "models/Baked/Oven_Bake1_CyclesBake_COMBINED.png",
+        "models/Baked/Building_Bake1_PBR_Diffuse.png",
+        "models/Baked/Building_Bake1_PBR_Normal.png",
+        "models/Baked/Building_Bake1_PBR_Roughness.png",
+        "textures/CeramicFloor_ambientocclusion.png",
+        "textures/CeramicFloor_basecolor.png",
+        "textures/CeramicFloor_roughness.png",
+        "textures/CeramicFloor_normal.png",
+        "models/Textures/PixelTest_basecolor.png",
+        "models/Textures/PixelTest_normal.png",
+        "models/Textures/PixelTest_ambientocclusion.png",
+        "models/Textures/PixelTest_metallic.png",
+        "models/Textures/PixelBrick_basecolor.png",
+        "models/Textures/PixelBrick_normal.png",
+        "models/Textures/PixelBrick_ambientocclusion.png",
+        "models/Textures/PixelWood_basecolor.png",
+        "models/Textures/PixelWood_roughness.png",
+        "models/Textures/PixelWood_normal.png",
+        "models/Textures/PixelWood_ambientocclusion.png"
     ],
     "fonts": {
         "238": {

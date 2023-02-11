@@ -4,14 +4,16 @@
   "description": "My Wonderland project",
   "main": "js/index.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js --mode development",
+    "buildwebpack": "webpack --config webpack.config.js --mode development",
+    "build": "esbuild --bundle --minify --sourcemap --target=es2022 --format=esm --outdir=deploy MamaMia-bundle.js",
     "buildProd": "webpack --config webpack.config.js --mode production",
-    "forward":"adb reverse tcp:7551 tcp:7551"
+    "forward": "adb reverse tcp:7551 tcp:7551"
   },
   "keywords": [
     "wonderland-engine"
   ],
   "devDependencies": {
+    "esbuild": "^0.17.7",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1"
   },
