@@ -14,10 +14,10 @@
 import '@wonderlandengine/components';
 import '@wonderlandengine/components/player-height';
 
-import { Grabbable } from './js/interactions/grabbable';
-import { Grabber } from './js/interactions/grabber';
-import { SnapZone } from './js/interactions/snapZone';
-import { Test } from './js/test';
+import { Grabbable } from './interactions/grabbable';
+import { Grabber } from './interactions/grabber';
+import { SnapZone } from './interactions/snapZone';
+import { Test } from './test';
 
 WL.registerComponent(Grabber);
 WL.registerComponent(Grabbable);

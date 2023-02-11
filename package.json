@@ -5,7 +5,7 @@
   "main": "js/index.js",
   "scripts": {
     "buildwebpack": "webpack --config webpack.config.js --mode development",
-    "build": "esbuild --bundle --minify --sourcemap --target=es2022 --format=esm --outdir=deploy MamaMia-bundle.js",
+    "buildDev": "esbuild ./js/index.js --bundle --minify --sourcemap --target=ES2022  --outfile=\"deploy/MamaMia-bundle.js\"",
     "buildProd": "webpack --config webpack.config.js --mode production",
     "forward": "adb reverse tcp:7551 tcp:7551"
   },

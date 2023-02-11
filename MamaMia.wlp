@@ -1703,7 +1703,7 @@
                 "MamaMia-bundle.js"
             ],
             "useInternalBundler": false,
-            "npmScript": "build"
+            "npmScript": "buildDev"
         },
         "runtime": {
             "visualizeColliders": false,

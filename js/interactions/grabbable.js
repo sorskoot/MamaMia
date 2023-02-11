@@ -1,4 +1,4 @@
-import { Component, Object as WLObject} from '@wonderlandengine/api';
+import { Component, Object as Object3D} from '@wonderlandengine/api';
 import { reparentKeepTransform } from '../utils/helper';
 import { Grabber } from './grabber';
 
@@ -11,7 +11,7 @@ export class Grabbable extends Component {
     static Properties = {
     }
     
-    /** @type {WLObject} the original parent of the object */
+    /** @type {Object3D} the original parent of the object */
     originalParent = null;
     
     /** @type {Grabber} the grabber that is currently holding this item */
