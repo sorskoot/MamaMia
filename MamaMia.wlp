@@ -3,9 +3,9 @@
         "14": {
             "name": "Player",
             "translation": [
-                -0.2351875,
+                0.094463,
                 0.0,
-                -0.2465798
+                -0.3005837
             ],
             "rotation": [
                 0.0,
@@ -14,9 +14,9 @@
                 -0.0002438
             ],
             "scale": [
-                0.9999998,
+                1.0000002,
                 1.0,
-                0.9999998
+                1.0000002
             ]
         },
         "17": {
@@ -352,20 +352,6 @@
                 1.0
             ]
         },
-        "343": {
-            "link": {
-                "name": "Counter",
-                "file": "models\\PizzaPlace.fbx"
-            },
-            "parent": "243"
-        },
-        "344": {
-            "link": {
-                "name": "Cupboards",
-                "file": "models\\PizzaPlace.fbx"
-            },
-            "parent": "243"
-        },
         "361": {
             "name": "Light.000",
             "components": [
@@ -408,8 +394,8 @@
             },
             "parent": "243",
             "translation": [
-                0.0382203,
-                0.8844861,
+                0.3077216,
+                0.884486,
                 0.1528349
             ],
             "rotation": [
@@ -499,8 +485,8 @@
             },
             "parent": "243",
             "translation": [
-                0.4785507,
-                0.8844861,
+                -0.1072983,
+                0.884486,
                 0.1528349
             ],
             "rotation": [
@@ -530,9 +516,9 @@
             },
             "parent": "243",
             "translation": [
-                -0.3960689,
-                0.8844861,
-                0.1528349
+                -0.5621448,
+                0.8857244,
+                0.1727743
             ],
             "rotation": [
                 0.0,
@@ -619,6 +605,198 @@
                 {
                     "mesh": {
                         "skin": null
+                    }
+                }
+            ]
+        },
+        "518": {
+            "name": "Ingredients",
+            "parent": "243",
+            "translation": [
+                0.767039,
+                0.8389468,
+                0.306589
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "521": {
+            "link": {
+                "name": "Sauce",
+                "file": "models\\Sauce.fbx"
+            },
+            "parent": "518",
+            "translation": [
+                0.0046049,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "529": {
+            "name": "Tools",
+            "parent": "243",
+            "translation": [
+                0.5466298,
+                0.9250905,
+                -0.0180884
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "535": {
+            "link": {
+                "name": "SauceLadle",
+                "file": "models\\SauceLadle.fbx"
+            },
+            "parent": "529",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "522"
+                    }
+                },
+                {
+                    "mesh": {
+                        "material": "523"
+                    }
+                }
+            ],
+            "translation": [
+                -3.5762786865234375e-7,
+                0.0845314,
+                -0.0107855
+            ],
+            "rotation": [
+                0.0,
+                0.0980174,
+                0.0,
+                0.9951846
+            ],
+            "scale": [
+                0.9999984,
+                1.0,
+                0.9999984
+            ]
+        },
+        "548": {
+            "link": {
+                "name": "Counter",
+                "file": "models\\Counter.fbx"
+            },
+            "parent": "386",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                {
+                    "active": true
+                },
+                null,
+                {
+                    "mesh": {
+                        "material": "522"
+                    }
+                },
+                {
+                    "mesh": {
+                        "material": "538"
+                    },
+                    "active": true
+                }
+            ]
+        },
+        "557": {
+            "link": {
+                "name": "Cupboards",
+                "file": "models\\Cupboards.fbx"
+            },
+            "parent": "386",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "536"
+                    }
+                },
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ]
+        },
+        "562": {
+            "link": {
+                "name": "ToppingBowl",
+                "file": "models\\ToppingBowl.fbx"
+            },
+            "parent": "518",
+            "translation": [
+                -0.3212628,
+                0.0,
+                0.2142591
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "522"
+                    }
+                },
+                {
+                    "mesh": {
+                        "material": "563"
                     }
                 }
             ]
@@ -946,6 +1124,114 @@
                 "name": "BasicHand",
                 "file": "models\\Hands\\SK_BasicHand_L.fbx"
             }
+        },
+        "520": {
+            "link": {
+                "name": "Plane",
+                "file": "models\\Sauce.fbx"
+            }
+        },
+        "524": {
+            "link": {
+                "name": "Plane.0",
+                "file": "models\\Sauce.fbx"
+            }
+        },
+        "532": {
+            "link": {
+                "name": "Sphere.001",
+                "file": "models\\SauceLadle.fbx"
+            }
+        },
+        "533": {
+            "link": {
+                "name": "Sphere.001.0",
+                "file": "models\\SauceLadle.fbx"
+            }
+        },
+        "540": {
+            "link": {
+                "name": "Counter",
+                "file": "models\\Counter.fbx"
+            }
+        },
+        "541": {
+            "link": {
+                "name": "Counter-uv1",
+                "file": "models\\Counter.fbx"
+            }
+        },
+        "542": {
+            "link": {
+                "name": "Counter.0",
+                "file": "models\\Counter.fbx"
+            }
+        },
+        "543": {
+            "link": {
+                "name": "Counter-uv1.0",
+                "file": "models\\Counter.fbx"
+            }
+        },
+        "544": {
+            "link": {
+                "name": "Counter.1",
+                "file": "models\\Counter.fbx"
+            }
+        },
+        "545": {
+            "link": {
+                "name": "Counter-uv1.1",
+                "file": "models\\Counter.fbx"
+            }
+        },
+        "546": {
+            "link": {
+                "name": "Counter.2",
+                "file": "models\\Counter.fbx"
+            }
+        },
+        "547": {
+            "link": {
+                "name": "Counter-uv1.2",
+                "file": "models\\Counter.fbx"
+            }
+        },
+        "553": {
+            "link": {
+                "name": "Cube.003",
+                "file": "models\\Cupboards.fbx"
+            }
+        },
+        "554": {
+            "link": {
+                "name": "Cube.003-uv1",
+                "file": "models\\Cupboards.fbx"
+            }
+        },
+        "555": {
+            "link": {
+                "name": "Cube.003.0",
+                "file": "models\\Cupboards.fbx"
+            }
+        },
+        "556": {
+            "link": {
+                "name": "Cube.003-uv1.0",
+                "file": "models\\Cupboards.fbx"
+            }
+        },
+        "560": {
+            "link": {
+                "name": "ToppingBowl",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "561": {
+            "link": {
+                "name": "ToppingBowl.0",
+                "file": "models\\ToppingBowl.fbx"
+            }
         }
     },
     "textures": {
@@ -1231,6 +1517,36 @@
                 "name": "Hands_1.png",
                 "file": "models\\Hands\\Hands_1.png"
             }
+        },
+        "526": {
+            "link": {
+                "name": "PizzeTomatoSauce_basecolor.png",
+                "file": "models\\Textures\\PizzeTomatoSauce_basecolor.png"
+            }
+        },
+        "528": {
+            "link": {
+                "name": "PizzeTomatoSauce_normal.png",
+                "file": "models\\Textures\\PizzeTomatoSauce_normal.png"
+            }
+        },
+        "550": {
+            "link": {
+                "name": "Marble_basecolor.png",
+                "file": "models\\Textures\\Marble_basecolor.png"
+            }
+        },
+        "565": {
+            "link": {
+                "name": "ShreddedCheese_basecolor.png",
+                "file": "models\\Textures\\ShreddedCheese_basecolor.png"
+            }
+        },
+        "567": {
+            "link": {
+                "name": "ShreddedCheese_normal.png",
+                "file": "models\\Textures\\ShreddedCheese_normal.png"
+            }
         }
     },
     "images": {
@@ -1431,48 +1747,17 @@
                 "file": "textures\\CeramicFloor_normal.png"
             }
         },
-        "321": {
-            "link": {
-                "name": "PixelTest_basecolor.png",
-                "file": "models\\Textures\\PixelTest_basecolor.png"
-            },
-            "maxSize": [
-                256,
-                256
-            ],
-            "compress": true
-        },
         "323": {
             "link": {
                 "name": "image_0",
                 "file": "models\\PizzaPlace.fbx"
-            }
-        },
-        "352": {
-            "link": {
-                "name": "PixelTest_normal.png",
-                "file": "models\\Textures\\PixelTest_normal.png"
             },
             "maxSize": [
-                256,
-                256
-            ]
-        },
-        "354": {
-            "link": {
-                "name": "PixelTest_ambientocclusion.png",
-                "file": "models\\Textures\\PixelTest_ambientocclusion.png"
-            },
-            "maxSize": [
-                256,
-                256
-            ]
-        },
-        "356": {
-            "link": {
-                "name": "PixelTest_metallic.png",
-                "file": "models\\Textures\\PixelTest_metallic.png"
-            }
+                64,
+                64
+            ],
+            "compress": false,
+            "stream": false
         },
         "362": {
             "link": {
@@ -1482,7 +1767,9 @@
             "maxSize": [
                 1024,
                 1024
-            ]
+            ],
+            "compress": false,
+            "stream": false
         },
         "364": {
             "link": {
@@ -1492,7 +1779,9 @@
             "maxSize": [
                 1024,
                 1024
-            ]
+            ],
+            "compress": false,
+            "stream": false
         },
         "366": {
             "link": {
@@ -1502,7 +1791,9 @@
             "maxSize": [
                 1024,
                 1024
-            ]
+            ],
+            "compress": false,
+            "stream": false
         },
         "368": {
             "link": {
@@ -1513,7 +1804,8 @@
                 1024,
                 1024
             ],
-            "compress": false
+            "compress": false,
+            "stream": false
         },
         "370": {
             "link": {
@@ -1524,7 +1816,8 @@
                 1024,
                 1024
             ],
-            "compress": false
+            "compress": false,
+            "stream": false
         },
         "372": {
             "link": {
@@ -1535,7 +1828,8 @@
                 1024,
                 1024
             ],
-            "compress": false
+            "compress": false,
+            "stream": false
         },
         "374": {
             "link": {
@@ -1546,7 +1840,8 @@
                 1024,
                 1024
             ],
-            "compress": false
+            "compress": false,
+            "stream": false
         },
         "381": {
             "link": {
@@ -1556,7 +1851,9 @@
             "maxSize": [
                 1024,
                 1024
-            ]
+            ],
+            "compress": false,
+            "stream": false
         },
         "383": {
             "link": {
@@ -1566,31 +1863,57 @@
             "maxSize": [
                 1024,
                 1024
-            ]
+            ],
+            "compress": false,
+            "stream": false
         },
         "395": {
             "link": {
                 "name": "image_0",
                 "file": "models\\Building_UpperWalls.fbx"
-            }
+            },
+            "stream": false,
+            "compress": false,
+            "maxSize": [
+                64,
+                64
+            ]
         },
         "405": {
             "link": {
                 "name": "image_0",
                 "file": "models\\Oven.fbx"
-            }
+            },
+            "compress": false,
+            "stream": false,
+            "maxSize": [
+                64,
+                64
+            ]
         },
         "414": {
             "link": {
                 "name": "PixelConcrete_basecolor.png",
                 "file": "models\\Textures\\PixelConcrete_basecolor.png"
-            }
+            },
+            "maxSize": [
+                1024,
+                1024
+            ],
+            "compress": false,
+            "stream": false
         },
         "416": {
             "link": {
                 "name": "PixelConcrete_normal.png",
                 "file": "models\\Textures\\PixelConcrete_normal.png"
-            }
+            },
+            "maxSize": [
+                1024,
+                1024
+            ],
+            "stream": false,
+            "compress": false
         },
         "420": {
             "link": {
@@ -1598,38 +1921,118 @@
                 "file": "models\\Textures\\PizzaTopping_0.png"
             },
             "maxSize": [
-                352,
-                352
-            ]
+                176,
+                176
+            ],
+            "compress": false,
+            "stream": false
         },
         "424": {
             "link": {
                 "name": "PizzaTopping_1.png",
                 "file": "models\\Textures\\PizzaTopping_1.png"
-            }
+            },
+            "maxSize": [
+                176,
+                176
+            ],
+            "compress": false,
+            "stream": false
         },
         "427": {
             "link": {
                 "name": "image_0",
                 "file": "models\\Building_LowerWalls.fbx"
-            }
+            },
+            "compress": false,
+            "stream": false,
+            "maxSize": [
+                1024,
+                1024
+            ]
         },
         "430": {
             "link": {
                 "name": "Wainscot_Paneling_normal.png",
                 "file": "models\\Textures\\Wainscot_Paneling_normal.png"
-            }
+            },
+            "stream": false,
+            "compress": false,
+            "maxSize": [
+                1024,
+                1024
+            ]
         },
         "490": {
             "link": {
                 "name": "Hands_0.png",
                 "file": "models\\Hands\\Hands_0.png"
-            }
+            },
+            "compress": false,
+            "stream": false,
+            "maxSize": [
+                512,
+                512
+            ]
         },
         "492": {
             "link": {
                 "name": "Hands_1.png",
                 "file": "models\\Hands\\Hands_1.png"
+            },
+            "compress": false,
+            "stream": false,
+            "maxSize": [
+                512,
+                512
+            ]
+        },
+        "525": {
+            "link": {
+                "name": "PizzeTomatoSauce_basecolor.png",
+                "file": "models\\Textures\\PizzeTomatoSauce_basecolor.png"
+            },
+            "maxSize": [
+                1024,
+                1024
+            ],
+            "compress": false,
+            "stream": false
+        },
+        "527": {
+            "link": {
+                "name": "PizzeTomatoSauce_normal.png",
+                "file": "models\\Textures\\PizzeTomatoSauce_normal.png"
+            },
+            "maxSize": [
+                1024,
+                1024
+            ],
+            "compress": false,
+            "stream": false
+        },
+        "549": {
+            "link": {
+                "name": "Marble_basecolor.png",
+                "file": "models\\Textures\\Marble_basecolor.png"
+            },
+            "maxSize": [
+                1024,
+                1024
+            ],
+            "compress": false,
+            "stream": false
+        },
+        "564": {
+            "link": {
+                "name": "ShreddedCheese_basecolor.png",
+                "file": "models\\Textures\\ShreddedCheese_basecolor.png"
+            }
+        },
+        "566": {
+            "link": {
+                "name": "ShreddedCheese_normal.png",
+                "file": "models\\Textures\\ShreddedCheese_normal.png"
             }
         }
     },
@@ -2131,10 +2534,17 @@
         },
         "419": {
             "name": "PizzaToppingTomato",
-            "pipeline": "38",
+            "pipeline": "235",
             "Phong": {
                 "shininess": 0,
-                "diffuseTexture": "421"
+                "diffuseTexture": "421",
+                "normalTexture": "384",
+                "ambientColor": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ]
             }
         },
         "423": {
@@ -2142,7 +2552,13 @@
             "pipeline": "38",
             "Phong": {
                 "shininess": 0,
-                "diffuseTexture": "425"
+                "diffuseTexture": "425",
+                "ambientColor": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ]
             }
         },
         "429": {
@@ -2171,6 +2587,147 @@
             "Phong": {
                 "diffuseTexture": "491",
                 "normalTexture": "493"
+            }
+        },
+        "519": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "models\\Sauce.fbx"
+            }
+        },
+        "522": {
+            "link": {
+                "name": "Metal",
+                "file": "models\\Sauce.fbx"
+            },
+            "Phong": {
+                "shininess": 3,
+                "specularColor": [
+                    0.4980391,
+                    0.3730411,
+                    0.3730411,
+                    1.0
+                ]
+            }
+        },
+        "523": {
+            "link": {
+                "name": "TomatoSauce",
+                "file": "models\\Sauce.fbx"
+            },
+            "pipeline": "235",
+            "Phong": {
+                "diffuseTexture": "526",
+                "normalTexture": "528"
+            }
+        },
+        "530": {
+            "link": {
+                "name": "Metal",
+                "file": "models\\SauceLadle.fbx"
+            }
+        },
+        "531": {
+            "link": {
+                "name": "TomatoSauce",
+                "file": "models\\SauceLadle.fbx"
+            }
+        },
+        "536": {
+            "link": {
+                "name": "White",
+                "file": "models\\Counter.fbx"
+            },
+            "Phong": {
+                "diffuseColor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "shininess": 0
+            }
+        },
+        "537": {
+            "link": {
+                "name": "Marble",
+                "file": "models\\Counter.fbx"
+            },
+            "pipeline": "38",
+            "Phong": {
+                "diffuseTexture": "550",
+                "shininess": 3
+            }
+        },
+        "538": {
+            "link": {
+                "name": "Glass",
+                "file": "models\\Counter.fbx"
+            },
+            "Phong": {
+                "diffuseColor": [
+                    0.5490196,
+                    0.5803921,
+                    0.9960784,
+                    0.5019608
+                ],
+                "ambientColor": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "specularColor": [
+                    0.8,
+                    0.8,
+                    0.8,
+                    1.0
+                ],
+                "shininess": 3
+            },
+            "pipeline": "347"
+        },
+        "539": {
+            "link": {
+                "name": "Metal",
+                "file": "models\\Counter.fbx"
+            }
+        },
+        "551": {
+            "link": {
+                "name": "White",
+                "file": "models\\Cupboards.fbx"
+            }
+        },
+        "552": {
+            "link": {
+                "name": "Marble",
+                "file": "models\\Cupboards.fbx"
+            }
+        },
+        "558": {
+            "link": {
+                "name": "Metal",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "559": {
+            "link": {
+                "name": "Contents",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "563": {
+            "link": {
+                "name": "Contents",
+                "file": "models\\ToppingBowl.fbx"
+            },
+            "name": "ContentsCheese",
+            "pipeline": "235",
+            "Phong": {
+                "diffuseTexture": "565",
+                "normalTexture": "567",
+                "shininess": 0
             }
         }
     },
@@ -2400,48 +2957,14 @@
                 "name": "skin_0",
                 "file": "models\\Hands\\SK_BasicHand_R.fbx"
             },
-            "joints": [
-                "457",
-                "458",
-                "456",
-                "441",
-                "442",
-                "440",
-                "439",
-                "444",
-                "446",
-                "453",
-                "454",
-                "452",
-                "449",
-                "448",
-                "450",
-                "445"
-            ]
+            "joints": []
         },
         "465": {
             "link": {
                 "name": "skin_0",
                 "file": "models\\Hands\\SK_BasicHand_L.fbx"
             },
-            "joints": [
-                "485",
-                "486",
-                "484",
-                "469",
-                "470",
-                "468",
-                "467",
-                "472",
-                "474",
-                "481",
-                "482",
-                "480",
-                "477",
-                "476",
-                "478",
-                "473"
-            ]
+            "joints": []
         }
     },
     "pipelines": {
@@ -2504,7 +3027,9 @@
             "link": {
                 "name": "Depth",
                 "file": "default"
-            }
+            },
+            "depthWrite": true,
+            "depthTest": true
         },
         "228": {
             "link": {
@@ -2521,7 +3046,8 @@
                 "ALPHA_MASKED": true,
                 "NORMAL_MAPPING": true,
                 "OCCLUSION_TEXTURE": true
-            }
+            },
+            "sampleAlphaToCoverage": false
         },
         "232": {
             "link": {
@@ -2551,7 +3077,16 @@
             "link": {
                 "name": "PhongSorskoot",
                 "file": "default"
-            }
+            },
+            "shader": "5",
+            "name": "Phong Transparent",
+            "sampleAlphaToCoverage": true,
+            "features": {
+                "ALPHA_MASKED": true
+            },
+            "depthTest": true,
+            "depthWrite": false,
+            "blending": true
         },
         "348": {
             "link": {
@@ -2642,7 +3177,17 @@
         "models/Hands/SK_BasicHand_L.fbx",
         "models/Hands/Hands_0.png",
         "models/Hands/Hands_1.png",
-        "models/Hands/R_ClosedFist.fbx"
+        "models/Hands/R_ClosedFist.fbx",
+        "models/Sauce.fbx",
+        "models/Textures/PizzeTomatoSauce_basecolor.png",
+        "models/Textures/PizzeTomatoSauce_normal.png",
+        "models/SauceLadle.fbx",
+        "models/Counter.fbx",
+        "models/Textures/Marble_basecolor.png",
+        "models/Cupboards.fbx",
+        "models/ToppingBowl.fbx",
+        "models/Textures/ShreddedCheese_basecolor.png",
+        "models/Textures/ShreddedCheese_normal.png"
     ],
     "fonts": {
         "238": {
