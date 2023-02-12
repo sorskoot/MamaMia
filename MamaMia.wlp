@@ -3,9 +3,9 @@
         "14": {
             "name": "Player",
             "translation": [
-                -2.1120808,
+                -0.2351875,
                 0.0,
-                -0.5523534
+                -0.2465798
             ],
             "rotation": [
                 0.0,
@@ -14,9 +14,9 @@
                 -0.0002438
             ],
             "scale": [
-                1.0000001,
+                0.9999998,
                 1.0,
-                1.0000001
+                0.9999998
             ]
         },
         "17": {
@@ -184,7 +184,7 @@
                 {
                     "type": "input",
                     "input": {
-                        "type": "hand right"
+                        "type": "ray right"
                     }
                 },
                 {
@@ -242,7 +242,7 @@
                 {
                     "type": "input",
                     "input": {
-                        "type": "hand left"
+                        "type": "ray left"
                     }
                 },
                 {
@@ -558,211 +558,41 @@
             "name": "Hand Anchor Right",
             "parent": "129",
             "translation": [
-                -0.0000255,
-                0.0000238,
-                0.0879322
+                -0.0001113,
+                0.0000178,
+                0.2268862
             ],
             "rotation": [
-                -0.7071067,
-                -0.0,
-                0.0,
-                0.7071067
+                0.0002441,
+                0.9999998,
+                0.0002418,
+                0.0002438
             ],
             "scale": [
-                1.0000137,
-                0.9999997,
-                0.9999933
+                1.0000028,
+                1.0000003,
+                0.9999841
             ]
         },
         "433": {
             "name": "Hand Anchor Left",
             "parent": "130",
             "translation": [
-                -0.0000255,
-                0.0000215,
-                0.0879312
+                -0.0001104,
+                0.0000132,
+                0.2268868
             ],
             "rotation": [
-                -0.7071067,
-                -0.0,
-                0.0,
-                0.7071067
+                0.0002422,
+                0.9999998,
+                0.0002354,
+                0.0002431
             ],
             "scale": [
-                1.0000128,
-                0.9999997,
-                0.9999936
+                1.000005,
+                1.0000036,
+                0.9999914
             ]
-        },
-        "438": {
-            "link": {
-                "name": "RHand",
-                "file": "models\\Hands\\SK_BasicHand_R.fbx"
-            },
-            "parent": "432"
-        },
-        "439": {
-            "link": {
-                "name": "hand_r<RHand",
-                "file": "models\\Hands\\SK_BasicHand_R.fbx"
-            },
-            "parent": "438",
-            "skin": "437"
-        },
-        "440": {
-            "link": {
-                "name": "index_01_r<hand_r<RHand",
-                "file": "models\\Hands\\SK_BasicHand_R.fbx"
-            },
-            "parent": "439",
-            "skin": "437"
-        },
-        "441": {
-            "link": {
-                "name": "index_02_r<index_01_r<hand_r<RHand",
-                "file": "models\\Hands\\SK_BasicHand_R.fbx"
-            },
-            "parent": "440",
-            "skin": "437"
-        },
-        "442": {
-            "link": {
-                "name": "index_03_r<index_02_r<index_01_r<hand_r<RHand",
-                "file": "models\\Hands\\SK_BasicHand_R.fbx"
-            },
-            "parent": "441",
-            "skin": "437"
-        },
-        "443": {
-            "link": {
-                "name": "index_03_r_end<index_03_r<index_02_r<index_01_r<hand_r<RHand",
-                "file": "models\\Hands\\SK_BasicHand_R.fbx"
-            },
-            "parent": "442"
-        },
-        "444": {
-            "link": {
-                "name": "middle_01_r<hand_r<RHand",
-                "file": "models\\Hands\\SK_BasicHand_R.fbx"
-            },
-            "parent": "439",
-            "skin": "437"
-        },
-        "445": {
-            "link": {
-                "name": "middle_02_r<middle_01_r<hand_r<RHand",
-                "file": "models\\Hands\\SK_BasicHand_R.fbx"
-            },
-            "parent": "444",
-            "skin": "437"
-        },
-        "446": {
-            "link": {
-                "name": "middle_03_r<middle_02_r<middle_01_r<hand_r<RHand",
-                "file": "models\\Hands\\SK_BasicHand_R.fbx"
-            },
-            "parent": "445",
-            "skin": "437"
-        },
-        "447": {
-            "link": {
-                "name": "middle_03_r_end<middle_03_r<middle_02_r<middle_01_r<hand_r<RHand",
-                "file": "models\\Hands\\SK_BasicHand_R.fbx"
-            },
-            "parent": "446"
-        },
-        "448": {
-            "link": {
-                "name": "pinky_01_r<hand_r<RHand",
-                "file": "models\\Hands\\SK_BasicHand_R.fbx"
-            },
-            "parent": "439",
-            "skin": "437"
-        },
-        "449": {
-            "link": {
-                "name": "pinky_02_r<pinky_01_r<hand_r<RHand",
-                "file": "models\\Hands\\SK_BasicHand_R.fbx"
-            },
-            "parent": "448",
-            "skin": "437"
-        },
-        "450": {
-            "link": {
-                "name": "pinky_03_r<pinky_02_r<pinky_01_r<hand_r<RHand",
-                "file": "models\\Hands\\SK_BasicHand_R.fbx"
-            },
-            "parent": "449",
-            "skin": "437"
-        },
-        "451": {
-            "link": {
-                "name": "pinky_03_r_end<pinky_03_r<pinky_02_r<pinky_01_r<hand_r<RHand",
-                "file": "models\\Hands\\SK_BasicHand_R.fbx"
-            },
-            "parent": "450"
-        },
-        "452": {
-            "link": {
-                "name": "ring_01_r<hand_r<RHand",
-                "file": "models\\Hands\\SK_BasicHand_R.fbx"
-            },
-            "parent": "439",
-            "skin": "437"
-        },
-        "453": {
-            "link": {
-                "name": "ring_02_r<ring_01_r<hand_r<RHand",
-                "file": "models\\Hands\\SK_BasicHand_R.fbx"
-            },
-            "parent": "452",
-            "skin": "437"
-        },
-        "454": {
-            "link": {
-                "name": "ring_03_r<ring_02_r<ring_01_r<hand_r<RHand",
-                "file": "models\\Hands\\SK_BasicHand_R.fbx"
-            },
-            "parent": "453",
-            "skin": "437"
-        },
-        "455": {
-            "link": {
-                "name": "ring_03_r_end<ring_03_r<ring_02_r<ring_01_r<hand_r<RHand",
-                "file": "models\\Hands\\SK_BasicHand_R.fbx"
-            },
-            "parent": "454"
-        },
-        "456": {
-            "link": {
-                "name": "thumb_01_r<hand_r<RHand",
-                "file": "models\\Hands\\SK_BasicHand_R.fbx"
-            },
-            "parent": "439",
-            "skin": "437"
-        },
-        "457": {
-            "link": {
-                "name": "thumb_02_r<thumb_01_r<hand_r<RHand",
-                "file": "models\\Hands\\SK_BasicHand_R.fbx"
-            },
-            "parent": "456",
-            "skin": "437"
-        },
-        "458": {
-            "link": {
-                "name": "thumb_03_r<thumb_02_r<thumb_01_r<hand_r<RHand",
-                "file": "models\\Hands\\SK_BasicHand_R.fbx"
-            },
-            "parent": "457",
-            "skin": "437"
-        },
-        "459": {
-            "link": {
-                "name": "thumb_03_r_end<thumb_03_r<thumb_02_r<thumb_01_r<hand_r<RHand",
-                "file": "models\\Hands\\SK_BasicHand_R.fbx"
-            },
-            "parent": "458"
         },
         "460": {
             "link": {
@@ -773,181 +603,11 @@
             "components": [
                 {
                     "mesh": {
-                        "skin": "437",
+                        "skin": null,
                         "material": "463"
                     }
                 }
             ]
-        },
-        "466": {
-            "link": {
-                "name": "LHand",
-                "file": "models\\Hands\\SK_BasicHand_L.fbx"
-            },
-            "parent": "433"
-        },
-        "467": {
-            "link": {
-                "name": "hand_l<LHand",
-                "file": "models\\Hands\\SK_BasicHand_L.fbx"
-            },
-            "parent": "466",
-            "skin": "465"
-        },
-        "468": {
-            "link": {
-                "name": "index_01_l<hand_l<LHand",
-                "file": "models\\Hands\\SK_BasicHand_L.fbx"
-            },
-            "parent": "467",
-            "skin": "465"
-        },
-        "469": {
-            "link": {
-                "name": "index_02_l<index_01_l<hand_l<LHand",
-                "file": "models\\Hands\\SK_BasicHand_L.fbx"
-            },
-            "parent": "468",
-            "skin": "465"
-        },
-        "470": {
-            "link": {
-                "name": "index_03_l<index_02_l<index_01_l<hand_l<LHand",
-                "file": "models\\Hands\\SK_BasicHand_L.fbx"
-            },
-            "parent": "469",
-            "skin": "465"
-        },
-        "471": {
-            "link": {
-                "name": "index_03_l_end<index_03_l<index_02_l<index_01_l<hand_l<LHand",
-                "file": "models\\Hands\\SK_BasicHand_L.fbx"
-            },
-            "parent": "470"
-        },
-        "472": {
-            "link": {
-                "name": "middle_01_l<hand_l<LHand",
-                "file": "models\\Hands\\SK_BasicHand_L.fbx"
-            },
-            "parent": "467",
-            "skin": "465"
-        },
-        "473": {
-            "link": {
-                "name": "middle_02_l<middle_01_l<hand_l<LHand",
-                "file": "models\\Hands\\SK_BasicHand_L.fbx"
-            },
-            "parent": "472",
-            "skin": "465"
-        },
-        "474": {
-            "link": {
-                "name": "middle_03_l<middle_02_l<middle_01_l<hand_l<LHand",
-                "file": "models\\Hands\\SK_BasicHand_L.fbx"
-            },
-            "parent": "473",
-            "skin": "465"
-        },
-        "475": {
-            "link": {
-                "name": "middle_03_l_end<middle_03_l<middle_02_l<middle_01_l<hand_l<LHand",
-                "file": "models\\Hands\\SK_BasicHand_L.fbx"
-            },
-            "parent": "474"
-        },
-        "476": {
-            "link": {
-                "name": "pinky_01_l<hand_l<LHand",
-                "file": "models\\Hands\\SK_BasicHand_L.fbx"
-            },
-            "parent": "467",
-            "skin": "465"
-        },
-        "477": {
-            "link": {
-                "name": "pinky_02_l<pinky_01_l<hand_l<LHand",
-                "file": "models\\Hands\\SK_BasicHand_L.fbx"
-            },
-            "parent": "476",
-            "skin": "465"
-        },
-        "478": {
-            "link": {
-                "name": "pinky_03_l<pinky_02_l<pinky_01_l<hand_l<LHand",
-                "file": "models\\Hands\\SK_BasicHand_L.fbx"
-            },
-            "parent": "477",
-            "skin": "465"
-        },
-        "479": {
-            "link": {
-                "name": "pinky_03_l_end<pinky_03_l<pinky_02_l<pinky_01_l<hand_l<LHand",
-                "file": "models\\Hands\\SK_BasicHand_L.fbx"
-            },
-            "parent": "478"
-        },
-        "480": {
-            "link": {
-                "name": "ring_01_l<hand_l<LHand",
-                "file": "models\\Hands\\SK_BasicHand_L.fbx"
-            },
-            "parent": "467",
-            "skin": "465"
-        },
-        "481": {
-            "link": {
-                "name": "ring_02_l<ring_01_l<hand_l<LHand",
-                "file": "models\\Hands\\SK_BasicHand_L.fbx"
-            },
-            "parent": "480",
-            "skin": "465"
-        },
-        "482": {
-            "link": {
-                "name": "ring_03_l<ring_02_l<ring_01_l<hand_l<LHand",
-                "file": "models\\Hands\\SK_BasicHand_L.fbx"
-            },
-            "parent": "481",
-            "skin": "465"
-        },
-        "483": {
-            "link": {
-                "name": "ring_03_l_end<ring_03_l<ring_02_l<ring_01_l<hand_l<LHand",
-                "file": "models\\Hands\\SK_BasicHand_L.fbx"
-            },
-            "parent": "482"
-        },
-        "484": {
-            "link": {
-                "name": "thumb_01_l<hand_l<LHand",
-                "file": "models\\Hands\\SK_BasicHand_L.fbx"
-            },
-            "parent": "467",
-            "skin": "465"
-        },
-        "485": {
-            "link": {
-                "name": "thumb_02_l<thumb_01_l<hand_l<LHand",
-                "file": "models\\Hands\\SK_BasicHand_L.fbx"
-            },
-            "parent": "484",
-            "skin": "465"
-        },
-        "486": {
-            "link": {
-                "name": "thumb_03_l<thumb_02_l<thumb_01_l<hand_l<LHand",
-                "file": "models\\Hands\\SK_BasicHand_L.fbx"
-            },
-            "parent": "485",
-            "skin": "465"
-        },
-        "487": {
-            "link": {
-                "name": "thumb_03_l_end<thumb_03_l<thumb_02_l<thumb_01_l<hand_l<LHand",
-                "file": "models\\Hands\\SK_BasicHand_L.fbx"
-            },
-            "parent": "486"
         },
         "488": {
             "link": {
@@ -958,7 +618,7 @@
             "components": [
                 {
                     "mesh": {
-                        "skin": "465"
+                        "skin": null
                     }
                 }
             ]
@@ -2712,6 +2372,12 @@
                 "name": "<default>",
                 "file": "models\\Hands\\SK_BasicHand_L.fbx"
             }
+        },
+        "517": {
+            "link": {
+                "name": "R_ClosedFist",
+                "file": "models\\Hands\\R_ClosedFist.fbx"
+            }
         }
     },
     "skins": {
@@ -2975,7 +2641,8 @@
         "models/Hands/SK_BasicHand_R.fbx",
         "models/Hands/SK_BasicHand_L.fbx",
         "models/Hands/Hands_0.png",
-        "models/Hands/Hands_1.png"
+        "models/Hands/Hands_1.png",
+        "models/Hands/R_ClosedFist.fbx"
     ],
     "fonts": {
         "238": {
