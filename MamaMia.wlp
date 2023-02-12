@@ -3,9 +3,9 @@
         "14": {
             "name": "Player",
             "translation": [
-                2.9831426218152046e-8,
+                -2.1120808,
                 0.0,
-                -0.5523564
+                -0.5523534
             ],
             "rotation": [
                 0.0,
@@ -14,9 +14,9 @@
                 -0.0002438
             ],
             "scale": [
-                0.9999997,
+                1.0000001,
                 1.0,
-                0.9999997
+                1.0000001
             ]
         },
         "17": {
@@ -122,7 +122,7 @@
                 {
                     "type": "light",
                     "light": {
-                        "attenuation": 0.1,
+                        "attenuation": 0.215,
                         "color": [
                             0.9960784,
                             0.9527426,
@@ -135,9 +135,9 @@
             ],
             "parent": "217",
             "translation": [
-                -1.9445447,
-                2.2719078,
-                -0.379855
+                -2.0,
+                2.2000837,
+                -0.6930476
             ],
             "rotation": [
                 0.0,
@@ -296,25 +296,27 @@
             "name": "Lights"
         },
         "220": {
-            "name": "Light.000",
+            "name": "Blue Fill Light",
             "components": [
                 {
                     "type": "light",
                     "light": {
-                        "attenuation": 0.1,
+                        "attenuation": 0.0099999,
                         "color": [
-                            0.1783929,
-                            0.4778209,
-                            0.7843137
-                        ]
-                    }
+                            0.064775,
+                            0.1839231,
+                            0.3058823
+                        ],
+                        "range": 25.0
+                    },
+                    "active": true
                 }
             ],
             "parent": "217",
             "translation": [
                 3.0716891,
                 -2.1777999,
-                1.894283
+                1.8767366
             ],
             "rotation": [
                 0.0,
@@ -332,14 +334,23 @@
             "name": "Managers"
         },
         "243": {
-            "name": "Scene"
-        },
-        "342": {
-            "link": {
-                "name": "Building",
-                "file": "models\\PizzaPlace.fbx"
-            },
-            "parent": "243"
+            "name": "Scene",
+            "translation": [
+                0.0,
+                0.2140529,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
         },
         "343": {
             "link": {
@@ -355,20 +366,13 @@
             },
             "parent": "243"
         },
-        "345": {
-            "link": {
-                "name": "Oven",
-                "file": "models\\PizzaPlace.fbx"
-            },
-            "parent": "243"
-        },
         "361": {
             "name": "Light.000",
             "components": [
                 {
                     "type": "light",
                     "light": {
-                        "attenuation": 0.1,
+                        "attenuation": 0.185,
                         "color": [
                             0.9960784,
                             0.9527426,
@@ -381,9 +385,9 @@
             ],
             "parent": "217",
             "translation": [
-                2.2582836,
-                2.2719078,
-                -0.379855
+                2.0,
+                2.2000799,
+                -0.693048
             ],
             "rotation": [
                 0.0,
@@ -395,6 +399,568 @@
                 1.0,
                 1.0,
                 1.0
+            ]
+        },
+        "380": {
+            "link": {
+                "name": "Pizza",
+                "file": "models\\Pizza.fbx"
+            },
+            "parent": "243",
+            "translation": [
+                0.0382203,
+                0.8844861,
+                0.1528349
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "386": {
+            "name": "Building",
+            "parent": "243"
+        },
+        "390": {
+            "link": {
+                "name": "Building_Floor",
+                "file": "models\\Building_Floor.fbx"
+            },
+            "parent": "386",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "325"
+                    }
+                }
+            ]
+        },
+        "394": {
+            "link": {
+                "name": "Building_LowerWalls",
+                "file": "models\\Building_LowerWalls.fbx"
+            },
+            "parent": "386"
+        },
+        "400": {
+            "link": {
+                "name": "Building_UpperWalls",
+                "file": "models\\Building_UpperWalls.fbx"
+            },
+            "parent": "386",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "328"
+                    }
+                }
+            ]
+        },
+        "404": {
+            "link": {
+                "name": "Building_Outside",
+                "file": "models\\Building_Outside.fbx"
+            },
+            "parent": "386",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "407"
+                    }
+                }
+            ]
+        },
+        "413": {
+            "link": {
+                "name": "Oven",
+                "file": "models\\Oven.fbx"
+            },
+            "parent": "243",
+            "components": [
+                null,
+                {
+                    "mesh": {
+                        "material": "328"
+                    }
+                }
+            ]
+        },
+        "418": {
+            "link": {
+                "name": "Pizza",
+                "file": "models\\Pizza.fbx"
+            },
+            "parent": "243",
+            "translation": [
+                0.4785507,
+                0.8844861,
+                0.1528349
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                null,
+                {
+                    "mesh": {
+                        "material": "419"
+                    }
+                }
+            ]
+        },
+        "422": {
+            "link": {
+                "name": "Pizza",
+                "file": "models\\Pizza.fbx"
+            },
+            "parent": "243",
+            "translation": [
+                -0.3960689,
+                0.8844861,
+                0.1528349
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                null,
+                {
+                    "mesh": {
+                        "material": "423"
+                    }
+                }
+            ]
+        },
+        "432": {
+            "name": "Hand Anchor Right",
+            "parent": "129",
+            "translation": [
+                -0.0000255,
+                0.0000238,
+                0.0879322
+            ],
+            "rotation": [
+                -0.7071067,
+                -0.0,
+                0.0,
+                0.7071067
+            ],
+            "scale": [
+                1.0000137,
+                0.9999997,
+                0.9999933
+            ]
+        },
+        "433": {
+            "name": "Hand Anchor Left",
+            "parent": "130",
+            "translation": [
+                -0.0000255,
+                0.0000215,
+                0.0879312
+            ],
+            "rotation": [
+                -0.7071067,
+                -0.0,
+                0.0,
+                0.7071067
+            ],
+            "scale": [
+                1.0000128,
+                0.9999997,
+                0.9999936
+            ]
+        },
+        "438": {
+            "link": {
+                "name": "RHand",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            },
+            "parent": "432"
+        },
+        "439": {
+            "link": {
+                "name": "hand_r<RHand",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            },
+            "parent": "438",
+            "skin": "437"
+        },
+        "440": {
+            "link": {
+                "name": "index_01_r<hand_r<RHand",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            },
+            "parent": "439",
+            "skin": "437"
+        },
+        "441": {
+            "link": {
+                "name": "index_02_r<index_01_r<hand_r<RHand",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            },
+            "parent": "440",
+            "skin": "437"
+        },
+        "442": {
+            "link": {
+                "name": "index_03_r<index_02_r<index_01_r<hand_r<RHand",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            },
+            "parent": "441",
+            "skin": "437"
+        },
+        "443": {
+            "link": {
+                "name": "index_03_r_end<index_03_r<index_02_r<index_01_r<hand_r<RHand",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            },
+            "parent": "442"
+        },
+        "444": {
+            "link": {
+                "name": "middle_01_r<hand_r<RHand",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            },
+            "parent": "439",
+            "skin": "437"
+        },
+        "445": {
+            "link": {
+                "name": "middle_02_r<middle_01_r<hand_r<RHand",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            },
+            "parent": "444",
+            "skin": "437"
+        },
+        "446": {
+            "link": {
+                "name": "middle_03_r<middle_02_r<middle_01_r<hand_r<RHand",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            },
+            "parent": "445",
+            "skin": "437"
+        },
+        "447": {
+            "link": {
+                "name": "middle_03_r_end<middle_03_r<middle_02_r<middle_01_r<hand_r<RHand",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            },
+            "parent": "446"
+        },
+        "448": {
+            "link": {
+                "name": "pinky_01_r<hand_r<RHand",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            },
+            "parent": "439",
+            "skin": "437"
+        },
+        "449": {
+            "link": {
+                "name": "pinky_02_r<pinky_01_r<hand_r<RHand",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            },
+            "parent": "448",
+            "skin": "437"
+        },
+        "450": {
+            "link": {
+                "name": "pinky_03_r<pinky_02_r<pinky_01_r<hand_r<RHand",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            },
+            "parent": "449",
+            "skin": "437"
+        },
+        "451": {
+            "link": {
+                "name": "pinky_03_r_end<pinky_03_r<pinky_02_r<pinky_01_r<hand_r<RHand",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            },
+            "parent": "450"
+        },
+        "452": {
+            "link": {
+                "name": "ring_01_r<hand_r<RHand",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            },
+            "parent": "439",
+            "skin": "437"
+        },
+        "453": {
+            "link": {
+                "name": "ring_02_r<ring_01_r<hand_r<RHand",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            },
+            "parent": "452",
+            "skin": "437"
+        },
+        "454": {
+            "link": {
+                "name": "ring_03_r<ring_02_r<ring_01_r<hand_r<RHand",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            },
+            "parent": "453",
+            "skin": "437"
+        },
+        "455": {
+            "link": {
+                "name": "ring_03_r_end<ring_03_r<ring_02_r<ring_01_r<hand_r<RHand",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            },
+            "parent": "454"
+        },
+        "456": {
+            "link": {
+                "name": "thumb_01_r<hand_r<RHand",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            },
+            "parent": "439",
+            "skin": "437"
+        },
+        "457": {
+            "link": {
+                "name": "thumb_02_r<thumb_01_r<hand_r<RHand",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            },
+            "parent": "456",
+            "skin": "437"
+        },
+        "458": {
+            "link": {
+                "name": "thumb_03_r<thumb_02_r<thumb_01_r<hand_r<RHand",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            },
+            "parent": "457",
+            "skin": "437"
+        },
+        "459": {
+            "link": {
+                "name": "thumb_03_r_end<thumb_03_r<thumb_02_r<thumb_01_r<hand_r<RHand",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            },
+            "parent": "458"
+        },
+        "460": {
+            "link": {
+                "name": "BasicHand",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            },
+            "parent": "432",
+            "components": [
+                {
+                    "mesh": {
+                        "skin": "437",
+                        "material": "463"
+                    }
+                }
+            ]
+        },
+        "466": {
+            "link": {
+                "name": "LHand",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            },
+            "parent": "433"
+        },
+        "467": {
+            "link": {
+                "name": "hand_l<LHand",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            },
+            "parent": "466",
+            "skin": "465"
+        },
+        "468": {
+            "link": {
+                "name": "index_01_l<hand_l<LHand",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            },
+            "parent": "467",
+            "skin": "465"
+        },
+        "469": {
+            "link": {
+                "name": "index_02_l<index_01_l<hand_l<LHand",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            },
+            "parent": "468",
+            "skin": "465"
+        },
+        "470": {
+            "link": {
+                "name": "index_03_l<index_02_l<index_01_l<hand_l<LHand",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            },
+            "parent": "469",
+            "skin": "465"
+        },
+        "471": {
+            "link": {
+                "name": "index_03_l_end<index_03_l<index_02_l<index_01_l<hand_l<LHand",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            },
+            "parent": "470"
+        },
+        "472": {
+            "link": {
+                "name": "middle_01_l<hand_l<LHand",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            },
+            "parent": "467",
+            "skin": "465"
+        },
+        "473": {
+            "link": {
+                "name": "middle_02_l<middle_01_l<hand_l<LHand",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            },
+            "parent": "472",
+            "skin": "465"
+        },
+        "474": {
+            "link": {
+                "name": "middle_03_l<middle_02_l<middle_01_l<hand_l<LHand",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            },
+            "parent": "473",
+            "skin": "465"
+        },
+        "475": {
+            "link": {
+                "name": "middle_03_l_end<middle_03_l<middle_02_l<middle_01_l<hand_l<LHand",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            },
+            "parent": "474"
+        },
+        "476": {
+            "link": {
+                "name": "pinky_01_l<hand_l<LHand",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            },
+            "parent": "467",
+            "skin": "465"
+        },
+        "477": {
+            "link": {
+                "name": "pinky_02_l<pinky_01_l<hand_l<LHand",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            },
+            "parent": "476",
+            "skin": "465"
+        },
+        "478": {
+            "link": {
+                "name": "pinky_03_l<pinky_02_l<pinky_01_l<hand_l<LHand",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            },
+            "parent": "477",
+            "skin": "465"
+        },
+        "479": {
+            "link": {
+                "name": "pinky_03_l_end<pinky_03_l<pinky_02_l<pinky_01_l<hand_l<LHand",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            },
+            "parent": "478"
+        },
+        "480": {
+            "link": {
+                "name": "ring_01_l<hand_l<LHand",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            },
+            "parent": "467",
+            "skin": "465"
+        },
+        "481": {
+            "link": {
+                "name": "ring_02_l<ring_01_l<hand_l<LHand",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            },
+            "parent": "480",
+            "skin": "465"
+        },
+        "482": {
+            "link": {
+                "name": "ring_03_l<ring_02_l<ring_01_l<hand_l<LHand",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            },
+            "parent": "481",
+            "skin": "465"
+        },
+        "483": {
+            "link": {
+                "name": "ring_03_l_end<ring_03_l<ring_02_l<ring_01_l<hand_l<LHand",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            },
+            "parent": "482"
+        },
+        "484": {
+            "link": {
+                "name": "thumb_01_l<hand_l<LHand",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            },
+            "parent": "467",
+            "skin": "465"
+        },
+        "485": {
+            "link": {
+                "name": "thumb_02_l<thumb_01_l<hand_l<LHand",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            },
+            "parent": "484",
+            "skin": "465"
+        },
+        "486": {
+            "link": {
+                "name": "thumb_03_l<thumb_02_l<thumb_01_l<hand_l<LHand",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            },
+            "parent": "485",
+            "skin": "465"
+        },
+        "487": {
+            "link": {
+                "name": "thumb_03_l_end<thumb_03_l<thumb_02_l<thumb_01_l<hand_l<LHand",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            },
+            "parent": "486"
+        },
+        "488": {
+            "link": {
+                "name": "BasicHand",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            },
+            "parent": "433",
+            "components": [
+                {
+                    "mesh": {
+                        "skin": "465"
+                    }
+                }
             ]
         }
     },
@@ -624,6 +1190,102 @@
                 "name": "Oven-uv1",
                 "file": "models\\PizzaPlace.fbx"
             }
+        },
+        "378": {
+            "link": {
+                "name": "Cylinder",
+                "file": "models\\Pizza.fbx"
+            }
+        },
+        "379": {
+            "link": {
+                "name": "Cylinder.0",
+                "file": "models\\Pizza.fbx"
+            }
+        },
+        "388": {
+            "link": {
+                "name": "Building.001",
+                "file": "models\\Building_Floor.fbx"
+            }
+        },
+        "389": {
+            "link": {
+                "name": "Building.001-uv1",
+                "file": "models\\Building_Floor.fbx"
+            }
+        },
+        "392": {
+            "link": {
+                "name": "Building.003",
+                "file": "models\\Building_LowerWalls.fbx"
+            }
+        },
+        "393": {
+            "link": {
+                "name": "Building.003-uv1",
+                "file": "models\\Building_LowerWalls.fbx"
+            }
+        },
+        "398": {
+            "link": {
+                "name": "Building.004",
+                "file": "models\\Building_UpperWalls.fbx"
+            }
+        },
+        "399": {
+            "link": {
+                "name": "Building.004-uv1",
+                "file": "models\\Building_UpperWalls.fbx"
+            }
+        },
+        "402": {
+            "link": {
+                "name": "Building.002",
+                "file": "models\\Building_Outside.fbx"
+            }
+        },
+        "403": {
+            "link": {
+                "name": "Building.002-uv1",
+                "file": "models\\Building_Outside.fbx"
+            }
+        },
+        "409": {
+            "link": {
+                "name": "Oven",
+                "file": "models\\Oven.fbx"
+            }
+        },
+        "410": {
+            "link": {
+                "name": "Oven-uv1",
+                "file": "models\\Oven.fbx"
+            }
+        },
+        "411": {
+            "link": {
+                "name": "Oven.0",
+                "file": "models\\Oven.fbx"
+            }
+        },
+        "412": {
+            "link": {
+                "name": "Oven-uv1.0",
+                "file": "models\\Oven.fbx"
+            }
+        },
+        "436": {
+            "link": {
+                "name": "BasicHand",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            }
+        },
+        "464": {
+            "link": {
+                "name": "BasicHand",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            }
         }
     },
     "textures": {
@@ -824,6 +1486,90 @@
             "link": {
                 "name": "PixelWood_ambientocclusion.png",
                 "file": "models\\Textures\\PixelWood_ambientocclusion.png"
+            }
+        },
+        "382": {
+            "link": {
+                "name": "PizzaDough_basecolor.png",
+                "file": "models\\Textures\\PizzaDough_basecolor.png"
+            }
+        },
+        "384": {
+            "link": {
+                "name": "PizzaDough_normal.png",
+                "file": "models\\Textures\\PizzaDough_normal.png"
+            }
+        },
+        "396": {
+            "link": {
+                "name": "texture_0",
+                "file": "models\\Building_UpperWalls.fbx"
+            }
+        },
+        "406": {
+            "link": {
+                "name": "texture_0",
+                "file": "models\\Oven.fbx"
+            }
+        },
+        "415": {
+            "link": {
+                "name": "PixelConcrete_basecolor.png",
+                "file": "models\\Textures\\PixelConcrete_basecolor.png"
+            }
+        },
+        "417": {
+            "link": {
+                "name": "PixelConcrete_normal.png",
+                "file": "models\\Textures\\PixelConcrete_normal.png"
+            }
+        },
+        "421": {
+            "link": {
+                "name": "PizzaTopping_0.png",
+                "file": "models\\Textures\\PizzaTopping_0.png"
+            }
+        },
+        "425": {
+            "link": {
+                "name": "PizzaTopping_1.png",
+                "file": "models\\Textures\\PizzaTopping_1.png"
+            }
+        },
+        "428": {
+            "link": {
+                "name": "texture_0",
+                "file": "models\\Building_LowerWalls.fbx"
+            }
+        },
+        "431": {
+            "link": {
+                "name": "Wainscot_Paneling_normal.png",
+                "file": "models\\Textures\\Wainscot_Paneling_normal.png"
+            }
+        },
+        "434": {
+            "link": {
+                "name": "texture_0",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            }
+        },
+        "462": {
+            "link": {
+                "name": "texture_0",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            }
+        },
+        "491": {
+            "link": {
+                "name": "Hands_0.png",
+                "file": "models\\Hands\\Hands_0.png"
+            }
+        },
+        "493": {
+            "link": {
+                "name": "Hands_1.png",
+                "file": "models\\Hands\\Hands_1.png"
             }
         }
     },
@@ -1141,6 +1887,90 @@
                 1024
             ],
             "compress": false
+        },
+        "381": {
+            "link": {
+                "name": "PizzaDough_basecolor.png",
+                "file": "models\\Textures\\PizzaDough_basecolor.png"
+            },
+            "maxSize": [
+                1024,
+                1024
+            ]
+        },
+        "383": {
+            "link": {
+                "name": "PizzaDough_normal.png",
+                "file": "models\\Textures\\PizzaDough_normal.png"
+            },
+            "maxSize": [
+                1024,
+                1024
+            ]
+        },
+        "395": {
+            "link": {
+                "name": "image_0",
+                "file": "models\\Building_UpperWalls.fbx"
+            }
+        },
+        "405": {
+            "link": {
+                "name": "image_0",
+                "file": "models\\Oven.fbx"
+            }
+        },
+        "414": {
+            "link": {
+                "name": "PixelConcrete_basecolor.png",
+                "file": "models\\Textures\\PixelConcrete_basecolor.png"
+            }
+        },
+        "416": {
+            "link": {
+                "name": "PixelConcrete_normal.png",
+                "file": "models\\Textures\\PixelConcrete_normal.png"
+            }
+        },
+        "420": {
+            "link": {
+                "name": "PizzaTopping_0.png",
+                "file": "models\\Textures\\PizzaTopping_0.png"
+            },
+            "maxSize": [
+                352,
+                352
+            ]
+        },
+        "424": {
+            "link": {
+                "name": "PizzaTopping_1.png",
+                "file": "models\\Textures\\PizzaTopping_1.png"
+            }
+        },
+        "427": {
+            "link": {
+                "name": "image_0",
+                "file": "models\\Building_LowerWalls.fbx"
+            }
+        },
+        "430": {
+            "link": {
+                "name": "Wainscot_Paneling_normal.png",
+                "file": "models\\Textures\\Wainscot_Paneling_normal.png"
+            }
+        },
+        "490": {
+            "link": {
+                "name": "Hands_0.png",
+                "file": "models\\Hands\\Hands_0.png"
+            }
+        },
+        "492": {
+            "link": {
+                "name": "Hands_1.png",
+                "file": "models\\Hands\\Hands_1.png"
+            }
         }
     },
     "materials": {
@@ -1484,6 +2314,15 @@
             "link": {
                 "name": "NoMaterial",
                 "file": "models\\PizzaPlace.fbx"
+            },
+            "Phong": {
+                "shininess": 0,
+                "specularColor": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ]
             }
         },
         "327": {
@@ -1540,6 +2379,138 @@
             "link": {
                 "name": "SmoothPlaster",
                 "file": "models\\PizzaPlace.fbx"
+            }
+        },
+        "376": {
+            "link": {
+                "name": "PizzaDough",
+                "file": "models\\Pizza.fbx"
+            },
+            "pipeline": "235",
+            "Phong": {
+                "diffuseTexture": "382",
+                "normalTexture": "384",
+                "shininess": 0,
+                "diffuseColor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "specularColor": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ]
+            }
+        },
+        "377": {
+            "link": {
+                "name": "PizzaCenter",
+                "file": "models\\Pizza.fbx"
+            },
+            "pipeline": "235",
+            "Phong": {
+                "diffuseTexture": "382",
+                "normalTexture": "384",
+                "shininess": 100,
+                "specularColor": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ]
+            },
+            "Physical": {
+                "albedoTexture": "382",
+                "normalTexture": "384"
+            }
+        },
+        "387": {
+            "link": {
+                "name": "Stylized_Planks",
+                "file": "models\\Building_Floor.fbx"
+            }
+        },
+        "391": {
+            "link": {
+                "name": "Simple_White_Tiles",
+                "file": "models\\Building_LowerWalls.fbx"
+            }
+        },
+        "397": {
+            "link": {
+                "name": "BrickWall",
+                "file": "models\\Building_UpperWalls.fbx"
+            }
+        },
+        "401": {
+            "link": {
+                "name": "NoMaterial",
+                "file": "models\\Building_Outside.fbx"
+            }
+        },
+        "407": {
+            "link": {
+                "name": "Concrete",
+                "file": "models\\Oven.fbx"
+            },
+            "pipeline": "235",
+            "Phong": {
+                "shininess": 0,
+                "diffuseTexture": "415",
+                "normalTexture": "417"
+            }
+        },
+        "408": {
+            "link": {
+                "name": "BrickWall",
+                "file": "models\\Oven.fbx"
+            }
+        },
+        "419": {
+            "name": "PizzaToppingTomato",
+            "pipeline": "38",
+            "Phong": {
+                "shininess": 0,
+                "diffuseTexture": "421"
+            }
+        },
+        "423": {
+            "name": "PizzaToppingCheese",
+            "pipeline": "38",
+            "Phong": {
+                "shininess": 0,
+                "diffuseTexture": "425"
+            }
+        },
+        "429": {
+            "link": {
+                "name": "Wainscot_paneling",
+                "file": "models\\Building_LowerWalls.fbx"
+            },
+            "pipeline": "235",
+            "Phong": {
+                "normalTexture": "431",
+                "shininess": 0
+            }
+        },
+        "435": {
+            "link": {
+                "name": "M_BasicHand",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            }
+        },
+        "463": {
+            "link": {
+                "name": "M_BasicHand",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            },
+            "pipeline": "235",
+            "Phong": {
+                "diffuseTexture": "491",
+                "normalTexture": "493"
             }
         }
     },
@@ -1729,7 +2700,20 @@
             "serverPort": 7551
         }
     },
-    "animations": {},
+    "animations": {
+        "461": {
+            "link": {
+                "name": "<default>",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            }
+        },
+        "489": {
+            "link": {
+                "name": "<default>",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            }
+        }
+    },
     "skins": {
         "240": {
             "link": {
@@ -1744,6 +2728,54 @@
                 "file": "models\\hand-right.glb"
             },
             "joints": []
+        },
+        "437": {
+            "link": {
+                "name": "skin_0",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            },
+            "joints": [
+                "457",
+                "458",
+                "456",
+                "441",
+                "442",
+                "440",
+                "439",
+                "444",
+                "446",
+                "453",
+                "454",
+                "452",
+                "449",
+                "448",
+                "450",
+                "445"
+            ]
+        },
+        "465": {
+            "link": {
+                "name": "skin_0",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            },
+            "joints": [
+                "485",
+                "486",
+                "484",
+                "469",
+                "470",
+                "468",
+                "467",
+                "472",
+                "474",
+                "481",
+                "482",
+                "480",
+                "477",
+                "476",
+                "478",
+                "473"
+            ]
         }
     },
     "pipelines": {
@@ -1926,7 +2958,24 @@
         "models/Textures/PixelWood_basecolor.png",
         "models/Textures/PixelWood_roughness.png",
         "models/Textures/PixelWood_normal.png",
-        "models/Textures/PixelWood_ambientocclusion.png"
+        "models/Textures/PixelWood_ambientocclusion.png",
+        "models/Pizza.fbx",
+        "models/Textures/PizzaDough_basecolor.png",
+        "models/Textures/PizzaDough_normal.png",
+        "models/Building_Floor.fbx",
+        "models/Building_LowerWalls.fbx",
+        "models/Building_UpperWalls.fbx",
+        "models/Building_Outside.fbx",
+        "models/Oven.fbx",
+        "models/Textures/PixelConcrete_basecolor.png",
+        "models/Textures/PixelConcrete_normal.png",
+        "models/Textures/PizzaTopping_0.png",
+        "models/Textures/PizzaTopping_1.png",
+        "models/Textures/Wainscot_Paneling_normal.png",
+        "models/Hands/SK_BasicHand_R.fbx",
+        "models/Hands/SK_BasicHand_L.fbx",
+        "models/Hands/Hands_0.png",
+        "models/Hands/Hands_1.png"
     ],
     "fonts": {
         "238": {
