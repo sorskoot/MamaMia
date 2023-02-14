@@ -16,6 +16,7 @@ import '@wonderlandengine/components/player-height';
 
 import { Grabbable } from './interactions/grabbable';
 import { Grabber } from './interactions/grabber';
+import { HandPoser } from './interactions/handPoser';
 import { SnapZone } from './interactions/snapZone';
 import { Test } from './test';
 
@@ -23,3 +24,4 @@ WL.registerComponent(Grabber);
 WL.registerComponent(Grabbable);
 WL.registerComponent(SnapZone);
 WL.registerComponent(Test);
+WL.registerComponent(HandPoser);

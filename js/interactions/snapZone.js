@@ -1,4 +1,4 @@
-import { CollisionComponent, Type } from '@wonderlandengine/api/wonderland';
+import { CollisionComponent, Type, Object as Object3D } from '@wonderlandengine/api/wonderland';
 import { EventEmitterComponent } from '../core/eventEmitter';
 import { Grabbable } from './grabbable';
 
@@ -20,7 +20,11 @@ export class SnapZone extends EventEmitterComponent {
         locked: { type: Type.Bool, default: false }
     }
 
+    /** @type {Object3D} target to snap to */
     objectInZone = null;
+
+    /** @type {Object3D} target to snap to */
+    snapTarget = null;
 
     constructor() {
         super();
@@ -80,11 +84,15 @@ export class SnapZone extends EventEmitterComponent {
             }
             if (!grabbable.IsBeingHeld()) {
                 this.heldObject = grabbable;
+                if(this.heldObject.physx){
+                    this.heldObject.physx.kinematic = true;
+                }
                 grabbable.object.parent = this.object.parent;
                 grabbable.object.resetTranslationRotation();
-                let x = [];
-                this.snapTarget.getTranslationWorld(x);
-                grabbable.object.setTranslationWorld(x);
+                let rotation = [];
+                this.snapTarget.getTranslationWorld(rotation);
+                grabbable.object.setTranslationWorld(rotation);               
+                grabbable.object.rotateObject( this.snapTarget.rotationLocal);
                 this.emit('snapped', grabbable);
             }
         }

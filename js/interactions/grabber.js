@@ -7,7 +7,7 @@ export class Grabber extends ControllerBase {
     static Properties = Object.assign({}, ControllerBase.Properties,{
         handMeshObject: {type: WL.Type.Object, default:null},
         hideHandOnGrab: {type: WL.Type.Bool, default: true},
-        
+        handPoserObject: {type: WL.Type.Object, default:null},
         collisionObject: {type: WL.Type.Object},
         //- only on certain layers
         //- grab with trigger or grip
@@ -37,10 +37,12 @@ export class Grabber extends ControllerBase {
         if(!this._collision){
             console.error('Grabber: collision component is missing');
         }
+        this.handPoser = this.handPoserObject.getComponent('hand-poser');
         super.start();
     };
 
-    onTriggerPressed(event) {                
+    onTriggerPressed(event) {      
+        if(this.handPoser)this.handPoser.setPose('grab');          
         let collisions = this._collision.queryOverlaps();
         if(collisions.length > 0){            
             //todo: check if there's anyting in the collisions list that is grabbable
@@ -55,7 +57,8 @@ export class Grabber extends ControllerBase {
         }
     }
 
-    onTriggerReleased(event) {        
+    onTriggerReleased(event) {     
+        if(this.handPoser)this.handPoser.resetPose();             
         if(this.currentlyHeld){            
             this.currentlyHeld.drop(this);
             this.currentlyHeld = null;

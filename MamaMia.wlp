@@ -194,10 +194,19 @@
                 {
                     "type": "grabber",
                     "grabber": {
-                        "handMeshObject": "460",
+                        "handMeshObject": "765",
                         "collisionObject": "568",
                         "hideHandOnGrab": false,
-                        "handedness": "Right"
+                        "handedness": "Right",
+                        "handPoserObject": "129"
+                    }
+                },
+                {
+                    "type": "hand-poser",
+                    "hand-poser": {
+                        "BonesRoot": "737",
+                        "handedNess": "right",
+                        "handedness": "right"
                     }
                 }
             ],
@@ -256,14 +265,22 @@
                 },
                 {
                     "type": "vr-mode-active-switch",
-                    "active": true
+                    "active": false
                 },
                 {
                     "type": "grabber",
                     "grabber": {
-                        "handMeshObject": "488",
-                        "collisionObject": "569"
+                        "handMeshObject": "705",
+                        "collisionObject": "569",
+                        "handPoserObject": "130"
                     }
+                },
+                {
+                    "type": "hand-poser",
+                    "hand-poser": {
+                        "BonesRoot": "704"
+                    },
+                    "active": true
                 }
             ],
             "translation": [
@@ -560,69 +577,40 @@
             "name": "Hand Anchor Right",
             "parent": "129",
             "translation": [
-                -0.0001113,
-                0.0000178,
-                0.2268862
+                -0.0001115,
+                0.000019,
+                0.2268865
             ],
             "rotation": [
-                0.0002441,
-                0.9999998,
-                0.0002418,
-                0.0002438
+                0.0,
+                0.0,
+                -0.7071068,
+                0.7071068
             ],
             "scale": [
-                1.0000028,
-                1.0000003,
-                0.9999841
+                1.0000025,
+                0.9999997,
+                0.9999845
             ]
         },
         "433": {
             "name": "Hand Anchor Left",
             "parent": "130",
             "translation": [
-                -0.0001104,
-                0.0000132,
-                0.2268868
+                -0.0002163,
+                0.0000405,
+                0.2186481
             ],
             "rotation": [
-                0.0002422,
-                0.9999998,
-                0.0002354,
-                0.0002431
+                0.0,
+                0.0,
+                0.7071068,
+                0.7071068
             ],
             "scale": [
                 1.000005,
-                1.0000036,
-                0.9999914
-            ]
-        },
-        "460": {
-            "link": {
-                "name": "BasicHand",
-                "file": "models\\Hands\\SK_BasicHand_R.fbx"
-            },
-            "parent": "432",
-            "components": [
-                {
-                    "mesh": {
-                        "skin": null,
-                        "material": "463"
-                    }
-                }
-            ]
-        },
-        "488": {
-            "link": {
-                "name": "BasicHand",
-                "file": "models\\Hands\\SK_BasicHand_L.fbx"
-            },
-            "parent": "433",
-            "components": [
-                {
-                    "mesh": {
-                        "skin": null
-                    }
-                }
+                1.0000029,
+                1.0000267
             ]
         },
         "518": {
@@ -720,10 +708,24 @@
                             ]
                         }
                     }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "kinematic": true,
+                        "shape": "convexMesh",
+                        "convexMesh": {
+                            "mesh": "532"
+                        },
+                        "bounciness": 0.0,
+                        "linearDamping": 1.0,
+                        "angularDamping": 1.0
+                    },
+                    "active": true
                 }
             ],
             "translation": [
-                -3.5762786865234375e-7,
+                -3.576278686523438e-7,
                 0.0845314,
                 -0.0107855
             ],
@@ -841,15 +843,15 @@
                     "type": "collision",
                     "collision": {
                         "sphere": {
-                            "radius": 0.05
+                            "radius": 0.1
                         }
                     }
                 }
             ],
             "translation": [
-                -0.0000346,
-                0.0000195,
-                0.0699652
+                -0.0573413,
+                0.0001212,
+                0.2379939
             ],
             "rotation": [
                 0.0,
@@ -858,9 +860,9 @@
                 1.0
             ],
             "scale": [
-                1.0000097,
+                1.0000404,
                 1.0,
-                1.0000097
+                1.0000404
             ]
         },
         "569": {
@@ -871,15 +873,15 @@
                     "type": "collision",
                     "collision": {
                         "sphere": {
-                            "radius": 0.05
+                            "radius": 0.1
                         }
                     }
                 }
             ],
             "translation": [
-                -0.0000346,
-                0.0000196,
-                0.0699652
+                0.0792235,
+                0.0010112,
+                0.2441769
             ],
             "rotation": [
                 0.0,
@@ -888,9 +890,1464 @@
                 1.0
             ],
             "scale": [
-                1.0000097,
+                1.0000457,
                 1.0,
-                1.0000097
+                1.0000457
+            ]
+        },
+        "699": {
+            "name": "Empty",
+            "parent": "243",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "plane",
+                        "static": true
+                    }
+                }
+            ],
+            "translation": [
+                -5.21540641784668e-8,
+                1.341104507446289e-7,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.7072291,
+                0.7069843
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "700": {
+            "name": "Empty.000",
+            "parent": "521",
+            "components": [
+                {
+                    "type": "snap-zone",
+                    "snap-zone": {
+                        "snapCollisionObject": "701",
+                        "snapTargetObject": "702"
+                    }
+                }
+            ]
+        },
+        "701": {
+            "name": "Collision.000",
+            "parent": "521",
+            "components": [
+                {
+                    "type": "collision",
+                    "collision": {
+                        "sphere": {
+                            "radius": 0.2
+                        }
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.1,
+                0.0
+            ]
+        },
+        "702": {
+            "name": "SnapTarget",
+            "parent": "521",
+            "translation": [
+                -0.029219,
+                0.0611437,
+                5.662441253662109e-7
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                -0.258819,
+                0.9659258
+            ],
+            "scale": [
+                0.9999989,
+                0.9999989,
+                1.0
+            ]
+        },
+        "704": {
+            "link": {
+                "name": "Armature",
+                "file": "models\\Hands\\left_hand.glb"
+            },
+            "parent": "433"
+        },
+        "737": {
+            "link": {
+                "name": "Armature",
+                "file": "models\\Hands\\right_hand.glb"
+            },
+            "parent": "432"
+        },
+        "765": {
+            "link": {
+                "name": "r_handMeshNode<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "737",
+            "components": [
+                {
+                    "mesh": {
+                        "skin": "791",
+                        "material": "463"
+                    }
+                }
+            ],
+            "translation": [
+                -1.1920928955078125e-7,
+                0.0,
+                -2.980232238769531e-7
+            ],
+            "rotation": [
+                -0.0,
+                -0.0,
+                2.3196747633846826e-8,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                0.9999999,
+                0.9999999
+            ]
+        },
+        "766": {
+            "link": {
+                "name": "wrist<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "737",
+            "skin": "791",
+            "translation": [
+                -2.384185791015625e-7,
+                3.5762786865234375e-7,
+                -1.7881393432617188e-7
+            ],
+            "rotation": [
+                -0.7071068,
+                1.7217104186784127e-8,
+                9.214241458721517e-8,
+                0.7071067
+            ],
+            "scale": [
+                1.0000001,
+                0.9999998,
+                1.0000001
+            ]
+        },
+        "767": {
+            "link": {
+                "name": "thumb-metacarpal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "737",
+            "skin": "791",
+            "translation": [
+                -0.0280286,
+                -0.0359584,
+                0.0191574
+            ],
+            "rotation": [
+                -0.4763745,
+                0.7100346,
+                0.1802873,
+                0.4862249
+            ],
+            "scale": [
+                1.0,
+                0.9999997,
+                0.9999997
+            ]
+        },
+        "768": {
+            "link": {
+                "name": "thumb-phalanx-proximal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "737",
+            "skin": "791",
+            "translation": [
+                -0.044956,
+                -0.0592185,
+                0.0343073
+            ],
+            "rotation": [
+                -0.4767399,
+                0.6406401,
+                0.1147791,
+                0.5908679
+            ],
+            "scale": [
+                0.9999998,
+                0.9999997,
+                0.9999998
+            ]
+        },
+        "769": {
+            "link": {
+                "name": "thumb-phalanx-distal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "737",
+            "skin": "791",
+            "translation": [
+                -0.0669128,
+                -0.0831228,
+                0.0437116
+            ],
+            "rotation": [
+                -0.3914218,
+                0.7194156,
+                0.096442,
+                0.5656226
+            ],
+            "scale": [
+                0.9999999,
+                0.9999997,
+                0.9999999
+            ]
+        },
+        "770": {
+            "link": {
+                "name": "thumb-tip<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "737",
+            "skin": "791",
+            "translation": [
+                -0.0778988,
+                -0.0916779,
+                0.0489119
+            ],
+            "rotation": [
+                -0.3947905,
+                0.7221442,
+                0.090972,
+                0.560689
+            ],
+            "scale": [
+                0.9999998,
+                0.9999997,
+                0.9999997
+            ]
+        },
+        "771": {
+            "link": {
+                "name": "index-finger-metacarpal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "737",
+            "skin": "791",
+            "translation": [
+                -0.0158846,
+                -0.0292125,
+                0.0094196
+            ],
+            "rotation": [
+                -0.7749422,
+                0.053324,
+                -0.0319579,
+                0.6289672
+            ],
+            "scale": [
+                0.9999998,
+                1.0000003,
+                0.9999998
+            ]
+        },
+        "772": {
+            "link": {
+                "name": "index-finger-phalanx-proximal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "737",
+            "skin": "791",
+            "translation": [
+                -0.0235509,
+                -0.0885484,
+                0.0073162
+            ],
+            "rotation": [
+                -0.7392874,
+                0.0168317,
+                0.0280361,
+                0.6725955
+            ],
+            "scale": [
+                1.0000001,
+                1.0,
+                1.0000003
+            ]
+        },
+        "773": {
+            "link": {
+                "name": "index-finger-phalanx-intermediate<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "737",
+            "skin": "791",
+            "translation": [
+                -0.0220221,
+                -0.1337543,
+                0.0105502
+            ],
+            "rotation": [
+                -0.7388503,
+                -0.0152893,
+                0.020967,
+                0.6733697
+            ],
+            "scale": [
+                0.9999994,
+                0.9999991,
+                1.0000001
+            ]
+        },
+        "774": {
+            "link": {
+                "name": "index-finger-phalanx-distal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "737",
+            "skin": "791",
+            "translation": [
+                -0.0206917,
+                -0.1579198,
+                0.0127686
+            ],
+            "rotation": [
+                -0.6864076,
+                -0.0415611,
+                0.0314421,
+                0.7253471
+            ],
+            "scale": [
+                0.9999994,
+                0.9999996,
+                0.9999997
+            ]
+        },
+        "775": {
+            "link": {
+                "name": "index-finger-tip<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "737",
+            "components": [
+                {
+                    "type": "collision",
+                    "collision": {
+                        "sphere": {
+                            "radius": 0.0099999
+                        },
+                        "groups": 2
+                    }
+                },
+                {
+                    "type": "finger-cursor"
+                }
+            ],
+            "skin": "791",
+            "translation": [
+                -0.019425,
+                -0.1694173,
+                0.0121589
+            ],
+            "rotation": [
+                -0.6862807,
+                -0.0499778,
+                0.0385212,
+                0.7245944
+            ],
+            "scale": [
+                1.0000001,
+                0.9999998,
+                0.9999998
+            ]
+        },
+        "776": {
+            "link": {
+                "name": "middle-finger-metacarpal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "737",
+            "skin": "791",
+            "translation": [
+                -0.0032593,
+                -0.0291062,
+                0.0094195
+            ],
+            "rotation": [
+                -0.7821786,
+                -0.0230439,
+                -0.0630474,
+                0.6194276
+            ],
+            "scale": [
+                1.0,
+                0.9999995,
+                1.0000002
+            ]
+        },
+        "777": {
+            "link": {
+                "name": "middle-finger-phalanx-proximal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "737",
+            "skin": "791",
+            "translation": [
+                -0.001726,
+                -0.0916465,
+                0.0025429
+            ],
+            "rotation": [
+                -0.7427287,
+                -0.0415185,
+                0.0283176,
+                0.6677037
+            ],
+            "scale": [
+                0.9999994,
+                1.0000001,
+                1.0000005
+            ]
+        },
+        "778": {
+            "link": {
+                "name": "middle-finger-phalanx-intermediate<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "737",
+            "skin": "791",
+            "translation": [
+                0.0026401,
+                -0.1381154,
+                0.0070209
+            ],
+            "rotation": [
+                -0.7380438,
+                -0.0625841,
+                0.0365743,
+                0.6708478
+            ],
+            "scale": [
+                1.0,
+                1.0000003,
+                1.0000001
+            ]
+        },
+        "779": {
+            "link": {
+                "name": "middle-finger-phalanx-distal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "737",
+            "skin": "791",
+            "translation": [
+                0.0056855,
+                -0.1653552,
+                0.0097924
+            ],
+            "rotation": [
+                -0.6704925,
+                -0.0809939,
+                0.014193,
+                0.7373455
+            ],
+            "scale": [
+                1.0000007,
+                0.9999995,
+                1.0
+            ]
+        },
+        "780": {
+            "link": {
+                "name": "middle-finger-tip<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "737",
+            "skin": "791",
+            "translation": [
+                0.0073022,
+                -0.1774077,
+                0.0087631
+            ],
+            "rotation": [
+                -0.6713147,
+                -0.0782103,
+                0.0080886,
+                0.7369899
+            ],
+            "scale": [
+                0.9999992,
+                0.9999998,
+                0.9999997
+            ]
+        },
+        "781": {
+            "link": {
+                "name": "ring-finger-metacarpal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "737",
+            "skin": "791",
+            "translation": [
+                0.0082656,
+                -0.0269904,
+                0.0094196
+            ],
+            "rotation": [
+                -0.7795129,
+                -0.1231361,
+                -0.0489037,
+                0.6122136
+            ],
+            "scale": [
+                1.0000002,
+                0.9999997,
+                1.0000005
+            ]
+        },
+        "782": {
+            "link": {
+                "name": "ring-finger-phalanx-proximal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "737",
+            "skin": "791",
+            "translation": [
+                0.017465,
+                -0.0846935,
+                0.0065292
+            ],
+            "rotation": [
+                -0.7372061,
+                -0.1199005,
+                0.0469763,
+                0.6632829
+            ],
+            "scale": [
+                0.9999995,
+                1.0000001,
+                1.0000003
+            ]
+        },
+        "783": {
+            "link": {
+                "name": "ring-finger-phalanx-intermediate<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "737",
+            "skin": "791",
+            "translation": [
+                0.0267609,
+                -0.1263144,
+                0.0108845
+            ],
+            "rotation": [
+                -0.7334646,
+                -0.1584361,
+                0.0386865,
+                0.6598719
+            ],
+            "scale": [
+                0.9999992,
+                0.9999999,
+                0.9999997
+            ]
+        },
+        "784": {
+            "link": {
+                "name": "ring-finger-phalanx-distal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "737",
+            "skin": "791",
+            "translation": [
+                0.0331919,
+                -0.1518876,
+                0.0141683
+            ],
+            "rotation": [
+                -0.7179668,
+                -0.1319783,
+                0.0064492,
+                0.6834205
+            ],
+            "scale": [
+                1.0000002,
+                0.9999992,
+                1.0000002
+            ]
+        },
+        "785": {
+            "link": {
+                "name": "ring-finger-tip<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "737",
+            "skin": "791",
+            "translation": [
+                0.0355225,
+                -0.1635719,
+                0.0149418
+            ],
+            "rotation": [
+                -0.7187319,
+                -0.1341748,
+                0.0034635,
+                0.6822093
+            ],
+            "scale": [
+                0.9999994,
+                1.0000003,
+                1.0000001
+            ]
+        },
+        "786": {
+            "link": {
+                "name": "pinky-finger-metacarpal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "737",
+            "skin": "791",
+            "translation": [
+                0.0229984,
+                -0.0340734,
+                0.0094195
+            ],
+            "rotation": [
+                -0.6950897,
+                -0.2457116,
+                -0.0527737,
+                0.6735659
+            ],
+            "scale": [
+                0.9999999,
+                0.9999998,
+                1.0000008
+            ]
+        },
+        "787": {
+            "link": {
+                "name": "pinky-finger-phalanx-proximal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "737",
+            "skin": "791",
+            "translation": [
+                0.0350537,
+                -0.0738954,
+                0.0136908
+            ],
+            "rotation": [
+                -0.7371916,
+                -0.1664296,
+                -0.004589,
+                0.6548501
+            ],
+            "scale": [
+                0.9999998,
+                0.9999999,
+                1.0000001
+            ]
+        },
+        "788": {
+            "link": {
+                "name": "pinky-finger-phalanx-intermediate<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "737",
+            "skin": "791",
+            "translation": [
+                0.0423673,
+                -0.1074026,
+                0.0181167
+            ],
+            "rotation": [
+                -0.7181382,
+                -0.2287672,
+                0.0115434,
+                0.6571223
+            ],
+            "scale": [
+                1.0000002,
+                1.0000002,
+                0.9999995
+            ]
+        },
+        "789": {
+            "link": {
+                "name": "pinky-finger-phalanx-distal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "737",
+            "skin": "791",
+            "translation": [
+                0.0489547,
+                -0.1264032,
+                0.0209715
+            ],
+            "rotation": [
+                -0.7028483,
+                -0.1945386,
+                -0.0178297,
+                0.683989
+            ],
+            "scale": [
+                0.9999997,
+                0.9999992,
+                1.0000003
+            ]
+        },
+        "790": {
+            "link": {
+                "name": "pinky-finger-tip<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "737",
+            "skin": "791",
+            "translation": [
+                0.0519309,
+                -0.1379069,
+                0.0217613
+            ],
+            "rotation": [
+                -0.7031675,
+                -0.2156881,
+                0.0012596,
+                0.6775193
+            ],
+            "scale": [
+                0.9999995,
+                1.0000004,
+                1.0000001
+            ]
+        },
+        "793": {
+            "link": {
+                "name": "l_handMeshNode<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "components": [
+                {
+                    "active": true,
+                    "mesh": {
+                        "skin": "822",
+                        "material": "463"
+                    }
+                }
+            ],
+            "translation": [
+                -1.1920928955078125e-7,
+                -0.0,
+                -2.980232238769531e-7
+            ],
+            "rotation": [
+                -0.0,
+                0.0,
+                -0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "794": {
+            "link": {
+                "name": "xr_standard_trigger_pressed_max<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "translation": [
+                -1.1920928955078125e-7,
+                -0.0,
+                -2.980232238769531e-7
+            ],
+            "rotation": [
+                -0.0,
+                0.0,
+                -0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "795": {
+            "link": {
+                "name": "xr_standard_trigger_pressed_min<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "translation": [
+                -1.1920928955078125e-7,
+                -0.0,
+                -2.980232238769531e-7
+            ],
+            "rotation": [
+                -0.0,
+                0.0,
+                -0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "796": {
+            "link": {
+                "name": "xr_standard_trigger_pressed_value<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "translation": [
+                -1.1920928955078125e-7,
+                -0.0,
+                -2.980232238769531e-7
+            ],
+            "rotation": [
+                -0.0,
+                0.0,
+                -0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "797": {
+            "link": {
+                "name": "pinky-finger-tip<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "skin": "822",
+            "translation": [
+                -0.0519309,
+                -0.137907,
+                0.0217614
+            ],
+            "rotation": [
+                -0.7025406,
+                0.1908321,
+                0.0259493,
+                0.6850886
+            ],
+            "scale": [
+                0.9999979,
+                0.999978,
+                1.0000237
+            ]
+        },
+        "798": {
+            "link": {
+                "name": "pinky-finger-phalanx-distal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "skin": "822",
+            "translation": [
+                -0.0489547,
+                -0.1264031,
+                0.0209717
+            ],
+            "rotation": [
+                -0.7018193,
+                0.193861,
+                0.0201117,
+                0.6851737
+            ],
+            "scale": [
+                0.9999979,
+                0.9999779,
+                1.0000239
+            ]
+        },
+        "799": {
+            "link": {
+                "name": "pinky-finger-phalanx-intermediate<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "skin": "822",
+            "translation": [
+                -0.0423672,
+                -0.107403,
+                0.0181172
+            ],
+            "rotation": [
+                -0.7184377,
+                0.2315424,
+                -0.0142401,
+                0.6557686
+            ],
+            "scale": [
+                0.9999985,
+                0.9999786,
+                1.0000234
+            ]
+        },
+        "800": {
+            "link": {
+                "name": "pinky-finger-phalanx-proximal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "skin": "822",
+            "translation": [
+                -0.0350539,
+                -0.0738959,
+                0.013691
+            ],
+            "rotation": [
+                -0.7356166,
+                0.1771783,
+                -0.0054082,
+                0.653794
+            ],
+            "scale": [
+                0.9999992,
+                0.9999775,
+                1.0000234
+            ]
+        },
+        "801": {
+            "link": {
+                "name": "pinky-finger-metacarpal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "skin": "822",
+            "translation": [
+                -0.0229986,
+                -0.0340736,
+                0.0094195
+            ],
+            "rotation": [
+                -0.6971041,
+                0.2520424,
+                0.0421947,
+                0.6698805
+            ],
+            "scale": [
+                0.9999966,
+                0.9999797,
+                1.0000236
+            ]
+        },
+        "802": {
+            "link": {
+                "name": "ring-finger-tip<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "skin": "822",
+            "translation": [
+                -0.0355225,
+                -0.1635719,
+                0.014942
+            ],
+            "rotation": [
+                -0.7179075,
+                0.1270163,
+                -0.0053999,
+                0.6844315
+            ],
+            "scale": [
+                0.9999994,
+                0.9999766,
+                1.0000234
+            ]
+        },
+        "803": {
+            "link": {
+                "name": "ring-finger-phalanx-distal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "skin": "822",
+            "translation": [
+                -0.0331922,
+                -0.1518878,
+                0.0141684
+            ],
+            "rotation": [
+                -0.7199001,
+                0.1409214,
+                -0.0094698,
+                0.6795551
+            ],
+            "scale": [
+                0.9999993,
+                0.9999769,
+                1.0000237
+            ]
+        },
+        "804": {
+            "link": {
+                "name": "ring-finger-phalanx-intermediate<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "skin": "822",
+            "translation": [
+                -0.0267608,
+                -0.1263144,
+                0.0108846
+            ],
+            "rotation": [
+                -0.7340468,
+                0.1547545,
+                -0.0315189,
+                0.6604792
+            ],
+            "scale": [
+                0.9999995,
+                0.9999768,
+                1.0000233
+            ]
+        },
+        "805": {
+            "link": {
+                "name": "ring-finger-phalanx-proximal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "skin": "822",
+            "translation": [
+                -0.0174651,
+                -0.0846937,
+                0.0065291
+            ],
+            "rotation": [
+                -0.7350938,
+                0.1242676,
+                -0.0474649,
+                0.6647868
+            ],
+            "scale": [
+                1.0000001,
+                0.9999764,
+                1.0000237
+            ]
+        },
+        "806": {
+            "link": {
+                "name": "ring-finger-metacarpal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "skin": "822",
+            "translation": [
+                -0.0082656,
+                -0.0269904,
+                0.0094196
+            ],
+            "rotation": [
+                -0.7838645,
+                0.1511992,
+                0.0248531,
+                0.6017287
+            ],
+            "scale": [
+                0.9999989,
+                0.9999787,
+                1.0000219
+            ]
+        },
+        "807": {
+            "link": {
+                "name": "middle-finger-tip<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "skin": "822",
+            "translation": [
+                -0.0073022,
+                -0.1774076,
+                0.0087631
+            ],
+            "rotation": [
+                -0.6716066,
+                0.0841127,
+                -0.0125491,
+                0.7360109
+            ],
+            "scale": [
+                0.9999995,
+                0.9999763,
+                1.0000237
+            ]
+        },
+        "808": {
+            "link": {
+                "name": "middle-finger-phalanx-distal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "skin": "822",
+            "translation": [
+                -0.0056859,
+                -0.1653555,
+                0.0097926
+            ],
+            "rotation": [
+                -0.6702026,
+                0.0929633,
+                -0.026791,
+                0.7358454
+            ],
+            "scale": [
+                1.0,
+                0.9999762,
+                1.0000239
+            ]
+        },
+        "809": {
+            "link": {
+                "name": "middle-finger-phalanx-intermediate<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "skin": "822",
+            "translation": [
+                -0.0026402,
+                -0.1381154,
+                0.0070213
+            ],
+            "rotation": [
+                -0.7391,
+                0.0504305,
+                -0.0237811,
+                0.6712841
+            ],
+            "scale": [
+                0.9999998,
+                0.9999762,
+                1.0000237
+            ]
+        },
+        "810": {
+            "link": {
+                "name": "middle-finger-phalanx-proximal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "skin": "822",
+            "translation": [
+                0.0017259,
+                -0.0916464,
+                0.0025429
+            ],
+            "rotation": [
+                -0.7411656,
+                0.0374271,
+                -0.0256771,
+                0.6697861
+            ],
+            "scale": [
+                1.0000005,
+                0.9999762,
+                1.0000234
+            ]
+        },
+        "811": {
+            "link": {
+                "name": "middle-finger-metacarpal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "skin": "822",
+            "translation": [
+                0.0032589,
+                -0.0291062,
+                0.0094195
+            ],
+            "rotation": [
+                -0.7822594,
+                0.0333087,
+                0.0478009,
+                0.6202223
+            ],
+            "scale": [
+                0.9999994,
+                0.9999771,
+                1.0000226
+            ]
+        },
+        "812": {
+            "link": {
+                "name": "index-finger-tip<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "components": [
+                {
+                    "type": "finger-cursor"
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "sphere": {
+                            "radius": 0.0099999
+                        },
+                        "groups": 2
+                    }
+                }
+            ],
+            "skin": "822",
+            "translation": [
+                0.0194253,
+                -0.1694175,
+                0.0121589
+            ],
+            "rotation": [
+                -0.6860064,
+                0.0402391,
+                -0.0319131,
+                0.7257806
+            ],
+            "scale": [
+                1.0000004,
+                0.9999763,
+                1.0000239
+            ]
+        },
+        "813": {
+            "link": {
+                "name": "index-finger-phalanx-distal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "skin": "822",
+            "translation": [
+                0.0206916,
+                -0.15792,
+                0.0127688
+            ],
+            "rotation": [
+                -0.6893143,
+                0.0414328,
+                -0.0372869,
+                0.7223148
+            ],
+            "scale": [
+                1.0,
+                0.9999759,
+                1.0000238
+            ]
+        },
+        "814": {
+            "link": {
+                "name": "index-finger-phalanx-intermediate<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "skin": "822",
+            "translation": [
+                0.0220222,
+                -0.1337544,
+                0.0105503
+            ],
+            "rotation": [
+                -0.7378436,
+                0.017482,
+                -0.0233281,
+                0.6743418
+            ],
+            "scale": [
+                0.9999999,
+                0.9999762,
+                1.0000237
+            ]
+        },
+        "815": {
+            "link": {
+                "name": "index-finger-phalanx-proximal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "skin": "822",
+            "translation": [
+                0.0235508,
+                -0.0919961,
+                0.0073164
+            ],
+            "rotation": [
+                -0.7353149,
+                -0.0088912,
+                -0.0346055,
+                0.6767831
+            ],
+            "scale": [
+                1.0,
+                0.9999763,
+                1.0000238
+            ]
+        },
+        "816": {
+            "link": {
+                "name": "index-finger-metacarpal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "skin": "822",
+            "translation": [
+                0.0158846,
+                -0.0292126,
+                0.0094196
+            ],
+            "rotation": [
+                -0.7737977,
+                -0.0760484,
+                0.0609273,
+                0.6258926
+            ],
+            "scale": [
+                1.0000004,
+                0.9999769,
+                1.0000226
+            ]
+        },
+        "817": {
+            "link": {
+                "name": "thumb-tip<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "skin": "822",
+            "translation": [
+                0.0778988,
+                -0.091678,
+                0.048912
+            ],
+            "rotation": [
+                -0.391088,
+                -0.7220984,
+                -0.0967864,
+                0.5623668
+            ],
+            "scale": [
+                0.999983,
+                0.9999971,
+                1.00002
+            ]
+        },
+        "818": {
+            "link": {
+                "name": "thumb-phalanx-distal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "skin": "822",
+            "translation": [
+                0.0669127,
+                -0.0831232,
+                0.0437116
+            ],
+            "rotation": [
+                -0.3913604,
+                -0.7193928,
+                -0.0922201,
+                0.5663976
+            ],
+            "scale": [
+                0.9999828,
+                0.999997,
+                1.00002
+            ]
+        },
+        "819": {
+            "link": {
+                "name": "thumb-phalanx-proximal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "skin": "822",
+            "translation": [
+                0.0449558,
+                -0.0592187,
+                0.0343074
+            ],
+            "rotation": [
+                -0.4766192,
+                -0.637173,
+                -0.115795,
+                0.594505
+            ],
+            "scale": [
+                0.9999836,
+                0.9999946,
+                1.0000212
+            ]
+        },
+        "820": {
+            "link": {
+                "name": "thumb-metacarpal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "skin": "822",
+            "translation": [
+                0.0280283,
+                -0.0359583,
+                0.0191575
+            ],
+            "rotation": [
+                0.4760464,
+                0.7034947,
+                0.1832986,
+                -0.49485
+            ],
+            "scale": [
+                0.9999833,
+                0.9999971,
+                1.0000185
+            ]
+        },
+        "821": {
+            "link": {
+                "name": "wrist<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "704",
+            "skin": "822",
+            "translation": [
+                -2.384185791015625e-7,
+                5.21540641784668e-8,
+                -4.172325134277344e-7
+            ],
+            "rotation": [
+                -0.7071068,
+                -2.4988530356040428e-8,
+                1.0133851446880726e-7,
+                0.7071066
+            ],
+            "scale": [
+                1.0,
+                0.9999758,
+                1.0000239
             ]
         }
     },
@@ -1323,6 +2780,18 @@
             "link": {
                 "name": "ToppingBowl.0",
                 "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "619": {
+            "link": {
+                "name": "Mesh",
+                "file": "models\\Hands\\left_hand.glb"
+            }
+        },
+        "735": {
+            "link": {
+                "name": "Mesh.001",
+                "file": "models\\Hands\\right_hand.glb"
             }
         }
     },
@@ -2827,6 +4296,18 @@
                     1.0
                 ]
             }
+        },
+        "618": {
+            "link": {
+                "name": "Default_Material",
+                "file": "models\\Hands\\left_hand.glb"
+            }
+        },
+        "734": {
+            "link": {
+                "name": "lambert2",
+                "file": "models\\Hands\\right_hand.glb"
+            }
         }
     },
     "shaders": {
@@ -2992,12 +4473,13 @@
             "npmScript": "buildDev"
         },
         "runtime": {
-            "visualizeColliders": false,
+            "visualizeColliders": true,
             "webxr": {
                 "optionalFeatures": {
                     "local-floor": true
                 }
-            }
+            },
+            "visualizePhysX": true
         },
         "rendering": {
             "hdr": {
@@ -3013,6 +4495,9 @@
         },
         "editor": {
             "serverPort": 7551
+        },
+        "physx": {
+            "enable": true
         }
     },
     "animations": {
@@ -3055,14 +4540,285 @@
                 "name": "skin_0",
                 "file": "models\\Hands\\SK_BasicHand_R.fbx"
             },
-            "joints": []
+            "joints": [
+                "614",
+                "615",
+                "613",
+                "598",
+                "599",
+                "597",
+                "596",
+                "601",
+                "603",
+                "610",
+                "611",
+                "609",
+                "606",
+                "605",
+                "607",
+                "602"
+            ]
         },
         "465": {
             "link": {
                 "name": "skin_0",
                 "file": "models\\Hands\\SK_BasicHand_L.fbx"
             },
+            "joints": [
+                "695",
+                "696",
+                "694",
+                "679",
+                "680",
+                "678",
+                "677",
+                "682",
+                "684",
+                "691",
+                "692",
+                "690",
+                "687",
+                "686",
+                "688",
+                "683"
+            ]
+        },
+        "570": {
+            "link": {
+                "name": "skin_0",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            },
+            "joints": [
+                "590",
+                "591",
+                "589",
+                "574",
+                "575",
+                "573",
+                "572",
+                "577",
+                "579",
+                "586",
+                "587",
+                "585",
+                "582",
+                "581",
+                "583",
+                "578"
+            ]
+        },
+        "594": {
+            "link": {
+                "name": "skin_0",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            },
+            "joints": [
+                "614",
+                "615",
+                "613",
+                "598",
+                "599",
+                "597",
+                "596",
+                "601",
+                "603",
+                "610",
+                "611",
+                "609",
+                "606",
+                "605",
+                "607",
+                "602"
+            ]
+        },
+        "620": {
+            "link": {
+                "name": "Armature",
+                "file": "models\\Hands\\left_hand.glb"
+            },
             "joints": []
+        },
+        "651": {
+            "link": {
+                "name": "skin_0",
+                "file": "models\\Hands\\SK_BasicHand_R.fbx"
+            },
+            "joints": [
+                "671",
+                "672",
+                "670",
+                "655",
+                "656",
+                "654",
+                "653",
+                "658",
+                "660",
+                "667",
+                "668",
+                "666",
+                "663",
+                "662",
+                "664",
+                "659"
+            ]
+        },
+        "675": {
+            "link": {
+                "name": "skin_0",
+                "file": "models\\Hands\\SK_BasicHand_L.fbx"
+            },
+            "joints": [
+                "695",
+                "696",
+                "694",
+                "679",
+                "680",
+                "678",
+                "677",
+                "682",
+                "684",
+                "691",
+                "692",
+                "690",
+                "687",
+                "686",
+                "688",
+                "683"
+            ]
+        },
+        "703": {
+            "link": {
+                "name": "Armature",
+                "file": "models\\Hands\\left_hand.glb"
+            },
+            "joints": [
+                "709",
+                "710",
+                "711",
+                "712",
+                "713",
+                "714",
+                "715",
+                "716",
+                "717",
+                "718",
+                "719",
+                "720",
+                "721",
+                "722",
+                "723",
+                "724",
+                "725",
+                "726",
+                "727",
+                "728",
+                "729",
+                "730",
+                "731",
+                "732",
+                "733"
+            ]
+        },
+        "736": {
+            "link": {
+                "name": "Armature",
+                "file": "models\\Hands\\right_hand.glb"
+            },
+            "joints": [
+                "739",
+                "740",
+                "741",
+                "742",
+                "743",
+                "744",
+                "745",
+                "746",
+                "747",
+                "748",
+                "749",
+                "750",
+                "751",
+                "752",
+                "753",
+                "754",
+                "755",
+                "756",
+                "757",
+                "758",
+                "759",
+                "760",
+                "761",
+                "762",
+                "763"
+            ]
+        },
+        "791": {
+            "link": {
+                "name": "Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "name": "HandRightSkin",
+            "joints": [
+                "766",
+                "767",
+                "768",
+                "769",
+                "770",
+                "771",
+                "772",
+                "773",
+                "774",
+                "775",
+                "776",
+                "777",
+                "778",
+                "779",
+                "780",
+                "781",
+                "782",
+                "783",
+                "784",
+                "785",
+                "786",
+                "787",
+                "788",
+                "789",
+                "790"
+            ]
+        },
+        "822": {
+            "link": {
+                "name": "Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "name": "HandLeftSkin",
+            "joints": [
+                "797",
+                "798",
+                "799",
+                "800",
+                "801",
+                "802",
+                "803",
+                "804",
+                "805",
+                "806",
+                "807",
+                "808",
+                "809",
+                "810",
+                "811",
+                "812",
+                "813",
+                "814",
+                "815",
+                "816",
+                "817",
+                "818",
+                "819",
+                "820",
+                "821"
+            ]
         }
     },
     "pipelines": {
@@ -3285,7 +5041,9 @@
         "models/Cupboards.fbx",
         "models/ToppingBowl.fbx",
         "models/Textures/ShreddedCheese_basecolor.png",
-        "models/Textures/ShreddedCheese_normal.png"
+        "models/Textures/ShreddedCheese_normal.png",
+        "models/Hands/left_hand.glb",
+        "models/Hands/right_hand.glb"
     ],
     "fonts": {
         "238": {

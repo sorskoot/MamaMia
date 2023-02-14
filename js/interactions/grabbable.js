@@ -18,8 +18,7 @@ export class Grabbable extends Component {
     grabbedBy;        
 
     start(){
-        this.physx = this.object.getComponent('physx');        
-        super.start();
+        this.physx = this.object.getComponent('physx');              
     }
 
     /** @param {Grabber} grabber that is grabbing the item */
