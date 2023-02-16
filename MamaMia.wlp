@@ -2551,6 +2551,57 @@
                 0.0,
                 1.0
             ]
+        },
+        "829": {
+            "name": "Mesh.000",
+            "parent": "529",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "11",
+                        "material": "25"
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "aabb",
+                        "aabb": {
+                            "extents": [
+                                0.1,
+                                0.1,
+                                0.1
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "grabbable"
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "bounciness": 0.0
+                    }
+                }
+            ],
+            "scale": [
+                0.1,
+                0.1,
+                0.1
+            ],
+            "translation": [
+                -0.5802556,
+                0.0862419,
+                0.160433
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
         }
     },
     "meshes": {
