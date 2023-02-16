@@ -13,6 +13,8 @@
 /* Register all default components. */
 import '@wonderlandengine/components';
 import '@wonderlandengine/components/player-height';
+import { PizzaComponent } from './game/components/pizza-component';
+import { ToppingComponent } from './game/components/topping-component';
 
 import { Grabbable } from './interactions/grabbable';
 import { Grabber } from './interactions/grabber';
@@ -27,3 +29,5 @@ WL.registerComponent(SnapZone);
 WL.registerComponent(GrabPoint);
 WL.registerComponent(Test);
 WL.registerComponent(HandPoser);
+WL.registerComponent(PizzaComponent);
+WL.registerComponent(ToppingComponent);

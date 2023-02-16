@@ -407,10 +407,10 @@
                 "name": "Pizza",
                 "file": "models\\Pizza.fbx"
             },
-            "parent": "243",
+            "parent": "830",
             "translation": [
                 0.3077216,
-                0.884486,
+                0.8844859,
                 0.1528349
             ],
             "rotation": [
@@ -498,10 +498,10 @@
                 "name": "Pizza",
                 "file": "models\\Pizza.fbx"
             },
-            "parent": "243",
+            "parent": "830",
             "translation": [
-                -0.1072983,
-                0.884486,
+                -0.1072982,
+                0.8844859,
                 0.1528349
             ],
             "rotation": [
@@ -529,11 +529,11 @@
                 "name": "Pizza",
                 "file": "models\\Pizza.fbx"
             },
-            "parent": "243",
+            "parent": "830",
             "translation": [
                 -0.5621448,
                 0.8857244,
-                0.1727743
+                0.1727742
             ],
             "rotation": [
                 0.0,
@@ -684,12 +684,20 @@
                 {
                     "type": "collision",
                     "collision": {
-                        "collider": "box",
+                        "collider": "aabb",
                         "box": {
                             "extents": [
                                 0.05,
                                 0.2,
                                 0.1
+                            ]
+                        },
+                        "groups": 6,
+                        "aabb": {
+                            "extents": [
+                                0.05,
+                                0.05,
+                                0.05
                             ]
                         }
                     }
@@ -707,6 +715,13 @@
                         "angularDamping": 1.0
                     },
                     "active": true
+                },
+                {
+                    "type": "topping-component",
+                    "topping-component": {
+                        "ToppingUncooked": "419",
+                        "needsToBeDropped": false
+                    }
                 }
             ],
             "translation": [
@@ -829,7 +844,8 @@
                     "collision": {
                         "sphere": {
                             "radius": 0.1
-                        }
+                        },
+                        "groups": 2
                     }
                 }
             ],
@@ -859,7 +875,8 @@
                     "collision": {
                         "sphere": {
                             "radius": 0.1
-                        }
+                        },
+                        "groups": 2
                     }
                 }
             ],
@@ -881,7 +898,7 @@
             ]
         },
         "699": {
-            "name": "Empty",
+            "name": "Ground",
             "parent": "243",
             "components": [
                 {
@@ -931,7 +948,8 @@
                     "collision": {
                         "sphere": {
                             "radius": 0.2
-                        }
+                        },
+                        "groups": 4
                     }
                 }
             ],
@@ -2489,24 +2507,24 @@
                 }
             ],
             "translation": [
-                -0.0299999,
-                0.0000243,
-                0.1379999
+                -0.0300001,
+                0.000036,
+                0.1380002
             ],
             "rotation": [
                 0.0,
+                1.0,
                 0.0,
-                0.0,
-                1.0
+                -0.000173
             ],
             "scale": [
-                1.0000121,
+                1.0000139,
                 1.0,
-                1.0000121
+                1.0000139
             ]
         },
         "827": {
-            "name": "Mesh",
+            "name": "Grab Center Visualizer",
             "parent": "825",
             "components": [
                 {
@@ -2514,7 +2532,8 @@
                     "mesh": {
                         "mesh": "9",
                         "material": "22"
-                    }
+                    },
+                    "active": false
                 }
             ],
             "scale": [
@@ -2524,7 +2543,7 @@
             ]
         },
         "828": {
-            "name": "Mesh",
+            "name": "Grab Center Visualizer",
             "parent": "826",
             "components": [
                 {
@@ -2532,7 +2551,8 @@
                     "mesh": {
                         "mesh": "9",
                         "material": "22"
-                    }
+                    },
+                    "active": false
                 }
             ],
             "scale": [
@@ -2552,55 +2572,128 @@
                 1.0
             ]
         },
-        "829": {
-            "name": "Mesh.000",
-            "parent": "529",
-            "components": [
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "11",
-                        "material": "25"
-                    }
-                },
-                {
-                    "type": "collision",
-                    "collision": {
-                        "collider": "aabb",
-                        "aabb": {
-                            "extents": [
-                                0.1,
-                                0.1,
-                                0.1
-                            ]
-                        }
-                    }
-                },
-                {
-                    "type": "grabbable"
-                },
-                {
-                    "type": "physx",
-                    "physx": {
-                        "bounciness": 0.0
-                    }
-                }
-            ],
-            "scale": [
-                0.1,
-                0.1,
-                0.1
-            ],
+        "830": {
+            "name": "PizzaExamples",
+            "parent": "243",
             "translation": [
-                -0.5802556,
-                0.0862419,
-                0.160433
+                0.0,
+                0.0,
+                -1.8486535
             ],
             "rotation": [
                 0.0,
                 0.0,
                 0.0,
                 1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "831": {
+            "name": "PizzaPool",
+            "translation": [
+                0.0,
+                1.0737056,
+                0.1766473
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "832": {
+            "name": "Pizza",
+            "parent": "831",
+            "components": [
+                {
+                    "type": "pizza-component",
+                    "pizza-component": {
+                        "SnapZoneObject": "835",
+                        "PizzaCenterObject": "834"
+                    }
+                }
+            ]
+        },
+        "833": {
+            "name": "PizzaBorder",
+            "parent": "832",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "378",
+                        "material": "376"
+                    }
+                }
+            ]
+        },
+        "834": {
+            "name": "PizzaCenter",
+            "parent": "832",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "379",
+                        "material": "377"
+                    }
+                }
+            ]
+        },
+        "835": {
+            "name": "PizzaCollision",
+            "parent": "832",
+            "components": [
+                {
+                    "type": "collision",
+                    "collision": {
+                        "sphere": {
+                            "radius": 0.1749999
+                        },
+                        "collider": "aabb",
+                        "aabb": {
+                            "extents": [
+                                0.1749999,
+                                0.05,
+                                0.1749999
+                            ]
+                        },
+                        "groups": 4
+                    }
+                },
+                {
+                    "type": "snap-zone",
+                    "snap-zone": {
+                        "snapCollisionObject": "835",
+                        "snapTargetObject": "835"
+                    }
+                }
+            ],
+            "translation": [
+                1.3969838619232178e-8,
+                0.0192259,
+                2.5331974029541016e-7
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                0.9999987,
+                1.0,
+                0.9999987
             ]
         }
     },
@@ -4732,7 +4825,7 @@
                     "local-floor": true
                 }
             },
-            "visualizePhysX": true
+            "visualizePhysX": false
         },
         "rendering": {
             "hdr": {

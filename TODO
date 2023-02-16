@@ -2,12 +2,12 @@
 Interactions:
     ☐ Grab items from a distance, Jedi style, IE: RemoteGrabber
     ☐ 2 handed grabbing
-    ☐ Fixed hand poses when grabbing
+    ✔ Fixed hand poses when grabbing @done(23-02-16 16:13)
     ☐ Optional hide hand when grabbing
     ✔ Optional Haptics when grabbing @done(23-02-13 22:53)
     ☐ Optional PhysX
     GrabPoint:
-        ☐ translate/rotate object related to grabPoint
+        ✔ translate/rotate object related to grabPoint @done(23-02-16 16:12)
         ☐ Change handpose when grabbing with grabPoint
         ☐ Add multiple grabPoints, and choose the closest. 
 
@@ -19,5 +19,37 @@ Interactions:
         ✔ Only one item should snap to snapZone @done(23-02-01 00:06)
         ☐ grabbable snaps to zone when not being dropped.
 
-
-        
+Gameplay:
+    Main gameloop:        
+        ☐ create the game component
+        ☐ Add customers requesting pizza's
+            ~ maybe in a similar style as 'Welcome to Hell' where a picture is shown 
+            ~ with various pizza's and the player has to make the pizza's in the picture
+    Pizza:
+        ✔ Create the pizza component @done(23-02-16 23:28)
+        ☐ Spawn dough from somewhere
+        ☐ Add functionality to have to press the dough to form a pizza
+        ☐ Add functionality to bake the pizza in the oven
+        ☐ add functionality to put pizza in the box
+        Pizza topings:
+            ✔ Create base class for toppings @done(23-02-16 23:28)
+            ✔ Update texture of pizza based on topping @done(23-02-16 23:28)
+            Toppings to create:
+                Tomato Sause:
+                    ☐ Create the tomato sause component
+                    ☐ Add functionality to add tomato sause to pizza
+                Cheese:
+                    ☐ Create the cheese component
+                    ☐ Add functionality to add cheese to pizza
+                Pepperoni:
+                    ☐ Create the pepperoni component
+                    ☐ Add functionality to add pepperoni to pizza
+                mushrooms:
+                    ☐ Create the mushroom component
+                    ☐ Add functionality to add mushrooms to pizza
+                
+Graphics:
+    ☐ Title screen            
+Audio:
+    ☐ Add soundFX
+    ☐ Add Music

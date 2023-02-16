@@ -22,7 +22,7 @@ export class Grabbable extends Component {
 
     start() {
         this.physx = this.object.getComponent('physx');
-        this.originalTransform = this.object.transformLocal;
+        this.originalTransformLocal = this.object.transformLocal;        
     }
 
     /** @param {Grabber} grabber that is grabbing the item */
@@ -57,7 +57,7 @@ export class Grabbable extends Component {
         this.grabbedBy = null;
 
         reparentKeepTransform(this.object, this.originalParent);
-        this.object.transformLocal = this.originalTransform;
+        this.object.transformLocal = this.originalTransformLocal;
 
         if (this.physx) {
             this.physx.kinematic = false;

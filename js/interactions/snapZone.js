@@ -25,7 +25,10 @@ export class SnapZone extends EventEmitterComponent {
 
     /** @type {Object3D} target to snap to */
     snapTarget = null;
-
+    
+    /** @type {CollisionComponent} */
+    _snapCollision = null;
+    
     constructor() {
         super();
     }

@@ -60,7 +60,7 @@ export class EventEmitterComponent extends Component {
      */
     emit(eventName,...args){
         if(!this._listeners.has(eventName)){
-            console.warn(`EventEmitterComponent: Can't emit, no listeners registered for event ${eventName}`)
+            //console.warn(`EventEmitterComponent: Can't emit, no listeners registered for event ${eventName}`)
             return;
         }                    
         const functions = this._listeners.get(eventName);
