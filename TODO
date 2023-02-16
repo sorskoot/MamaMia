@@ -1,11 +1,19 @@
 
 Interactions:
-    ☐ RemoteGrabbale ~ grab over distance
+    ☐ Grab items from a distance, Jedi style, IE: RemoteGrabber
     ☐ 2 handed grabbing
     ☐ Fixed hand poses when grabbing
     ☐ Optional hide hand when grabbing
     ✔ Optional Haptics when grabbing @done(23-02-13 22:53)
     ☐ Optional PhysX
+    GrabPoint:
+        ☐ translate/rotate object related to grabPoint
+        ☐ Change handpose when grabbing with grabPoint
+        ☐ Add multiple grabPoints, and choose the closest. 
+
+    Prevent hands from clipping through objects:
+        ☐ When grabbing
+        ☐ When not grabbing
     
     Bugs:
         ✔ Only one item should snap to snapZone @done(23-02-01 00:06)

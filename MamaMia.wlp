@@ -192,16 +192,6 @@
                     "active": true
                 },
                 {
-                    "type": "grabber",
-                    "grabber": {
-                        "handMeshObject": "765",
-                        "collisionObject": "568",
-                        "hideHandOnGrab": false,
-                        "handedness": "Right",
-                        "handPoserObject": "129"
-                    }
-                },
-                {
                     "type": "hand-poser",
                     "hand-poser": {
                         "BonesRoot": "737",
@@ -266,14 +256,6 @@
                 {
                     "type": "vr-mode-active-switch",
                     "active": false
-                },
-                {
-                    "type": "grabber",
-                    "grabber": {
-                        "handMeshObject": "705",
-                        "collisionObject": "569",
-                        "handPoserObject": "130"
-                    }
                 },
                 {
                     "type": "hand-poser",
@@ -694,7 +676,10 @@
                     }
                 },
                 {
-                    "type": "grabbable"
+                    "type": "grabbable",
+                    "grabbable": {
+                        "grabPoint": "823"
+                    }
                 },
                 {
                     "type": "collision",
@@ -725,9 +710,9 @@
                 }
             ],
             "translation": [
-                -3.576278686523438e-7,
-                0.0845314,
-                -0.0107855
+                0.0,
+                0.0,
+                0.0
             ],
             "rotation": [
                 0.0,
@@ -849,9 +834,9 @@
                 }
             ],
             "translation": [
-                -0.0573413,
-                0.0001212,
-                0.2379939
+                -0.0572943,
+                0.0001631,
+                0.1379999
             ],
             "rotation": [
                 0.0,
@@ -860,9 +845,9 @@
                 1.0
             ],
             "scale": [
-                1.0000404,
+                1.0000613,
                 1.0,
-                1.0000404
+                1.0000613
             ]
         },
         "569": {
@@ -879,9 +864,9 @@
                 }
             ],
             "translation": [
-                0.0792235,
-                0.0010112,
-                0.2441769
+                0.056,
+                0.0010531,
+                0.1389999
             ],
             "rotation": [
                 0.0,
@@ -890,9 +875,9 @@
                 1.0
             ],
             "scale": [
-                1.0000457,
+                1.0000667,
                 1.0,
-                1.0000457
+                1.0000667
             ]
         },
         "699": {
@@ -1027,11 +1012,11 @@
                 "file": "models\\hand-right.glb"
             },
             "parent": "737",
-            "skin": "791",
+            "skin": "242",
             "translation": [
                 -2.384185791015625e-7,
-                3.5762786865234375e-7,
-                -1.7881393432617188e-7
+                3.576278686523438e-7,
+                -1.788139343261719e-7
             ],
             "rotation": [
                 -0.7071068,
@@ -1051,7 +1036,7 @@
                 "file": "models\\hand-right.glb"
             },
             "parent": "737",
-            "skin": "791",
+            "skin": "242",
             "translation": [
                 -0.0280286,
                 -0.0359584,
@@ -1075,7 +1060,7 @@
                 "file": "models\\hand-right.glb"
             },
             "parent": "737",
-            "skin": "791",
+            "skin": "242",
             "translation": [
                 -0.044956,
                 -0.0592185,
@@ -1099,7 +1084,7 @@
                 "file": "models\\hand-right.glb"
             },
             "parent": "737",
-            "skin": "791",
+            "skin": "242",
             "translation": [
                 -0.0669128,
                 -0.0831228,
@@ -1123,7 +1108,7 @@
                 "file": "models\\hand-right.glb"
             },
             "parent": "737",
-            "skin": "791",
+            "skin": "242",
             "translation": [
                 -0.0778988,
                 -0.0916779,
@@ -1147,7 +1132,7 @@
                 "file": "models\\hand-right.glb"
             },
             "parent": "737",
-            "skin": "791",
+            "skin": "242",
             "translation": [
                 -0.0158846,
                 -0.0292125,
@@ -1171,7 +1156,7 @@
                 "file": "models\\hand-right.glb"
             },
             "parent": "737",
-            "skin": "791",
+            "skin": "242",
             "translation": [
                 -0.0235509,
                 -0.0885484,
@@ -1195,7 +1180,7 @@
                 "file": "models\\hand-right.glb"
             },
             "parent": "737",
-            "skin": "791",
+            "skin": "242",
             "translation": [
                 -0.0220221,
                 -0.1337543,
@@ -1219,7 +1204,7 @@
                 "file": "models\\hand-right.glb"
             },
             "parent": "737",
-            "skin": "791",
+            "skin": "242",
             "translation": [
                 -0.0206917,
                 -0.1579198,
@@ -1243,21 +1228,7 @@
                 "file": "models\\hand-right.glb"
             },
             "parent": "737",
-            "components": [
-                {
-                    "type": "collision",
-                    "collision": {
-                        "sphere": {
-                            "radius": 0.0099999
-                        },
-                        "groups": 2
-                    }
-                },
-                {
-                    "type": "finger-cursor"
-                }
-            ],
-            "skin": "791",
+            "skin": "242",
             "translation": [
                 -0.019425,
                 -0.1694173,
@@ -1281,7 +1252,7 @@
                 "file": "models\\hand-right.glb"
             },
             "parent": "737",
-            "skin": "791",
+            "skin": "242",
             "translation": [
                 -0.0032593,
                 -0.0291062,
@@ -1305,7 +1276,7 @@
                 "file": "models\\hand-right.glb"
             },
             "parent": "737",
-            "skin": "791",
+            "skin": "242",
             "translation": [
                 -0.001726,
                 -0.0916465,
@@ -1329,7 +1300,7 @@
                 "file": "models\\hand-right.glb"
             },
             "parent": "737",
-            "skin": "791",
+            "skin": "242",
             "translation": [
                 0.0026401,
                 -0.1381154,
@@ -1353,7 +1324,7 @@
                 "file": "models\\hand-right.glb"
             },
             "parent": "737",
-            "skin": "791",
+            "skin": "242",
             "translation": [
                 0.0056855,
                 -0.1653552,
@@ -1377,7 +1348,7 @@
                 "file": "models\\hand-right.glb"
             },
             "parent": "737",
-            "skin": "791",
+            "skin": "242",
             "translation": [
                 0.0073022,
                 -0.1774077,
@@ -1401,7 +1372,7 @@
                 "file": "models\\hand-right.glb"
             },
             "parent": "737",
-            "skin": "791",
+            "skin": "242",
             "translation": [
                 0.0082656,
                 -0.0269904,
@@ -1425,7 +1396,7 @@
                 "file": "models\\hand-right.glb"
             },
             "parent": "737",
-            "skin": "791",
+            "skin": "242",
             "translation": [
                 0.017465,
                 -0.0846935,
@@ -1449,7 +1420,7 @@
                 "file": "models\\hand-right.glb"
             },
             "parent": "737",
-            "skin": "791",
+            "skin": "242",
             "translation": [
                 0.0267609,
                 -0.1263144,
@@ -1473,7 +1444,7 @@
                 "file": "models\\hand-right.glb"
             },
             "parent": "737",
-            "skin": "791",
+            "skin": "242",
             "translation": [
                 0.0331919,
                 -0.1518876,
@@ -1497,7 +1468,7 @@
                 "file": "models\\hand-right.glb"
             },
             "parent": "737",
-            "skin": "791",
+            "skin": "242",
             "translation": [
                 0.0355225,
                 -0.1635719,
@@ -1521,7 +1492,7 @@
                 "file": "models\\hand-right.glb"
             },
             "parent": "737",
-            "skin": "791",
+            "skin": "242",
             "translation": [
                 0.0229984,
                 -0.0340734,
@@ -1545,7 +1516,7 @@
                 "file": "models\\hand-right.glb"
             },
             "parent": "737",
-            "skin": "791",
+            "skin": "242",
             "translation": [
                 0.0350537,
                 -0.0738954,
@@ -1569,7 +1540,7 @@
                 "file": "models\\hand-right.glb"
             },
             "parent": "737",
-            "skin": "791",
+            "skin": "242",
             "translation": [
                 0.0423673,
                 -0.1074026,
@@ -1593,7 +1564,7 @@
                 "file": "models\\hand-right.glb"
             },
             "parent": "737",
-            "skin": "791",
+            "skin": "242",
             "translation": [
                 0.0489547,
                 -0.1264032,
@@ -1617,7 +1588,7 @@
                 "file": "models\\hand-right.glb"
             },
             "parent": "737",
-            "skin": "791",
+            "skin": "242",
             "translation": [
                 0.0519309,
                 -0.1379069,
@@ -1742,7 +1713,7 @@
                 "file": "models\\hand-left.glb"
             },
             "parent": "704",
-            "skin": "822",
+            "skin": "240",
             "translation": [
                 -0.0519309,
                 -0.137907,
@@ -1766,7 +1737,7 @@
                 "file": "models\\hand-left.glb"
             },
             "parent": "704",
-            "skin": "822",
+            "skin": "240",
             "translation": [
                 -0.0489547,
                 -0.1264031,
@@ -1790,7 +1761,7 @@
                 "file": "models\\hand-left.glb"
             },
             "parent": "704",
-            "skin": "822",
+            "skin": "240",
             "translation": [
                 -0.0423672,
                 -0.107403,
@@ -1814,7 +1785,7 @@
                 "file": "models\\hand-left.glb"
             },
             "parent": "704",
-            "skin": "822",
+            "skin": "240",
             "translation": [
                 -0.0350539,
                 -0.0738959,
@@ -1838,7 +1809,7 @@
                 "file": "models\\hand-left.glb"
             },
             "parent": "704",
-            "skin": "822",
+            "skin": "240",
             "translation": [
                 -0.0229986,
                 -0.0340736,
@@ -1862,7 +1833,7 @@
                 "file": "models\\hand-left.glb"
             },
             "parent": "704",
-            "skin": "822",
+            "skin": "240",
             "translation": [
                 -0.0355225,
                 -0.1635719,
@@ -1886,7 +1857,7 @@
                 "file": "models\\hand-left.glb"
             },
             "parent": "704",
-            "skin": "822",
+            "skin": "240",
             "translation": [
                 -0.0331922,
                 -0.1518878,
@@ -1910,7 +1881,7 @@
                 "file": "models\\hand-left.glb"
             },
             "parent": "704",
-            "skin": "822",
+            "skin": "240",
             "translation": [
                 -0.0267608,
                 -0.1263144,
@@ -1934,7 +1905,7 @@
                 "file": "models\\hand-left.glb"
             },
             "parent": "704",
-            "skin": "822",
+            "skin": "240",
             "translation": [
                 -0.0174651,
                 -0.0846937,
@@ -1958,7 +1929,7 @@
                 "file": "models\\hand-left.glb"
             },
             "parent": "704",
-            "skin": "822",
+            "skin": "240",
             "translation": [
                 -0.0082656,
                 -0.0269904,
@@ -1982,7 +1953,7 @@
                 "file": "models\\hand-left.glb"
             },
             "parent": "704",
-            "skin": "822",
+            "skin": "240",
             "translation": [
                 -0.0073022,
                 -0.1774076,
@@ -2006,7 +1977,7 @@
                 "file": "models\\hand-left.glb"
             },
             "parent": "704",
-            "skin": "822",
+            "skin": "240",
             "translation": [
                 -0.0056859,
                 -0.1653555,
@@ -2030,7 +2001,7 @@
                 "file": "models\\hand-left.glb"
             },
             "parent": "704",
-            "skin": "822",
+            "skin": "240",
             "translation": [
                 -0.0026402,
                 -0.1381154,
@@ -2054,7 +2025,7 @@
                 "file": "models\\hand-left.glb"
             },
             "parent": "704",
-            "skin": "822",
+            "skin": "240",
             "translation": [
                 0.0017259,
                 -0.0916464,
@@ -2078,7 +2049,7 @@
                 "file": "models\\hand-left.glb"
             },
             "parent": "704",
-            "skin": "822",
+            "skin": "240",
             "translation": [
                 0.0032589,
                 -0.0291062,
@@ -2102,21 +2073,7 @@
                 "file": "models\\hand-left.glb"
             },
             "parent": "704",
-            "components": [
-                {
-                    "type": "finger-cursor"
-                },
-                {
-                    "type": "collision",
-                    "collision": {
-                        "sphere": {
-                            "radius": 0.0099999
-                        },
-                        "groups": 2
-                    }
-                }
-            ],
-            "skin": "822",
+            "skin": "240",
             "translation": [
                 0.0194253,
                 -0.1694175,
@@ -2140,7 +2097,7 @@
                 "file": "models\\hand-left.glb"
             },
             "parent": "704",
-            "skin": "822",
+            "skin": "240",
             "translation": [
                 0.0206916,
                 -0.15792,
@@ -2164,7 +2121,7 @@
                 "file": "models\\hand-left.glb"
             },
             "parent": "704",
-            "skin": "822",
+            "skin": "240",
             "translation": [
                 0.0220222,
                 -0.1337544,
@@ -2188,7 +2145,7 @@
                 "file": "models\\hand-left.glb"
             },
             "parent": "704",
-            "skin": "822",
+            "skin": "240",
             "translation": [
                 0.0235508,
                 -0.0919961,
@@ -2212,7 +2169,7 @@
                 "file": "models\\hand-left.glb"
             },
             "parent": "704",
-            "skin": "822",
+            "skin": "240",
             "translation": [
                 0.0158846,
                 -0.0292126,
@@ -2236,7 +2193,7 @@
                 "file": "models\\hand-left.glb"
             },
             "parent": "704",
-            "skin": "822",
+            "skin": "240",
             "translation": [
                 0.0778988,
                 -0.091678,
@@ -2246,7 +2203,7 @@
                 -0.391088,
                 -0.7220984,
                 -0.0967864,
-                0.5623668
+                0.5623667
             ],
             "scale": [
                 0.999983,
@@ -2260,7 +2217,7 @@
                 "file": "models\\hand-left.glb"
             },
             "parent": "704",
-            "skin": "822",
+            "skin": "240",
             "translation": [
                 0.0669127,
                 -0.0831232,
@@ -2284,7 +2241,7 @@
                 "file": "models\\hand-left.glb"
             },
             "parent": "704",
-            "skin": "822",
+            "skin": "240",
             "translation": [
                 0.0449558,
                 -0.0592187,
@@ -2308,7 +2265,7 @@
                 "file": "models\\hand-left.glb"
             },
             "parent": "704",
-            "skin": "822",
+            "skin": "240",
             "translation": [
                 0.0280283,
                 -0.0359583,
@@ -2332,7 +2289,7 @@
                 "file": "models\\hand-left.glb"
             },
             "parent": "704",
-            "skin": "822",
+            "skin": "240",
             "translation": [
                 -2.384185791015625e-7,
                 5.21540641784668e-8,
@@ -2341,13 +2298,258 @@
             "rotation": [
                 -0.7071068,
                 -2.4988530356040428e-8,
-                1.0133851446880726e-7,
+                1.0133851446880729e-7,
                 0.7071066
             ],
             "scale": [
                 1.0,
                 0.9999758,
                 1.0000239
+            ]
+        },
+        "823": {
+            "name": "GrabPoint",
+            "parent": "535",
+            "components": [
+                {
+                    "type": "grab-point"
+                }
+            ],
+            "translation": [
+                0.0652147,
+                0.1502693,
+                0.0129706
+            ],
+            "rotation": [
+                0.0480205,
+                0.9988005,
+                0.0095606,
+                -0.0001727
+            ],
+            "scale": [
+                1.0000017,
+                1.0000009,
+                1.0000013
+            ]
+        },
+        "824": {
+            "name": "PhysicsBody",
+            "parent": "548",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                1.0499999,
+                                0.8399999,
+                                0.4
+                            ]
+                        },
+                        "kinematic": true,
+                        "bounciness": 0.0
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.3624652
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "825": {
+            "name": "GrabberLeft",
+            "parent": "130",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "grabber",
+                    "grabber": {
+                        "handMeshObject": "793",
+                        "collisionObject": "569",
+                        "handPoserObject": "130"
+                    }
+                }
+            ],
+            "translation": [
+                0.0299914,
+                0.000149,
+                0.1379177
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0000745,
+                1.0,
+                1.0000745
+            ]
+        },
+        "826": {
+            "name": "GrabberRight",
+            "parent": "129",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "grabber",
+                    "grabber": {
+                        "handMeshObject": "765",
+                        "collisionObject": "568",
+                        "hideHandOnGrab": false,
+                        "handedness": "Right",
+                        "handPoserObject": "129"
+                    }
+                }
+            ],
+            "translation": [
+                -0.0299999,
+                0.0000243,
+                0.1379999
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0000121,
+                1.0,
+                1.0000121
+            ]
+        },
+        "827": {
+            "name": "Mesh",
+            "parent": "825",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "9",
+                        "material": "22"
+                    }
+                }
+            ],
+            "scale": [
+                0.0099999,
+                0.0099999,
+                0.0099999
+            ]
+        },
+        "828": {
+            "name": "Mesh",
+            "parent": "826",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "9",
+                        "material": "22"
+                    }
+                }
+            ],
+            "scale": [
+                0.0100006,
+                0.0099999,
+                0.0100006
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
             ]
         }
     },
@@ -4526,62 +4728,80 @@
                 "name": "Armature",
                 "file": "models\\hand-left.glb"
             },
-            "joints": []
+            "joints": [
+                "797",
+                "798",
+                "799",
+                "800",
+                "801",
+                "802",
+                "803",
+                "804",
+                "805",
+                "806",
+                "807",
+                "808",
+                "809",
+                "810",
+                "811",
+                "812",
+                "813",
+                "814",
+                "815",
+                "816",
+                "817",
+                "818",
+                "819",
+                "820",
+                "821"
+            ]
         },
         "242": {
             "link": {
                 "name": "Armature",
                 "file": "models\\hand-right.glb"
             },
-            "joints": []
+            "joints": [
+                "766",
+                "767",
+                "768",
+                "769",
+                "770",
+                "771",
+                "772",
+                "773",
+                "774",
+                "775",
+                "776",
+                "777",
+                "778",
+                "779",
+                "780",
+                "781",
+                "782",
+                "783",
+                "784",
+                "785",
+                "786",
+                "787",
+                "788",
+                "789",
+                "790"
+            ]
         },
         "437": {
             "link": {
                 "name": "skin_0",
                 "file": "models\\Hands\\SK_BasicHand_R.fbx"
             },
-            "joints": [
-                "614",
-                "615",
-                "613",
-                "598",
-                "599",
-                "597",
-                "596",
-                "601",
-                "603",
-                "610",
-                "611",
-                "609",
-                "606",
-                "605",
-                "607",
-                "602"
-            ]
+            "joints": []
         },
         "465": {
             "link": {
                 "name": "skin_0",
                 "file": "models\\Hands\\SK_BasicHand_L.fbx"
             },
-            "joints": [
-                "695",
-                "696",
-                "694",
-                "679",
-                "680",
-                "678",
-                "677",
-                "682",
-                "684",
-                "691",
-                "692",
-                "690",
-                "687",
-                "686",
-                "688",
-                "683"
-            ]
+            "joints": []
         },
         "570": {
             "link": {
@@ -4724,33 +4944,7 @@
                 "name": "Armature",
                 "file": "models\\Hands\\right_hand.glb"
             },
-            "joints": [
-                "739",
-                "740",
-                "741",
-                "742",
-                "743",
-                "744",
-                "745",
-                "746",
-                "747",
-                "748",
-                "749",
-                "750",
-                "751",
-                "752",
-                "753",
-                "754",
-                "755",
-                "756",
-                "757",
-                "758",
-                "759",
-                "760",
-                "761",
-                "762",
-                "763"
-            ]
+            "joints": []
         },
         "791": {
             "link": {
