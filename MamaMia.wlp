@@ -2558,9 +2558,25 @@
                     "type": "mesh",
                     "mesh": {
                         "mesh": "379",
-                        "material": "377"
+                        "material": "419"
                     }
                 }
+            ],
+            "translation": [
+                -0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
             ]
         },
         "835": {
@@ -4131,8 +4147,8 @@
                 "file": "models\\Textures\\PizzaTopping_0.png"
             },
             "maxSize": [
-                176,
-                176
+                512,
+                512
             ],
             "compress": false,
             "stream": false

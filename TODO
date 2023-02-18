@@ -67,7 +67,8 @@ Graphics:
                 ✔ Bowls @done(23-02-18 17:13)
                 ✔ Pizza @done(23-02-18 17:16)
                 ✔ Ladle @done(23-02-18 17:16)
-        ☐ Redo sause on Pizza in pyxel edit
+        ✔ Redo sause on Pizza in pyxel edit @done(23-02-18 20:17)
+            ~ Must be 64x64 as well to keep pixels the same size
 
 Audio:
     ☐ Add soundFX
