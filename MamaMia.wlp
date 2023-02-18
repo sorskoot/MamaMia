@@ -3244,6 +3244,198 @@
                 "name": "Mesh.001",
                 "file": "models\\Hands\\right_hand.glb"
             }
+        },
+        "867": {
+            "link": {
+                "name": "Counter",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "868": {
+            "link": {
+                "name": "Counter-uv1",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "869": {
+            "link": {
+                "name": "Counter.0",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "870": {
+            "link": {
+                "name": "Counter-uv1.0",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "871": {
+            "link": {
+                "name": "Counter.1",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "872": {
+            "link": {
+                "name": "Counter-uv1.1",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "873": {
+            "link": {
+                "name": "Counter.2",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "874": {
+            "link": {
+                "name": "Counter-uv1.2",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "875": {
+            "link": {
+                "name": "Cube.003",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "876": {
+            "link": {
+                "name": "Cube.003-uv1",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "877": {
+            "link": {
+                "name": "Cube.003.0",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "878": {
+            "link": {
+                "name": "Cube.003-uv1.0",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "879": {
+            "link": {
+                "name": "Oven",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "880": {
+            "link": {
+                "name": "Oven-uv1",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "881": {
+            "link": {
+                "name": "Oven.0",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "882": {
+            "link": {
+                "name": "Oven-uv1.0",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "883": {
+            "link": {
+                "name": "Building.001",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "884": {
+            "link": {
+                "name": "Building.001-uv1",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "885": {
+            "link": {
+                "name": "Building.002",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "886": {
+            "link": {
+                "name": "Building.002-uv1",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "887": {
+            "link": {
+                "name": "Building.003",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "888": {
+            "link": {
+                "name": "Building.003-uv1",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "889": {
+            "link": {
+                "name": "Building.004",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "890": {
+            "link": {
+                "name": "Building.004-uv1",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "891": {
+            "link": {
+                "name": "Cylinder",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "892": {
+            "link": {
+                "name": "Cylinder.0",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "893": {
+            "link": {
+                "name": "Sphere.001",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "894": {
+            "link": {
+                "name": "Sphere.001.0",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "895": {
+            "link": {
+                "name": "Plane",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "896": {
+            "link": {
+                "name": "Plane.0",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "897": {
+            "link": {
+                "name": "Sphere.001",
+                "file": "models\\Sauce.fbx"
+            }
+        },
+        "898": {
+            "link": {
+                "name": "Sphere.001.0",
+                "file": "models\\Sauce.fbx"
+            }
         }
     },
     "textures": {
@@ -3583,6 +3775,24 @@
                 "name": "Mushrooms_normal.png",
                 "file": "models\\Textures\\Mushrooms_normal.png"
             }
+        },
+        "854": {
+            "link": {
+                "name": "texture_0",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "855": {
+            "link": {
+                "name": "texture_1",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "856": {
+            "link": {
+                "name": "texture_2",
+                "file": "models\\ToppingBowl.fbx"
+            }
         }
     },
     "images": {
@@ -3791,42 +4001,6 @@
             "maxSize": [
                 64,
                 64
-            ],
-            "compress": false,
-            "stream": false
-        },
-        "362": {
-            "link": {
-                "name": "PixelBrick_basecolor.png",
-                "file": "models\\Textures\\PixelBrick_basecolor.png"
-            },
-            "maxSize": [
-                1024,
-                1024
-            ],
-            "compress": false,
-            "stream": false
-        },
-        "364": {
-            "link": {
-                "name": "PixelBrick_normal.png",
-                "file": "models\\Textures\\PixelBrick_normal.png"
-            },
-            "maxSize": [
-                1024,
-                1024
-            ],
-            "compress": false,
-            "stream": false
-        },
-        "366": {
-            "link": {
-                "name": "PixelBrick_ambientocclusion.png",
-                "file": "models\\Textures\\PixelBrick_ambientocclusion.png"
-            },
-            "maxSize": [
-                1024,
-                1024
             ],
             "compress": false,
             "stream": false
@@ -4094,6 +4268,30 @@
                 "name": "Mushrooms_normal.png",
                 "file": "models\\Textures\\Mushrooms_normal.png"
             }
+        },
+        "899": {
+            "link": {
+                "name": "PixelBrick_basecolor.png",
+                "file": "models\\Textures\\PixelBrick_basecolor.png"
+            },
+            "maxSize": [
+                1024,
+                1024
+            ],
+            "compress": false,
+            "stream": false
+        },
+        "900": {
+            "link": {
+                "name": "PixelBrick_normal.png",
+                "file": "models\\Textures\\PixelBrick_normal.png"
+            },
+            "maxSize": [
+                1024,
+                1024
+            ],
+            "compress": false,
+            "stream": false
         }
     },
     "materials": {
@@ -4844,6 +5042,66 @@
                     1.0,
                     1.0
                 ]
+            }
+        },
+        "857": {
+            "link": {
+                "name": "White",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "858": {
+            "link": {
+                "name": "Marble",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "859": {
+            "link": {
+                "name": "Glass",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "860": {
+            "link": {
+                "name": "Concrete",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "861": {
+            "link": {
+                "name": "BrickWall",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "862": {
+            "link": {
+                "name": "Stylized_Planks",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "863": {
+            "link": {
+                "name": "Wainscot_paneling",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "864": {
+            "link": {
+                "name": "PizzaDough",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "865": {
+            "link": {
+                "name": "PizzaCenter",
+                "file": "models\\ToppingBowl.fbx"
+            }
+        },
+        "866": {
+            "link": {
+                "name": "TomatoSauce",
+                "file": "models\\ToppingBowl.fbx"
             }
         }
     },

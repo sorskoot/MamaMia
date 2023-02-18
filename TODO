@@ -17,7 +17,8 @@ Interactions:
     
     Bugs:
         ✔ Only one item should snap to snapZone @done(23-02-01 00:06)
-        ☐ grabbable snaps to zone when not being dropped.
+        ✔ grabbable snaps to zone when not being dropped. @done(23-02-18 17:50)
+        ☐ Allow snopzone to igone dropped object.
 
 Gameplay:
     Main gameloop:        
@@ -25,6 +26,7 @@ Gameplay:
         ☐ Add customers requesting pizza's
             ~ maybe in a similar style as 'Welcome to Hell' where a picture is shown 
             ~ with various pizza's and the player has to make the pizza's in the picture
+            ~ Add the sound of a bell like someones is entering the shop
     Pizza:
         ✔ Create the pizza component @done(23-02-16 23:28)
         ☐ Spawn dough from somewhere
@@ -49,7 +51,24 @@ Gameplay:
                     ☐ Add functionality to add mushrooms to pizza
                 
 Graphics:
-    ☐ Title screen            
+    ☐ Title screen   
+    @today Change textures to double the size:
+        ✔ 1m² = 128x128 for the walls, floor and ceiling @done(23-02-18 17:51)
+            UVs:
+                ✔ Wall Upper @done(23-02-18 17:36)
+                ✔ Wall Lower @done(23-02-18 17:47)
+                ✔ Floor @done(23-02-18 17:45)
+                ✔ Ceiling @done(23-02-18 17:51)
+                ✔ Oven @done(23-02-18 17:51)
+                ✔ Counter @done(23-02-18 17:47)
+        ✔ 0.5m² = 64x64 for the pizza's and toppings @done(23-02-18 17:16)
+            UVs:
+                ✔ Sauce @done(23-02-18 17:14)
+                ✔ Bowls @done(23-02-18 17:13)
+                ✔ Pizza @done(23-02-18 17:16)
+                ✔ Ladle @done(23-02-18 17:16)
+        ☐ Redo sause on Pizza in pyxel edit
+
 Audio:
     ☐ Add soundFX
     ☐ Add Music
