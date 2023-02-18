@@ -663,7 +663,7 @@
                 "name": "SauceLadle",
                 "file": "models\\SauceLadle.fbx"
             },
-            "parent": "529",
+            "parent": "850",
             "components": [
                 {
                     "mesh": {
@@ -674,59 +674,11 @@
                     "mesh": {
                         "material": "523"
                     }
-                },
-                {
-                    "type": "grabbable",
-                    "grabbable": {
-                        "grabPoint": "823"
-                    }
-                },
-                {
-                    "type": "collision",
-                    "collision": {
-                        "collider": "aabb",
-                        "box": {
-                            "extents": [
-                                0.05,
-                                0.2,
-                                0.1
-                            ]
-                        },
-                        "groups": 6,
-                        "aabb": {
-                            "extents": [
-                                0.05,
-                                0.05,
-                                0.05
-                            ]
-                        }
-                    }
-                },
-                {
-                    "type": "physx",
-                    "physx": {
-                        "kinematic": true,
-                        "shape": "convexMesh",
-                        "convexMesh": {
-                            "mesh": "532"
-                        },
-                        "bounciness": 0.0,
-                        "linearDamping": 1.0,
-                        "angularDamping": 1.0
-                    },
-                    "active": true
-                },
-                {
-                    "type": "topping-component",
-                    "topping-component": {
-                        "ToppingUncooked": "419",
-                        "needsToBeDropped": false
-                    }
                 }
             ],
             "translation": [
                 0.0,
-                0.0,
+                -0.1115331,
                 0.0
             ],
             "rotation": [
@@ -739,7 +691,8 @@
                 0.9999984,
                 1.0,
                 0.9999984
-            ]
+            ],
+            "name": "SauceLadle Mesh"
         },
         "548": {
             "link": {
@@ -807,7 +760,7 @@
             },
             "parent": "518",
             "translation": [
-                -0.3212628,
+                -0.3,
                 0.0,
                 0.2142591
             ],
@@ -833,7 +786,8 @@
                         "material": "563"
                     }
                 }
-            ]
+            ],
+            "name": "Topping-Cheese"
         },
         "568": {
             "name": "Collision",
@@ -949,7 +903,15 @@
                         "sphere": {
                             "radius": 0.2
                         },
-                        "groups": 4
+                        "groups": 4,
+                        "collider": "aabb",
+                        "aabb": {
+                            "extents": [
+                                0.15,
+                                0.1,
+                                0.15
+                            ]
+                        }
                     }
                 }
             ],
@@ -963,9 +925,9 @@
             "name": "SnapTarget",
             "parent": "521",
             "translation": [
-                -0.029219,
-                0.0611437,
-                5.662441253662109e-7
+                0.0204552,
+                0.1855416,
+                6.258487701416016e-7
             ],
             "rotation": [
                 0.0,
@@ -2327,25 +2289,25 @@
         },
         "823": {
             "name": "GrabPoint",
-            "parent": "535",
+            "parent": "850",
             "components": [
                 {
                     "type": "grab-point"
                 }
             ],
             "translation": [
-                0.0652147,
-                0.1502693,
-                0.0129706
+                0.0664907,
+                0.0522452,
+                -0.0000011
             ],
             "rotation": [
-                0.0480205,
-                0.9988005,
-                0.0095606,
-                -0.0001727
+                0.0487264,
+                0.9939741,
+                0.0048077,
+                -0.0980716
             ],
             "scale": [
-                1.0000017,
+                1.0000013,
                 1.0000009,
                 1.0000013
             ]
@@ -2523,55 +2485,6 @@
                 1.0000139
             ]
         },
-        "827": {
-            "name": "Grab Center Visualizer",
-            "parent": "825",
-            "components": [
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "9",
-                        "material": "22"
-                    },
-                    "active": false
-                }
-            ],
-            "scale": [
-                0.0099999,
-                0.0099999,
-                0.0099999
-            ]
-        },
-        "828": {
-            "name": "Grab Center Visualizer",
-            "parent": "826",
-            "components": [
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "9",
-                        "material": "22"
-                    },
-                    "active": false
-                }
-            ],
-            "scale": [
-                0.0100006,
-                0.0099999,
-                0.0100006
-            ],
-            "translation": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "rotation": [
-                0.0,
-                0.0,
-                0.0,
-                1.0
-            ]
-        },
         "830": {
             "name": "PizzaExamples",
             "parent": "243",
@@ -2694,6 +2607,198 @@
                 0.9999987,
                 1.0,
                 0.9999987
+            ]
+        },
+        "836": {
+            "link": {
+                "name": "ToppingBowl",
+                "file": "models\\ToppingBowl.fbx"
+            },
+            "parent": "518",
+            "translation": [
+                -0.62,
+                0.0,
+                0.214259
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "522"
+                    }
+                },
+                {
+                    "mesh": {
+                        "material": "839"
+                    }
+                }
+            ],
+            "name": "Topping-Pepperoni"
+        },
+        "837": {
+            "link": {
+                "name": "ToppingBowl",
+                "file": "models\\ToppingBowl.fbx"
+            },
+            "parent": "518",
+            "translation": [
+                -0.93,
+                0.0,
+                0.214259
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "522"
+                    }
+                },
+                {
+                    "mesh": {
+                        "material": "838"
+                    }
+                }
+            ],
+            "name": "Topping-Mushrooms"
+        },
+        "850": {
+            "name": "SauceLadle",
+            "parent": "529",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "physx",
+                    "physx": {
+                        "kinematic": true,
+                        "shape": "box",
+                        "convexMesh": {
+                            "mesh": "532"
+                        },
+                        "bounciness": 0.0,
+                        "linearDamping": 1.0,
+                        "angularDamping": 1.0,
+                        "capsule": {
+                            "radius": 0.1,
+                            "halfHeight": 0.05
+                        },
+                        "box": {
+                            "extents": [
+                                0.0599999,
+                                0.15,
+                                0.05
+                            ]
+                        }
+                    },
+                    "active": true
+                },
+                {
+                    "type": "grabbable",
+                    "grabbable": {
+                        "grabPoint": "823"
+                    }
+                },
+                {
+                    "type": "topping-component",
+                    "topping-component": {
+                        "ToppingUncooked": "419",
+                        "needsToBeDropped": false
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "aabb",
+                        "box": {
+                            "extents": [
+                                0.05,
+                                0.2,
+                                0.1
+                            ]
+                        },
+                        "groups": 6,
+                        "aabb": {
+                            "extents": [
+                                0.0599999,
+                                0.15,
+                                0.05
+                            ]
+                        }
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.2064242,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
             ]
         }
     },
@@ -3454,6 +3559,30 @@
                 "name": "ShreddedCheese_normal.png",
                 "file": "models\\Textures\\ShreddedCheese_normal.png"
             }
+        },
+        "841": {
+            "link": {
+                "name": "Pepperoni_basecolor.png",
+                "file": "models\\Textures\\Pepperoni_basecolor.png"
+            }
+        },
+        "843": {
+            "link": {
+                "name": "Pepperoni_normal.png",
+                "file": "models\\Textures\\Pepperoni_normal.png"
+            }
+        },
+        "845": {
+            "link": {
+                "name": "Mushrooms_basecolor.png",
+                "file": "models\\Textures\\Mushrooms_basecolor.png"
+            }
+        },
+        "847": {
+            "link": {
+                "name": "Mushrooms_normal.png",
+                "file": "models\\Textures\\Mushrooms_normal.png"
+            }
         }
     },
     "images": {
@@ -3940,6 +4069,30 @@
             "link": {
                 "name": "ShreddedCheese_normal.png",
                 "file": "models\\Textures\\ShreddedCheese_normal.png"
+            }
+        },
+        "840": {
+            "link": {
+                "name": "Pepperoni_basecolor.png",
+                "file": "models\\Textures\\Pepperoni_basecolor.png"
+            }
+        },
+        "842": {
+            "link": {
+                "name": "Pepperoni_normal.png",
+                "file": "models\\Textures\\Pepperoni_normal.png"
+            }
+        },
+        "844": {
+            "link": {
+                "name": "Mushrooms_basecolor.png",
+                "file": "models\\Textures\\Mushrooms_basecolor.png"
+            }
+        },
+        "846": {
+            "link": {
+                "name": "Mushrooms_normal.png",
+                "file": "models\\Textures\\Mushrooms_normal.png"
             }
         }
     },
@@ -4653,6 +4806,44 @@
             "link": {
                 "name": "lambert2",
                 "file": "models\\Hands\\right_hand.glb"
+            }
+        },
+        "838": {
+            "link": {
+                "name": "Contents",
+                "file": "models\\ToppingBowl.fbx"
+            },
+            "name": "ContentsMushrooms",
+            "pipeline": "235",
+            "Phong": {
+                "diffuseTexture": "845",
+                "normalTexture": "847",
+                "shininess": 0,
+                "diffuseColor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            }
+        },
+        "839": {
+            "link": {
+                "name": "Contents",
+                "file": "models\\ToppingBowl.fbx"
+            },
+            "name": "ContentsPepperoni",
+            "pipeline": "235",
+            "Phong": {
+                "diffuseTexture": "841",
+                "normalTexture": "843",
+                "shininess": 0,
+                "diffuseColor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
             }
         }
     },
@@ -5381,7 +5572,11 @@
         "models/Textures/ShreddedCheese_basecolor.png",
         "models/Textures/ShreddedCheese_normal.png",
         "models/Hands/left_hand.glb",
-        "models/Hands/right_hand.glb"
+        "models/Hands/right_hand.glb",
+        "models/Textures/Pepperoni_basecolor.png",
+        "models/Textures/Pepperoni_normal.png",
+        "models/Textures/Mushrooms_basecolor.png",
+        "models/Textures/Mushrooms_normal.png"
     ],
     "fonts": {
         "238": {
