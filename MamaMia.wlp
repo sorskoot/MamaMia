@@ -2532,7 +2532,9 @@
                     "type": "pizza-component",
                     "pizza-component": {
                         "SnapZoneObject": "835",
-                        "PizzaCenterObject": "834"
+                        "PizzaCenterObject": "834",
+                        "DoughTexutre": "382",
+                        "PizzaToppingURL": "/toppings/PizzaTopping_0.png"
                     }
                 }
             ]
@@ -2558,7 +2560,7 @@
                     "type": "mesh",
                     "mesh": {
                         "mesh": "379",
-                        "material": "419"
+                        "material": "376"
                     }
                 }
             ],
@@ -2774,7 +2776,7 @@
                 {
                     "type": "topping-component",
                     "topping-component": {
-                        "ToppingUncooked": "419",
+                        "ToppingUncooked": "/toppings/PizzaTopping_1.png",
                         "needsToBeDropped": false
                     }
                 },
@@ -4811,7 +4813,7 @@
             "pipeline": "235",
             "Phong": {
                 "shininess": 0,
-                "diffuseTexture": "421",
+                "diffuseTexture": "425",
                 "normalTexture": "384",
                 "ambientColor": [
                     0.0,

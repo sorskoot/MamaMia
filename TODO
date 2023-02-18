@@ -52,7 +52,7 @@ Gameplay:
                 
 Graphics:
     ☐ Title screen   
-    @today Change textures to double the size:
+    Change textures to double the size:
         ✔ 1m² = 128x128 for the walls, floor and ceiling @done(23-02-18 17:51)
             UVs:
                 ✔ Wall Upper @done(23-02-18 17:36)
