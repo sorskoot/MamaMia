@@ -1,5 +1,6 @@
 import {Component, MeshComponent, Texture} from '@wonderlandengine/api';
 import { SnapZone } from '../../interactions/snapZone';
+import { MamaMia } from '../game';
 import { ToppingComponent } from './topping-component';
 
 export class PizzaComponent extends Component {
@@ -20,7 +21,7 @@ export class PizzaComponent extends Component {
     /** @type {HTMLImageElement[]} */
     layers = [];
 
-    start() {        
+    start() {                    
         if(!this.SnapZoneObject){
             console.error("No snapzone object set for PizzaComponent");
         }
@@ -42,7 +43,8 @@ export class PizzaComponent extends Component {
             let topping = grabbable.object.getComponent('topping-component');
             if(topping && topping.needsToBeDropped){
                 this.updateTextures(topping.toppingImage);
-                grabbable.object.destroy();
+                grabbable.reset();
+                this.snapZone.reset();
             }
         });
 
@@ -61,8 +63,7 @@ export class PizzaComponent extends Component {
             this.toppingMaterial.diffuseTexture = this.toppingTexture;
             this.centerMesh.material = this.toppingMaterial;  
             this.updateTextures(image);                   
-        };       
-      
+        };             
     }
 
     /**

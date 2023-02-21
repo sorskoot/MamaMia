@@ -98,10 +98,11 @@ export class SnapZone extends EventEmitterComponent {
                 grabbable.object.rotateObject( this.snapTarget.rotationLocal);
                 this.emit('snapped', grabbable);
             }
-        }
+        }        
+    }
 
-
-        
+    reset(){      
+        this.heldObject = null;
     }
 
     

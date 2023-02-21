@@ -22,14 +22,19 @@ export class Grabbable extends Component {
 
     start() {
         this.physx = this.object.getComponent('physx');
-        this.originalTransformLocal = this.object.transformLocal;        
+        
+        if (this.physx) {
+            this.originalKinematic = this.physx.kinematic;            
+        }
+        
+        this.originalTransformWorld = this.object.transformWorld;
+        this.originalTransformLocal = this.object.transformLocal;  
+        this.originalParent = this.object.parent;
     }
 
     /** @param {Grabber} grabber that is grabbing the item */
     grab(grabber) {
-        if (!this.originalParent) {
-            this.originalParent = this.object.parent;
-        }
+       
         this.grabbedBy = grabber;
 
         if (this.physx) {
@@ -62,6 +67,21 @@ export class Grabbable extends Component {
         if (this.physx) {
             this.physx.kinematic = false;
         }
+    }
+
+    /** Resets object back to its original position, and removes from being held */
+    reset(){
+        if (this.grabbedBy){
+            this.grabbedBy.reset();
+            this.grabbedBy = null;
+        }
+        if (this.physx) {
+            this.physx.kinematic = this.originalKinematic;            
+        }        
+
+        this.object.parent = this.originalParent;
+        this.object.transformWorld = this.originalTransformWorld;
+        this.object.transformLocal = this.originalTransformLocal;        
     }
 
     IsBeingHeld() {

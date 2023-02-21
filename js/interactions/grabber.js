@@ -72,4 +72,9 @@ export class Grabber extends ControllerBase {
         if (!actuator) return;
         actuator.pulse(this.hapticsIntensity, this.hapticsDuration * 1000);
     }
+
+    reset(){
+        this.currentlyHeld = null;
+        if(this.handPoser)this.handPoser.resetPose();
+    }
 };
