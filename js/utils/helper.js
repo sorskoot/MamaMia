@@ -8,25 +8,16 @@ import { Object as Object3D  } from "@wonderlandengine/api";
   */
 export function reparentKeepTransform (object, newParent) {
     let newParentTransformWorld = [];
-    quat2.identity(newParentTransformWorld);
-    let newParentScalingWorld = [1, 1, 1];
+    quat2.identity(newParentTransformWorld);    
 
     if (newParent) {
-        newParentTransformWorld = newParent.transformWorld;
-        newParentScalingWorld = newParent.scalingWorld;
+        newParentTransformWorld = newParent.transformWorld;        
     }
 
     let localTransform = getLocalTransform(object.transformWorld, newParentTransformWorld);
 
     object.transformLocal.set(localTransform);
-
-    let newScale = new Float32Array(3);
-    vec3.divide(newScale, object.scalingLocal, newParentScalingWorld);
-    object.resetScaling();
-    object.scale(newScale);
-
     object.parent = newParent;
-
     object.setDirty();
 }
 

@@ -2,7 +2,6 @@ import { CollisionComponent, Type, Object as Object3D } from '@wonderlandengine/
 import { EventEmitterComponent } from '../core/eventEmitter';
 import { Grabbable } from './grabbable';
 
-
 /**
  * Zone that can snap an object to it.
  * 
@@ -17,7 +16,8 @@ export class SnapZone extends EventEmitterComponent {
     static Properties = {
         snapCollisionObject: { type: Type.Object },
         snapTargetObject: { type: Type.Object },
-        locked: { type: Type.Bool, default: false }
+        locked: { type: Type.Bool, default: false },
+        initialObject: {type: WL.Type.Object, default:null}
     }
 
     /** @type {Object3D} target to snap to */
@@ -47,6 +47,10 @@ export class SnapZone extends EventEmitterComponent {
         } else {
             this.snapTarget = this.snapTargetObject;
         }
+
+        if(this.initialObject){         
+       //     this.snapToZone(this.initialObject);
+        }
     }
 
     update(dt) {
@@ -55,6 +59,8 @@ export class SnapZone extends EventEmitterComponent {
         }
 
         if (this.heldObject) {
+            // if there's an object held by the snapzone, but the object itself is not, 
+            // it should be removed from the snapzone
             if (this.heldObject.IsBeingHeld()) {
                 this.heldObject = null;
             }
@@ -63,7 +69,7 @@ export class SnapZone extends EventEmitterComponent {
             // TODO: add filtering on collision groups                         
             if (collisions.length > 0) {
                 // object in zone
-                this.snapToZone(collisions[0]);
+                this.snapToZone(collisions[0].object);
             } else {                
                 if(this.objectInZone){
                     this.emit('leftSnapZone', this.objectInZone);
@@ -75,11 +81,11 @@ export class SnapZone extends EventEmitterComponent {
 
     /**
      * Possibly snap object to the current zone
-     * @param {CollisionComponent} collision
+     * @param {Object3D} collided object
      */
-    snapToZone(collision) {
+    snapToZone(collisionObject) {
         /** @type {Grabbable} */
-        let grabbable = collision.object.getComponent('grabbable');
+        let grabbable = collisionObject.getComponent('grabbable');
         if (grabbable) {
             if(!this.objectInZone){
                 this.objectInZone = grabbable;
@@ -99,11 +105,8 @@ export class SnapZone extends EventEmitterComponent {
                 this.emit('snapped', grabbable);
             }
         }        
-    }
-
-    reset(){      
+    }    
+    reset(){
         this.heldObject = null;
     }
-
-    
 };

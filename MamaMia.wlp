@@ -439,7 +439,8 @@
                 {
                     "mesh": {
                         "material": "325"
-                    }
+                    },
+                    "active": false
                 }
             ]
         },
@@ -718,19 +719,22 @@
             ],
             "components": [
                 {
-                    "active": true
+                    "active": false
                 },
-                null,
+                {
+                    "active": false
+                },
                 {
                     "mesh": {
                         "material": "522"
-                    }
+                    },
+                    "active": false
                 },
                 {
                     "mesh": {
                         "material": "538"
                     },
-                    "active": true
+                    "active": false
                 }
             ]
         },
@@ -784,7 +788,8 @@
                 {
                     "mesh": {
                         "material": "563"
-                    }
+                    },
+                    "active": true
                 }
             ],
             "name": "Topping-Cheese"
@@ -881,16 +886,34 @@
             ]
         },
         "700": {
-            "name": "Empty.000",
-            "parent": "521",
+            "name": "SnapZone",
+            "parent": "702",
             "components": [
                 {
                     "type": "snap-zone",
                     "snap-zone": {
                         "snapCollisionObject": "701",
-                        "snapTargetObject": "702"
-                    }
+                        "snapTargetObject": "702",
+                        "initialObject": "850"
+                    },
+                    "active": false
                 }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.258819,
+                0.9659258
+            ],
+            "scale": [
+                1.000001,
+                1.000001,
+                1.0
             ]
         },
         "701": {
@@ -925,9 +948,9 @@
             "name": "SnapTarget",
             "parent": "521",
             "translation": [
-                0.0204552,
-                0.1855416,
-                6.258487701416016e-7
+                0.076855,
+                0.3085007,
+                -0.012033
             ],
             "rotation": [
                 0.0,
@@ -2702,7 +2725,7 @@
         },
         "850": {
             "name": "SauceLadle",
-            "parent": "529",
+            "parent": "521",
             "components": [
                 null,
                 null,
@@ -2771,7 +2794,8 @@
                 {
                     "type": "grabbable",
                     "grabbable": {
-                        "grabPoint": "823"
+                        "grabPoint": "823",
+                        "resets": true
                     }
                 },
                 {
@@ -2804,14 +2828,14 @@
                 }
             ],
             "translation": [
-                0.0,
-                0.2064242,
-                0.0
+                0.0204551,
+                0.1855413,
+                6.258487701416016e-7
             ],
             "rotation": [
                 0.0,
                 0.0,
-                0.0,
+                2.9802322387695313e-8,
                 1.0
             ],
             "scale": [
@@ -2829,7 +2853,8 @@
                     "mesh": {
                         "mesh": "8",
                         "material": "22"
-                    }
+                    },
+                    "active": false
                 },
                 {
                     "type": "collision",
@@ -2837,9 +2862,9 @@
                         "collider": "aabb",
                         "aabb": {
                             "extents": [
-                                0.05,
-                                0.05,
-                                0.05
+                                0.1,
+                                0.1,
+                                0.1
                             ]
                         },
                         "groups": 6
@@ -2863,9 +2888,9 @@
                         "shape": "box",
                         "box": {
                             "extents": [
-                                0.05,
-                                0.05,
-                                0.05
+                                0.1,
+                                0.1,
+                                0.1
                             ]
                         },
                         "kinematic": true,
@@ -2874,13 +2899,13 @@
                 }
             ],
             "scale": [
-                0.05,
-                0.05,
-                0.05
+                0.1,
+                0.1,
+                0.1
             ],
             "translation": [
                 0.0,
-                0.109631,
+                0.1230863,
                 5.960464477539063e-8
             ],
             "rotation": [
@@ -2899,7 +2924,8 @@
                     "mesh": {
                         "mesh": "8",
                         "material": "22"
-                    }
+                    },
+                    "active": false
                 },
                 {
                     "type": "collision",
@@ -2907,9 +2933,9 @@
                         "collider": "aabb",
                         "aabb": {
                             "extents": [
-                                0.05,
-                                0.05,
-                                0.05
+                                0.1,
+                                0.1,
+                                0.1
                             ]
                         },
                         "groups": 6
@@ -2918,7 +2944,9 @@
                 {
                     "type": "grabbable",
                     "grabbable": {
-                        "grabPoint": null
+                        "grabPoint": null,
+                        "resets": true,
+                        "resetTimeout": 1500
                     }
                 },
                 {
@@ -2933,9 +2961,9 @@
                         "shape": "box",
                         "box": {
                             "extents": [
-                                0.05,
-                                0.05,
-                                0.05
+                                0.1,
+                                0.1,
+                                0.1
                             ]
                         },
                         "kinematic": true,
@@ -2944,13 +2972,13 @@
                 }
             ],
             "scale": [
-                0.05,
-                0.05,
-                0.05
+                0.1,
+                0.1,
+                0.1
             ],
             "translation": [
                 0.0,
-                0.109631,
+                0.1230863,
                 0.0
             ],
             "rotation": [
@@ -2969,7 +2997,8 @@
                     "mesh": {
                         "mesh": "8",
                         "material": "22"
-                    }
+                    },
+                    "active": false
                 },
                 {
                     "type": "collision",
@@ -2977,9 +3006,9 @@
                         "collider": "aabb",
                         "aabb": {
                             "extents": [
-                                0.05,
-                                0.05,
-                                0.05
+                                0.1,
+                                0.1,
+                                0.1
                             ]
                         },
                         "groups": 6
@@ -3003,9 +3032,9 @@
                         "shape": "box",
                         "box": {
                             "extents": [
-                                0.05,
-                                0.05,
-                                0.05
+                                0.1,
+                                0.1,
+                                0.1
                             ]
                         },
                         "kinematic": true,
@@ -3014,19 +3043,37 @@
                 }
             ],
             "scale": [
-                0.05,
-                0.05,
-                0.05
+                0.1,
+                0.1,
+                0.1
             ],
             "translation": [
                 0.0,
-                0.109631,
-                5.960464477539064e-8
+                0.1230863,
+                5.960464477539063e-8
             ],
             "rotation": [
                 0.0,
                 0.0,
                 0.0,
+                1.0
+            ]
+        },
+        "904": {
+            "name": "Mesh",
+            "parent": "902",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "9",
+                        "material": "563"
+                    }
+                }
+            ],
+            "scale": [
+                1.0,
+                1.0,
                 1.0
             ]
         }
@@ -5497,7 +5544,7 @@
             "npmScript": "buildDev"
         },
         "runtime": {
-            "visualizeColliders": true,
+            "visualizeColliders": false,
             "webxr": {
                 "optionalFeatures": {
                     "local-floor": true

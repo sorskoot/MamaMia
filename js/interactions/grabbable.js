@@ -1,4 +1,4 @@
-import { Component, Object as Object3D } from '@wonderlandengine/api';
+import { Component, Object as Object3D, Type } from '@wonderlandengine/api';
 import { quat, quat2, vec3 } from 'gl-matrix';
 import { getLocalTransform, reparentKeepTransform } from '../utils/helper';
 import { Grabber } from './grabber';
@@ -11,7 +11,9 @@ import { GrabPoint } from './grabPoint';
 export class Grabbable extends Component {
     static TypeName = 'grabbable';
     static Properties = {
-        grabPoint: { type: WL.Type.Object, default: null }
+        grabPoint: { type: Type.Object, default: null },
+        resets: {type: Type.Bool, default: false},
+        resetTimeout: {type: Type.Int, default: 1500},
     }
 
     /** @type {Object3D} the original parent of the object */
@@ -20,6 +22,9 @@ export class Grabbable extends Component {
     /** @type {Grabber} the grabber that is currently holding this item */
     grabbedBy;
 
+    /** @type {NodeJS.Timeout} timout reference */
+    #timeout = null;
+
     start() {
         this.physx = this.object.getComponent('physx');
         
@@ -27,8 +32,8 @@ export class Grabbable extends Component {
             this.originalKinematic = this.physx.kinematic;            
         }
         
-        this.originalTransformWorld = this.object.transformWorld;
-        this.originalTransformLocal = this.object.transformLocal;  
+        this.originalTransformWorld = vec3.clone(this.object.transformWorld);
+        this.originalTransformLocal = vec3.clone(this.object.transformLocal);  
         this.originalParent = this.object.parent;
     }
 
@@ -47,11 +52,15 @@ export class Grabbable extends Component {
             /** @type {GrabPoint} */
             let grabPoint = this.grabPoint.getComponent('grab-point');
             if (grabPoint) {
-                this.object.transformLocal = quat2.invert(quat2.create(), grabPoint.object.transformLocal);;
+                this.object.transformLocal.set(quat2.invert(quat2.create(), grabPoint.object.transformLocal));
             }
         }
 
-        console.log(`grab by grabber ${grabber.object.name}`);
+        if(this.#timeout){
+            clearTimeout(this.#timeout);
+            this.#timeout=null;
+        }
+        
     }
 
     /** @param {Grabber} grabber that dropped the item */
@@ -62,10 +71,15 @@ export class Grabbable extends Component {
         this.grabbedBy = null;
 
         reparentKeepTransform(this.object, this.originalParent);
-        this.object.transformLocal = this.originalTransformLocal;
+        this.object.transformLocal.set(this.originalTransformLocal);
 
         if (this.physx) {
             this.physx.kinematic = false;
+        }
+        if(this.resets){
+            this.#timeout = setTimeout(() => {
+                this.reset();
+            }, this.resetTimeout);            
         }
     }
 
@@ -80,8 +94,9 @@ export class Grabbable extends Component {
         }        
 
         this.object.parent = this.originalParent;
-        this.object.transformWorld = this.originalTransformWorld;
-        this.object.transformLocal = this.originalTransformLocal;        
+        this.object.resetTranslationRotation();
+        this.object.transformWorld.set(this.originalTransformWorld);
+        //this.object.transformLocal.set(this.originalTransformLocal);        
     }
 
     IsBeingHeld() {
