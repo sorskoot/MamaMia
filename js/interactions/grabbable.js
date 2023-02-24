@@ -31,10 +31,12 @@ export class Grabbable extends Component {
         if (this.physx) {
             this.originalKinematic = this.physx.kinematic;            
         }
-        
-        this.originalTransformWorld = vec3.clone(this.object.transformWorld);
+        this.originalTransformWorld = [];
+        this.object.getTranslationWorld(this.originalTransformWorld);
+        // this.originalTransformWorld = vec3.clone(this.object.transformWorld);
         this.originalTransformLocal = vec3.clone(this.object.transformLocal);  
-        this.originalParent = this.object.parent;
+        this.originalParent = this.object.parent;  
+        console.log(`parent: ${this.originalParent.name}`)      
     }
 
     /** @param {Grabber} grabber that is grabbing the item */
@@ -69,13 +71,13 @@ export class Grabbable extends Component {
             return; //this item is not grabbed by this grabber
         }
         this.grabbedBy = null;
-
+        
         reparentKeepTransform(this.object, this.originalParent);
-        this.object.transformLocal.set(this.originalTransformLocal);
 
         if (this.physx) {
             this.physx.kinematic = false;
         }
+
         if(this.resets){
             this.#timeout = setTimeout(() => {
                 this.reset();
@@ -92,11 +94,17 @@ export class Grabbable extends Component {
         if (this.physx) {
             this.physx.kinematic = this.originalKinematic;            
         }        
-
-        this.object.parent = this.originalParent;
+                
+        this.object.parent =  this.originalParent;        
         this.object.resetTranslationRotation();
-        this.object.transformWorld.set(this.originalTransformWorld);
-        //this.object.transformLocal.set(this.originalTransformLocal);        
+
+//        this.object.transformLocal.set(this.originalTransformLocal);
+
+        // this.object.parent = this.originalParent;
+        // this.object.setTranslationWorld(this.originalTransformWorld);
+        //this.object.resetTranslationRotation();
+        // this.object.transformWorld.set(this.originalTransformWorld);
+        // this.object.transformLocal.set(this.originalTransformLocal);        
     }
 
     IsBeingHeld() {

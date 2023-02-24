@@ -440,7 +440,7 @@
                     "mesh": {
                         "material": "325"
                     },
-                    "active": false
+                    "active": true
                 }
             ]
         },
@@ -719,22 +719,22 @@
             ],
             "components": [
                 {
-                    "active": false
+                    "active": true
                 },
                 {
-                    "active": false
+                    "active": true
                 },
                 {
                     "mesh": {
                         "material": "522"
                     },
-                    "active": false
+                    "active": true
                 },
                 {
                     "mesh": {
                         "material": "538"
                     },
-                    "active": false
+                    "active": true
                 }
             ]
         },
@@ -864,7 +864,10 @@
                     "type": "physx",
                     "physx": {
                         "shape": "plane",
-                        "static": true
+                        "static": true,
+                        "bounciness": 0.0,
+                        "block": 2,
+                        "groups": 1
                     }
                 }
             ],
@@ -896,7 +899,7 @@
                         "snapTargetObject": "702",
                         "initialObject": "850"
                     },
-                    "active": false
+                    "active": true
                 }
             ],
             "translation": [
@@ -2351,7 +2354,10 @@
                             ]
                         },
                         "kinematic": true,
-                        "bounciness": 0.0
+                        "bounciness": 0.0,
+                        "static": false,
+                        "groups": 1,
+                        "block": 2
                     }
                 }
             ],
@@ -2725,7 +2731,7 @@
         },
         "850": {
             "name": "SauceLadle",
-            "parent": "521",
+            "parent": "908",
             "components": [
                 null,
                 null,
@@ -2828,9 +2834,9 @@
                 }
             ],
             "translation": [
-                0.0204551,
-                0.1855413,
-                6.258487701416016e-7
+                0.0,
+                2.384185791015625e-7,
+                0.0
             ],
             "rotation": [
                 0.0,
@@ -2846,7 +2852,7 @@
         },
         "901": {
             "name": "Mushroom Mesh",
-            "parent": "837",
+            "parent": "907",
             "components": [
                 {
                     "type": "mesh",
@@ -2905,8 +2911,8 @@
             ],
             "translation": [
                 0.0,
-                0.1230863,
-                5.960464477539063e-8
+                0.0,
+                0.0
             ],
             "rotation": [
                 0.0,
@@ -2917,7 +2923,7 @@
         },
         "902": {
             "name": "Cheese Mesh",
-            "parent": "562",
+            "parent": "905",
             "components": [
                 {
                     "type": "mesh",
@@ -2966,8 +2972,10 @@
                                 0.1
                             ]
                         },
-                        "kinematic": true,
-                        "bounciness": 0.0
+                        "bounciness": 0.0,
+                        "groups": 2,
+                        "block": 1,
+                        "kinematic": true
                     }
                 }
             ],
@@ -2978,7 +2986,7 @@
             ],
             "translation": [
                 0.0,
-                0.1230863,
+                0.0,
                 0.0
             ],
             "rotation": [
@@ -2990,7 +2998,7 @@
         },
         "903": {
             "name": "Pepperoni Mesh",
-            "parent": "836",
+            "parent": "906",
             "components": [
                 {
                     "type": "mesh",
@@ -3017,7 +3025,8 @@
                 {
                     "type": "grabbable",
                     "grabbable": {
-                        "grabPoint": null
+                        "grabPoint": null,
+                        "resets": true
                     }
                 },
                 {
@@ -3038,7 +3047,8 @@
                             ]
                         },
                         "kinematic": true,
-                        "bounciness": 0.0
+                        "groups": 2,
+                        "block": 1
                     }
                 }
             ],
@@ -3049,8 +3059,8 @@
             ],
             "translation": [
                 0.0,
-                0.1230863,
-                5.960464477539063e-8
+                0.0,
+                0.0
             ],
             "rotation": [
                 0.0,
@@ -3059,22 +3069,62 @@
                 1.0
             ]
         },
-        "904": {
-            "name": "Mesh",
-            "parent": "902",
-            "components": [
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "9",
-                        "material": "563"
-                    }
-                }
+        "905": {
+            "name": "Topping-Cheese Anchor",
+            "parent": "562",
+            "translation": [
+                0.0,
+                0.125,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
             ],
             "scale": [
                 1.0,
                 1.0,
                 1.0
+            ]
+        },
+        "906": {
+            "name": "Topping-Pepperoni Anchor",
+            "parent": "836",
+            "translation": [
+                0.0,
+                0.1230863,
+                5.960464477539063e-8
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "907": {
+            "name": "Topping-Mushrooms Anchor",
+            "parent": "837",
+            "translation": [
+                0.0,
+                0.1230859,
+                5.96045985901128e-8
+            ]
+        },
+        "908": {
+            "name": "SauseLadle Anchor",
+            "parent": "521",
+            "translation": [
+                0.020455,
+                0.185541,
+                6.25848997515277e-7
             ]
         }
     },
