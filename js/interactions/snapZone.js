@@ -2,6 +2,7 @@ import { CollisionComponent, Type, Object as Object3D } from '@wonderlandengine/
 import { EventEmitterComponent } from '../core/eventEmitter';
 import { Grabbable } from './grabbable';
 
+
 /**
  * Zone that can snap an object to it.
  * 

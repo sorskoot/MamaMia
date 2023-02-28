@@ -402,29 +402,6 @@
                 1.0
             ]
         },
-        "380": {
-            "link": {
-                "name": "Pizza",
-                "file": "models\\Pizza.fbx"
-            },
-            "parent": "830",
-            "translation": [
-                0.3077216,
-                0.8844859,
-                0.1528349
-            ],
-            "rotation": [
-                0.0,
-                0.0,
-                0.0,
-                1.0
-            ],
-            "scale": [
-                1.0,
-                1.0,
-                1.0
-            ]
-        },
         "386": {
             "name": "Building",
             "parent": "243"
@@ -490,68 +467,6 @@
                 {
                     "mesh": {
                         "material": "328"
-                    }
-                }
-            ]
-        },
-        "418": {
-            "link": {
-                "name": "Pizza",
-                "file": "models\\Pizza.fbx"
-            },
-            "parent": "830",
-            "translation": [
-                -0.1072982,
-                0.8844859,
-                0.1528349
-            ],
-            "rotation": [
-                0.0,
-                0.0,
-                0.0,
-                1.0
-            ],
-            "scale": [
-                1.0,
-                1.0,
-                1.0
-            ],
-            "components": [
-                null,
-                {
-                    "mesh": {
-                        "material": "419"
-                    }
-                }
-            ]
-        },
-        "422": {
-            "link": {
-                "name": "Pizza",
-                "file": "models\\Pizza.fbx"
-            },
-            "parent": "830",
-            "translation": [
-                -0.5621448,
-                0.8857244,
-                0.1727742
-            ],
-            "rotation": [
-                0.0,
-                0.0,
-                0.0,
-                1.0
-            ],
-            "scale": [
-                1.0,
-                1.0,
-                1.0
-            ],
-            "components": [
-                null,
-                {
-                    "mesh": {
-                        "material": "423"
                     }
                 }
             ]
@@ -896,7 +811,7 @@
                     "type": "snap-zone",
                     "snap-zone": {
                         "snapCollisionObject": "701",
-                        "snapTargetObject": "702",
+                        "snapTargetObject": "908",
                         "initialObject": "850"
                     },
                     "active": true
@@ -958,8 +873,8 @@
             "rotation": [
                 0.0,
                 0.0,
-                -0.258819,
-                0.9659258
+                0.0,
+                1.0
             ],
             "scale": [
                 0.9999989,
@@ -1250,6 +1165,17 @@
                 1.0000001,
                 0.9999998,
                 0.9999998
+            ],
+            "components": [
+                {
+                    "type": "collision",
+                    "collision": {
+                        "sphere": {
+                            "radius": 0.0099999
+                        },
+                        "groups": 8
+                    }
+                }
             ]
         },
         "776": {
@@ -2095,6 +2021,17 @@
                 1.0000004,
                 0.9999763,
                 1.0000239
+            ],
+            "components": [
+                {
+                    "type": "collision",
+                    "collision": {
+                        "sphere": {
+                            "radius": 0.0099999
+                        },
+                        "groups": 8
+                    }
+                }
             ]
         },
         "813": {
@@ -3095,7 +3032,7 @@
             "translation": [
                 0.0,
                 0.1230863,
-                5.960464477539063e-8
+                5.960464477539064e-8
             ],
             "rotation": [
                 0.0,
@@ -3125,6 +3062,18 @@
                 0.020455,
                 0.185541,
                 6.25848997515277e-7
+            ]
+        },
+        "909": {
+            "name": "Empty",
+            "parent": "243",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "9"
+                    }
+                }
             ]
         }
     },
@@ -4119,6 +4068,18 @@
                 "name": "texture_2",
                 "file": "models\\ToppingBowl.fbx"
             }
+        },
+        "911": {
+            "link": {
+                "name": "italyskybox.jpg",
+                "file": "models\\Textures\\italyskybox.jpg"
+            }
+        },
+        "914": {
+            "link": {
+                "name": "italyskybox_Pixelated.jpg",
+                "file": "models\\Textures\\italyskybox_Pixelated.jpg"
+            }
         }
     },
     "images": {
@@ -4618,6 +4579,28 @@
             ],
             "compress": false,
             "stream": false
+        },
+        "910": {
+            "link": {
+                "name": "italyskybox.jpg",
+                "file": "models\\Textures\\italyskybox.jpg"
+            },
+            "compress": true,
+            "maxSize": [
+                3146,
+                1536
+            ],
+            "stream": false
+        },
+        "913": {
+            "link": {
+                "name": "italyskybox_Pixelated.jpg",
+                "file": "models\\Textures\\italyskybox_Pixelated.jpg"
+            },
+            "maxSize": [
+                196,
+                96
+            ]
         }
     },
     "materials": {
@@ -5429,6 +5412,13 @@
                 "name": "TomatoSauce",
                 "file": "models\\ToppingBowl.fbx"
             }
+        },
+        "912": {
+            "name": "Sky",
+            "pipeline": "237",
+            "Sky": {
+                "texture": "911"
+            }
         }
     },
     "shaders": {
@@ -5612,7 +5602,11 @@
             "compressedTextureAtlasSize": [
                 16384,
                 16384
-            ]
+            ],
+            "sky": {
+                "enabled": true,
+                "material": "912"
+            }
         },
         "editor": {
             "serverPort": 7551
@@ -6160,7 +6154,9 @@
         "models/Textures/Pepperoni_basecolor.png",
         "models/Textures/Pepperoni_normal.png",
         "models/Textures/Mushrooms_basecolor.png",
-        "models/Textures/Mushrooms_normal.png"
+        "models/Textures/Mushrooms_normal.png",
+        "models/Textures/italyskybox.jpg",
+        "models/Textures/italyskybox_Pixelated.jpg"
     ],
     "fonts": {
         "238": {

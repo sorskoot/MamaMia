@@ -41,7 +41,8 @@ export class Grabber extends ControllerBase {
         super.start();
     };
 
-    onTriggerPressed(event) {      
+    onTriggerPressed(event) {     
+        console.log('trigger pressed') 
         if(this.handPoser)this.handPoser.setPose('grab');          
         let collisions = this._collision.queryOverlaps();
         if(collisions.length > 0){            
@@ -58,10 +59,25 @@ export class Grabber extends ControllerBase {
     }
 
     onTriggerReleased(event) {     
+        console.log('trigger released')
         if(this.handPoser)this.handPoser.resetPose();             
         if(this.currentlyHeld){            
             this.currentlyHeld.drop(this);
             this.currentlyHeld = null;
+        }
+    }
+
+    onGripPressed(event) {
+        console.log('grip pressed')
+        if(this.handPoser){
+            this.handPoser.setPose('point');       
+        }
+    }
+
+    onGripReleased(event) {
+        console.log('grip released')
+        if(this.handPoser){
+            this.handPoser.resetPose();             
         }
     }
 

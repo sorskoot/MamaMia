@@ -22,7 +22,7 @@ export class ControllerBase extends Component {
     static Properties = {
         handedness: { type: WL.Type.Enum, values: ['Left', 'Right'], default: 'Left' }
     }
-    
+
     /**
      * @type {ControllerButtonInfo[]}
      */
@@ -48,23 +48,30 @@ export class ControllerBase extends Component {
         if (this._triggerStart) {
             this.buttonInfo[ControllerButtonType.TRIGGER].pressed = true;
         }
-        if(this._triggerEnd){
+        if (this._triggerEnd) {
             this.buttonInfo[ControllerButtonType.TRIGGER].pressed = false;
         }
-        if(this.buttonInfo[ControllerButtonType.TRIGGER].isPressed()){
+        if (this.buttonInfo[ControllerButtonType.TRIGGER].isPressed()) {
             this.onTriggerPressed();
         };
-        
-        if(this.buttonInfo[ControllerButtonType.TRIGGER].isReleased()){
+
+        if (this.buttonInfo[ControllerButtonType.TRIGGER].isReleased()) {
             this.onTriggerReleased();
         };
 
-        if(this._gripStart){
+        if (this._gripStart) {
             this.buttonInfo[ControllerButtonType.GRIP].pressed = true;
         }
-        if(this._gripEnd){
+        if (this._gripEnd) {
             this.buttonInfo[ControllerButtonType.GRIP].pressed = false;
         }
+        if (this.buttonInfo[ControllerButtonType.GRIP].isPressed()) {
+            this.onGripPressed();
+        };
+
+        if (this.buttonInfo[ControllerButtonType.GRIP].isReleased()) {            
+            this.onGripReleased();
+        };
 
         // Reset button states
         this._triggerStart = false;
@@ -87,28 +94,30 @@ export class ControllerBase extends Component {
 
     /** @param {XRInputSourceEvent} event */
     _handleSelectStart(event) {
-        if (event.inputSource.handedness === handedness[this.handedness]) {
+        if (event.inputSource.handedness == handedness[this.handedness]) {
             this._triggerStart = true;
         }
     }
 
     /** @param {XRInputSourceEvent} event */
     _handleSelectEnd(event) {
-        if (event.inputSource.handedness === handedness[this.handedness]) {
+        if (event.inputSource.handedness == handedness[this.handedness]) {
             this._triggerEnd = true;
         }
     }
 
     /** @param {XRInputSourceEvent} event */
     _handleSqueezeStart(event) {
-        if (event.inputSource.handedness === handedness[this.handedness]) {
+        if (event.inputSource.handedness == handedness[this.handedness]) {
+            
             this._gripStart = true;
         }
     }
 
     /** @param {XRInputSourceEvent} event */
     _handleSqueezeEnd(event) {
-        if (event.inputSource.handedness === handedness[this.handedness]) {
+        if (event.inputSource.handedness == handedness[this.handedness]) {
+            
             this._gripEnd = true;
         }
     }
@@ -135,7 +144,7 @@ export class ControllerBase extends Component {
      * Handles the removal of an input source. Removes it from the internal variable. 
      * @param {XRInputSource} inputSource */
     _handleInputSourceRemoved(inputSource) {
-        this.currentInputSource = null;        
+        this.currentInputSource = null;
     }
 
     /**
@@ -152,5 +161,12 @@ export class ControllerBase extends Component {
 
     /** @param {XRInputSourceEvent} event */
     onTriggerReleased(event) { }
+
+    /** @param {XRInputSourceEvent} event */
+    onGripPressed(event) { }
+
+    /** @param {XRInputSourceEvent} event */
+    onGripReleased(event) { }
+
 
 };
