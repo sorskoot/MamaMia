@@ -13,6 +13,7 @@
 /* Register all default components. */
 import '@wonderlandengine/components';
 import '@wonderlandengine/components/player-height';
+import { GameManagementComponent } from './game/components/game-management-component';
 import { PizzaComponent } from './game/components/pizza-component';
 import { ToppingComponent } from './game/components/topping-component';
 
@@ -31,3 +32,4 @@ WL.registerComponent(Test);
 WL.registerComponent(HandPoser);
 WL.registerComponent(PizzaComponent);
 WL.registerComponent(ToppingComponent);
+WL.registerComponent(GameManagementComponent);

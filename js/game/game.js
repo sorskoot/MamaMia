@@ -1,4 +1,4 @@
-import { onXRSessionEnd, onXRSessionStart } from "@wonderlandengine/api";
+import { WonderlandEngine } from "@wonderlandengine/api";
 import { Subject } from "rxjs";
 
 const GameState = Object.freeze({
@@ -17,19 +17,30 @@ class Game
     /** @type {Subject<GameState>} observable containing the gamestate*/ 
     gameStateSubject;
 
-    constructor()
-    {
+    /** @type {Boolean} variable to track if the game state is registered */
+    #registered = false;
+
+    /**
+     * @param {WonderlandEngine} engine
+     */
+    register(engine)
+    {        
+        if(this.#registered) return;
+        this.#registered = true;
+
+        this.engine = engine;
+
         this.isInVRSubject = new Subject();      
         this.gameStateSubject = new Subject();
 
-        onXRSessionStart.push(()=>this.#setIsInVR(true));
-        onXRSessionEnd.push(()=>this.#setIsInVR(false));
+        this.engine.onXRSessionStart.push(()=>this.#setIsInVR(true));
+        this.engine.onXRSessionEnd.push(()=>this.#setIsInVR(false));
     }
 
     #isInVR = false;
     #setIsInVR(value) {
         this.#isInVR = value;
-        this.isInVRSubject.next(value);
+        this.isInVRSubject.next(value);        
     }
     
     #gameState = GameState.INIT;

@@ -14,12 +14,12 @@ import { Grabbable } from './grabbable';
  */
 export class SnapZone extends EventEmitterComponent {
     static TypeName = 'snap-zone';
-    static Properties = {
+    static Properties = Object.assign({}, EventEmitterComponent.Properties, {
         snapCollisionObject: { type: Type.Object },
         snapTargetObject: { type: Type.Object },
         locked: { type: Type.Bool, default: false },
         initialObject: {type: WL.Type.Object, default:null}
-    }
+    })
 
     /** @type {Object3D} target to snap to */
     objectInZone = null;

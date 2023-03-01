@@ -346,7 +346,24 @@
             ]
         },
         "222": {
-            "name": "Managers"
+            "name": "Managers",
+            "parent": null,
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
         },
         "243": {
             "name": "Scene",
@@ -2361,7 +2378,8 @@
                     "grabber": {
                         "handMeshObject": "793",
                         "collisionObject": "569",
-                        "handPoserObject": "130"
+                        "handPoserObject": "130",
+                        "hideHandOnGrab": false
                     }
                 }
             ],
@@ -3032,7 +3050,7 @@
             "translation": [
                 0.0,
                 0.1230863,
-                5.960464477539064e-8
+                5.960464477539065e-8
             ],
             "rotation": [
                 0.0,
@@ -3073,6 +3091,55 @@
                     "mesh": {
                         "mesh": "9"
                     }
+                }
+            ]
+        },
+        "915": {
+            "name": "GameManager",
+            "parent": "222",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "game-management-component"
                 }
             ]
         }
