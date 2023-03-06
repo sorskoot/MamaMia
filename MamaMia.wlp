@@ -3145,6 +3145,175 @@
                     "type": "game-management-component"
                 }
             ]
+        },
+        "916": {
+            "name": "Button-Base",
+            "parent": "917",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                0.1,
+                0.0199999,
+                0.1
+            ],
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "11",
+                        "material": "202"
+                    }
+                }
+            ]
+        },
+        "917": {
+            "name": "Button",
+            "parent": "529",
+            "translation": [
+                0.0,
+                -0.0640547,
+                -1.6016125
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonTop": "918",
+                        "collisionObject": "919",
+                        "pressDepth": 0.035
+                    }
+                }
+            ]
+        },
+        "918": {
+            "name": "Button-Top",
+            "parent": "917",
+            "translation": [
+                0.0,
+                0.0399999,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                0.0799999,
+                0.0199999,
+                0.0799999
+            ],
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "11",
+                        "material": "22"
+                    }
+                }
+            ]
+        },
+        "919": {
+            "name": "Button-Collision",
+            "parent": "917",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "collision",
+                    "collision": {
+                        "sphere": {
+                            "radius": 0.0199999
+                        },
+                        "collider": "aabb",
+                        "aabb": {
+                            "extents": [
+                                0.0799999,
+                                0.0199999,
+                                0.0799999
+                            ]
+                        },
+                        "groups": 8
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0399999,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
         }
     },
     "meshes": {

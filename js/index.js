@@ -16,6 +16,7 @@ import '@wonderlandengine/components/player-height';
 import { GameManagementComponent } from './game/components/game-management-component';
 import { PizzaComponent } from './game/components/pizza-component';
 import { ToppingComponent } from './game/components/topping-component';
+import { Button } from './interactions/button';
 
 import { Grabbable } from './interactions/grabbable';
 import { Grabber } from './interactions/grabber';
@@ -35,3 +36,4 @@ WL.registerComponent(PizzaComponent);
 WL.registerComponent(ToppingComponent);
 WL.registerComponent(GameManagementComponent);
 WL.registerComponent(InteractableBase);
+WL.registerComponent(Button);
