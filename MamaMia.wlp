@@ -255,7 +255,7 @@
                 },
                 {
                     "type": "vr-mode-active-switch",
-                    "active": false
+                    "active": true
                 },
                 {
                     "type": "hand-poser",
@@ -829,7 +829,8 @@
                     "snap-zone": {
                         "snapCollisionObject": "701",
                         "snapTargetObject": "908",
-                        "initialObject": "850"
+                        "initialObject": "850",
+                        "collisionObject": "701"
                     },
                     "active": true
                 }
@@ -2591,8 +2592,10 @@
                     "type": "snap-zone",
                     "snap-zone": {
                         "snapCollisionObject": "835",
-                        "snapTargetObject": "835"
-                    }
+                        "snapTargetObject": "835",
+                        "collisionObject": "835"
+                    },
+                    "active": true
                 }
             ],
             "translation": [

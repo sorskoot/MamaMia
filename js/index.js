@@ -21,6 +21,7 @@ import { Grabbable } from './interactions/grabbable';
 import { Grabber } from './interactions/grabber';
 import { GrabPoint } from './interactions/grabPoint';
 import { HandPoser } from './interactions/handPoser';
+import { InteractableBase } from './interactions/interactableBase';
 import { SnapZone } from './interactions/snapZone';
 import { Test } from './test';
 
@@ -33,3 +34,4 @@ WL.registerComponent(HandPoser);
 WL.registerComponent(PizzaComponent);
 WL.registerComponent(ToppingComponent);
 WL.registerComponent(GameManagementComponent);
+WL.registerComponent(InteractableBase);

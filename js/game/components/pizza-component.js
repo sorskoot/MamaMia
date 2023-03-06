@@ -34,6 +34,7 @@ export class PizzaComponent extends Component {
                
         this.snapZone.on('enteredSnapZone', (grabbable) => {            
             let topping = grabbable.object.getComponent('topping-component');
+            console.log(topping.object.name);
             if(topping && !topping.needsToBeDropped && grabbable.IsBeingHeld()){
                 this.updateTextures(topping.toppingImage);
             }

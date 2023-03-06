@@ -25,6 +25,11 @@ class Game
      */
     register(engine)
     {        
+        /** 
+         * @deprecated For now we use WL since the engine is not yet released, this line will be removed in 1.0.0
+         */
+        engine = WL;
+
         if(this.#registered) return;
         this.#registered = true;
 
@@ -35,6 +40,7 @@ class Game
 
         this.engine.onXRSessionStart.push(()=>this.#setIsInVR(true));
         this.engine.onXRSessionEnd.push(()=>this.#setIsInVR(false));
+        console.log(engine);
     }
 
     #isInVR = false;
