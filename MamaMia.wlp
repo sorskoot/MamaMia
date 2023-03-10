@@ -2470,26 +2470,6 @@
                 1.0000139
             ]
         },
-        "830": {
-            "name": "PizzaExamples",
-            "parent": "243",
-            "translation": [
-                0.0,
-                0.0,
-                -1.8486535
-            ],
-            "rotation": [
-                0.0,
-                0.0,
-                0.0,
-                1.0
-            ],
-            "scale": [
-                1.0,
-                1.0,
-                1.0
-            ]
-        },
         "831": {
             "name": "PizzaPool",
             "translation": [
@@ -2507,6 +2487,11 @@
                 1.0,
                 1.0,
                 1.0
+            ],
+            "components": [
+                {
+                    "type": "pizza-pool-component"
+                }
             ]
         },
         "832": {
@@ -3085,18 +3070,6 @@
                 6.25848997515277e-7
             ]
         },
-        "909": {
-            "name": "Empty",
-            "parent": "243",
-            "components": [
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "9"
-                    }
-                }
-            ]
-        },
         "915": {
             "name": "GameManager",
             "parent": "222",
@@ -3229,7 +3202,7 @@
                     "type": "mesh",
                     "mesh": {
                         "mesh": "11",
-                        "material": "22"
+                        "material": "922"
                     }
                 }
             ]
@@ -3312,6 +3285,65 @@
             "scale": [
                 1.0,
                 1.0,
+                1.0
+            ]
+        },
+        "920": {
+            "name": "PizzaSpawner",
+            "parent": "243",
+            "components": [
+                {
+                    "type": "pizza-spawner",
+                    "pizza-spawner": {
+                        "buttonObject": "917",
+                        "pizzaPoolObject": "831"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.8663612,
+                -1.6301535
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "921": {
+            "name": "TempMesh",
+            "parent": "920",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "8",
+                        "material": "922"
+                    },
+                    "active": false
+                }
+            ],
+            "scale": [
+                0.05,
+                0.05,
+                0.05
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
                 1.0
             ]
         }
@@ -5657,6 +5689,30 @@
             "pipeline": "237",
             "Sky": {
                 "texture": "911"
+            }
+        },
+        "922": {
+            "name": "Red",
+            "Phong": {
+                "diffuseColor": [
+                    0.9098039,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "specularColor": [
+                    9.999899930335232e-7,
+                    9.999911299019004e-7,
+                    9.999999974752427e-7,
+                    1.0
+                ],
+                "shininess": 10,
+                "ambientColor": [
+                    0.317647,
+                    0.0,
+                    0.0,
+                    1.0
+                ]
             }
         }
     },

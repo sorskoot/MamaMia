@@ -1,6 +1,11 @@
 import { CollisionComponent, Component } from '@wonderlandengine/api';
 import { EventEmitterComponent } from '../core/eventEmitter';
 
+/**
+ * This is a button component that can be used create a button in VR
+ * @event pressed - This event is triggered when the button is pressed.
+ * @event released - This event is triggered when the button is released.
+ */
 export class Button extends EventEmitterComponent {
     static TypeName = 'button';
     static Properties = {
