@@ -1,5 +1,6 @@
 import {Component} from '@wonderlandengine/api';
 import { Button } from '../../interactions/button';
+import { PizzaComponent } from './pizza-component';
 import { PizzaPoolComponent } from './pizza-pool-component';
 
 export class PizzaSpawner extends Component {
@@ -34,8 +35,10 @@ export class PizzaSpawner extends Component {
             let pizza = this.pizzaPool.spawn();
             if(pizza){
                 pizza.parent = this.object;
-                
                 pizza.setTranslationWorld(this.position);
+                setTimeout(() => {
+                    pizza.getComponent(PizzaComponent).disableKinematic();                
+                }, 25);
             }
         });
     }

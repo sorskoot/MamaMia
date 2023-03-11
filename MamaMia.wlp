@@ -2504,9 +2504,66 @@
                         "SnapZoneObject": "835",
                         "PizzaCenterObject": "834",
                         "DoughTexutre": "382",
-                        "PizzaToppingURL": "/toppings/PizzaTopping_0.png"
+                        "PizzaToppingURL": "/toppings/PizzaTopping_0.png",
+                        "PizzaPhysxObject": "832"
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.1749999,
+                                0.0099999,
+                                0.1749999
+                            ]
+                        },
+                        "kinematic": true,
+                        "groups": 2,
+                        "block": 1,
+                        "lockAxis": 24
+                    }
+                },
+                {
+                    "type": "grabbable",
+                    "grabbable": {
+                        "grabPoint": "832"
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "sphere": {
+                            "radius": 0.1749999
+                        },
+                        "collider": "aabb",
+                        "aabb": {
+                            "extents": [
+                                0.1749999,
+                                0.05,
+                                0.1749999
+                            ]
+                        },
+                        "groups": 6
                     }
                 }
+            ],
+            "translation": [
+                0.0,
+                0.2392554,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
             ]
         },
         "833": {
@@ -2556,23 +2613,6 @@
             "name": "PizzaCollision",
             "parent": "832",
             "components": [
-                {
-                    "type": "collision",
-                    "collision": {
-                        "sphere": {
-                            "radius": 0.1749999
-                        },
-                        "collider": "aabb",
-                        "aabb": {
-                            "extents": [
-                                0.1749999,
-                                0.05,
-                                0.1749999
-                            ]
-                        },
-                        "groups": 4
-                    }
-                },
                 {
                     "type": "snap-zone",
                     "snap-zone": {
@@ -3302,7 +3342,7 @@
             ],
             "translation": [
                 0.0,
-                0.8663612,
+                1.3427267,
                 -1.6301535
             ],
             "rotation": [
@@ -3344,6 +3384,86 @@
                 0.0,
                 0.0,
                 0.0,
+                1.0
+            ]
+        },
+        "923": {
+            "name": "PhysicsBody",
+            "parent": "557",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                2.45,
+                                0.8399999,
+                                0.4
+                            ]
+                        },
+                        "kinematic": true,
+                        "bounciness": 0.0,
+                        "static": false,
+                        "groups": 1,
+                        "block": 2
+                    }
+                }
+            ],
+            "translation": [
+                -1.448795,
+                0.0,
+                0.51247
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "924": {
+            "name": "PhysicsBody",
+            "parent": "386",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                1.0499999,
+                                0.8399999,
+                                0.4
+                            ]
+                        },
+                        "kinematic": true,
+                        "bounciness": 0.0,
+                        "static": false,
+                        "groups": 1,
+                        "block": 2
+                    }
+                }
+            ],
+            "translation": [
+                -0.7781664,
+                1.277413,
+                -2.338762
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
                 1.0
             ]
         }

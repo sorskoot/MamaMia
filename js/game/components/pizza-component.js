@@ -1,6 +1,5 @@
-import {Component, MeshComponent, Texture} from '@wonderlandengine/api';
+import {Component, MeshComponent, PhysXComponent} from '@wonderlandengine/api';
 import { SnapZone } from '../../interactions/snapZone';
-import { MamaMia } from '../game';
 import { ToppingComponent } from './topping-component';
 
 export class PizzaComponent extends Component {
@@ -9,7 +8,7 @@ export class PizzaComponent extends Component {
         SnapZoneObject: {type: WL.Type.Object},
         PizzaCenterObject: {type: WL.Type.Object},
         PizzaToppingURL: {type: WL.Type.String},
-        
+        PizzaPhysxObject: {type: WL.Type.Object},
     }
 
     /** @type {SnapZone} Snapzone of the pizza to drop toppings in*/
@@ -21,19 +20,27 @@ export class PizzaComponent extends Component {
     /** @type {HTMLImageElement[]} */
     layers = [];
 
+    /** @type {PhysXComponent} */
+    pizzaPhysx = null;
+
     start() {                    
         if(!this.SnapZoneObject){
             console.error("No snapzone object set for PizzaComponent");
         }
-        this.snapZone = this.SnapZoneObject.getComponent('snap-zone');        
+        this.snapZone = this.SnapZoneObject.getComponent(SnapZone);        
 
+        if(!this.PizzaPhysxObject){
+            console.error("No physx object set for PizzaComponent");
+        }
+        this.pizzaPhysx = this.PizzaPhysxObject.getComponent(PhysXComponent);
+        
         if(!this.PizzaCenterObject){
             console.error("No pizza center object set for PizzaComponent");
         }
-        this.centerMesh = this.PizzaCenterObject.getComponent('mesh');
+        this.centerMesh = this.PizzaCenterObject.getComponent(MeshComponent);
                
         this.snapZone.on('enteredSnapZone', (grabbable) => {            
-            let topping = grabbable.object.getComponent('topping-component');
+            let topping = grabbable.object.getComponent(ToppingComponent);
             console.log(topping.object.name);
             if(topping && !topping.needsToBeDropped && grabbable.IsBeingHeld()){
                 this.updateTextures(topping.toppingImage);
@@ -82,7 +89,26 @@ export class PizzaComponent extends Component {
         // this.toppingMaterial.diffuseTexture.update();        
     }
 
-    update(dt) {
+    /**
+     * Reset the pizza component to its initial state
+     */
+    reset(){
+        //TODO: Reset Texture
+        this.disableKinematic();
+    }
+
+    /**
+     * Enable kinematic on the pizza physx component
+     */
+    enableKinematic(){
+        this.pizzaPhysx.kinematic = true;
+    }
+    
+    /**
+     * Disable kinematic on the pizza physx component
+     */
+    disableKinematic(){
+        this.pizzaPhysx.kinematic = false;
     }
 
 };
